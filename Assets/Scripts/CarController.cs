@@ -16,6 +16,8 @@ public class CarController : MonoBehaviour
     [SerializeField] private Transform rearLeftWheelTransform;
     [SerializeField] private Transform rearRightWheelTransform;
 
+    [SerializeField] private float slowDownSpeed = 0.05f;
+
     Vector2 movement;
     private float steerAngle;
     private bool isAccelerating;
@@ -28,22 +30,28 @@ public class CarController : MonoBehaviour
 
     void FixedUpdate()
     {
+
         HandleMotor();
-        ApplyAcceleration();
+        //ApplyAcceleration();
         HandleSteering();
     }
 
     void HandleMotor()
     {
+
         frontLeftWheelCollider.motorTorque = movement.y * speedMultiplier * motorForce * Time.fixedDeltaTime;
         frontRightWheelCollider.motorTorque = movement.y * speedMultiplier * motorForce * Time.fixedDeltaTime;
-
+        if (movement.y <= 0)
+        {
+            rb.velocity= Vector3.Lerp(rb.velocity, new Vector3(0, 0, 0), slowDownSpeed );
+        }
         // Debug.Log(speedMultiplier);
-        Debug.Log(frontLeftWheelCollider.motorTorque);
+        
         // if(isAccelerating)
         // {
         //     ApplyAcceleration();
         // }
+        Debug.Log(rb.velocity);
     }
 
     void ApplyAcceleration()
@@ -93,5 +101,6 @@ public class CarController : MonoBehaviour
     {
         float f = context.ReadValue<float>();
         isAccelerating = f == 1;
+        Debug.Log(isAccelerating);
     }
 }
