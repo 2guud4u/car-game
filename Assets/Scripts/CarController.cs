@@ -34,17 +34,18 @@ public class CarController : MonoBehaviour
         HandleMotor();
         //ApplyAcceleration();
         HandleSteering();
+        UpdateWheels();
     }
 
     void HandleMotor()
     {
 
-        frontLeftWheelCollider.motorTorque = movement.y * speedMultiplier * motorForce * Time.fixedDeltaTime;
-        frontRightWheelCollider.motorTorque = movement.y * speedMultiplier * motorForce * Time.fixedDeltaTime;
-        if (movement.y <= 0)
-        {
-            rb.velocity= Vector3.Lerp(rb.velocity, new Vector3(0, 0, 0), slowDownSpeed );
-        }
+        frontLeftWheelCollider.motorTorque = movement.y  * speedMultiplier *motorForce * Time.fixedDeltaTime;
+        frontRightWheelCollider.motorTorque = movement.y  * speedMultiplier *motorForce * Time.fixedDeltaTime;
+        // if (movement.y <= 0)
+        // {
+        //     rb.velocity= Vector3.Lerp(rb.velocity, new Vector3(0, 0, 0), slowDownSpeed );
+        // }
         // Debug.Log(speedMultiplier);
         
         // if(isAccelerating)
@@ -54,18 +55,18 @@ public class CarController : MonoBehaviour
         Debug.Log(rb.velocity);
     }
 
-    void ApplyAcceleration()
-    {
-        float accelerationBoost = (isAccelerating ? 500 : 0) * (movement.y > 0 ? 1 : -0.5f) * Time.fixedDeltaTime;
-        if(rb.velocity.magnitude < maxBoost && movement.y > 0 && accelerationBoost > 0)
-        {
-            rb.AddForce(transform.forward * accelerationBoost, ForceMode.Acceleration);
-        }
-        if (rb.velocity.magnitude < maxBoost * 0.5 && movement.y < 0)
-        {
-            rb.AddForce(transform.forward * accelerationBoost, ForceMode.Acceleration);
-        }
-    }
+    // void ApplyAcceleration()
+    // {
+    //     float accelerationBoost = (isAccelerating ? 500 : 0) * (movement.y > 0 ? 1 : -0.5f) * Time.fixedDeltaTime;
+    //     if(rb.velocity.magnitude < maxBoost && movement.y > 0 && accelerationBoost > 0)
+    //     {
+    //         rb.AddForce(transform.forward * accelerationBoost, ForceMode.Acceleration);
+    //     }
+    //     if (rb.velocity.magnitude < maxBoost * 0.5 && movement.y < 0)
+    //     {
+    //         rb.AddForce(transform.forward * accelerationBoost, ForceMode.Acceleration);
+    //     }
+    // }
 
     void HandleSteering()
     {
