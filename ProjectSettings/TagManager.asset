@@ -5,14 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - Heart
+  - car
+  - MeleeSoldier
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - ground
   - Water
   - UI
-  - 
+  - player
   - 
   - 
   - 

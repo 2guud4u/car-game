@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        timerText.text = "Time: " + Mathf.FloorToInt(Time.timeSinceLevelLoad);
+       // timerText.text = "Time: " + Mathf.FloorToInt(Time.timeSinceLevelLoad);
     }
 
     public void LiveIncrease()
