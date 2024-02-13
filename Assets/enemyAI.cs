@@ -44,7 +44,7 @@ public class EnemyAiTutorial : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         rbs = RagdollRoot.GetComponentsInChildren<Rigidbody>();
         rb = GetComponent<Rigidbody>();
-        playerVelocity = GameObject.Find("Player").GetComponent<Rigidbody>();
+        playerVelocity = GameObject.Find("realcar").GetComponent<Rigidbody>();
     }
 
     private void Update()
@@ -124,12 +124,8 @@ public class EnemyAiTutorial : MonoBehaviour
     {
         health -= damage;
 
-        if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
     }
-    private void DestroyEnemy()
-    {
-        Destroy(gameObject);
-    }
+
 
     private void OnDrawGizmosSelected()
     {
@@ -149,11 +145,18 @@ public class EnemyAiTutorial : MonoBehaviour
     }
     private void turnOffRagdoll()
     {
-
-        GameObject enemy = Instantiate(enemyObj, torsoRb.transform.position, Quaternion.identity);
+        if(health > 0){
+            GameObject enemy = Instantiate(enemyObj, torsoRb.transform.position, Quaternion.identity);
+            enemy.GetComponentInChildren<EnemyAiTutorial>().setHealth(health);
+        }
+        
         Destroy(gameObject);
         
         
+    }
+    private void setHealth(float health)
+    {
+        this.health = health;
     }
     public void OnTriggerEnter(Collider other)
     {
@@ -165,13 +168,14 @@ public class EnemyAiTutorial : MonoBehaviour
             if(playerVelocity.velocity.magnitude > 5)
             {
                 Debug.Log("Player has entered the enemy's trigger");
+                TakeDamage(5);
                 turnOnRagdoll();
                 Vector3 awayDirection = transform.position - other.transform.position;
 
                 // Normalize the direction to ensure consistent force magnitude
                 awayDirection.Normalize();
 
-                rb.AddForce(awayDirection * 20, ForceMode.Impulse);
+                rb.AddForce(awayDirection * 10, ForceMode.Impulse);
                 
             }
             
