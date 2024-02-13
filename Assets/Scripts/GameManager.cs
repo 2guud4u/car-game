@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI overText;
     public Sprite heartSprite;
-    public GameObject heartUI;
     public Material unblock;
 
     public Button button;
@@ -38,7 +37,7 @@ public class GameManager : MonoBehaviour
 
     public void LiveIncrease()
     {
-        if(_live < 10)
+        if(_live < 5)
         {
             GameObject lastHeart = null;
             float bigX = float.NegativeInfinity;
@@ -54,14 +53,8 @@ public class GameManager : MonoBehaviour
 
             if (lastHeart != null)
             {
-                Vector3 newPosition = new Vector3(lastHeart.transform.position.x + 0.7f, lastHeart.transform.position.y, lastHeart.transform.position.z);
-                GameObject newHeart = new GameObject("heart");
-                SpriteRenderer renderer = newHeart.AddComponent<SpriteRenderer>();
-                renderer.sprite = heartSprite;
-                newHeart.transform.position = newPosition;
-                newHeart.transform.localScale = lastHeart.transform.localScale;
-                newHeart.transform.SetParent(heartUI.transform);
-                newHeart.GetComponent<Renderer>().material = unblock;
+                Instantiate(lastHeart, new Vector3(lastHeart.transform.position.x + 102.45f, lastHeart.transform.position.y, lastHeart.transform.position.z),
+                    lastHeart.transform.rotation, lastHeart.transform.parent);
                 _live++;
             }
         }
