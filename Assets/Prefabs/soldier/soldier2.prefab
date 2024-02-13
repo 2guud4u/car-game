@@ -251,6 +251,7 @@ MonoBehaviour:
   torsoRb: {fileID: 4629194880114553735}
   enemyObj: {fileID: 7755446284023417325, guid: 7a1288cfbcf7a4d31aecd97aab16dec4, type: 3}
   playerVelocity: {fileID: 0}
+  soulPrefab: {fileID: 8165119391464487357, guid: 4b821a88424cb4dab80c119a2262a410, type: 3}
 --- !u!65 &2825849678476941155
 BoxCollider:
   m_ObjectHideFlags: 0
