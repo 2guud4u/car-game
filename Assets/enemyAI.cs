@@ -29,7 +29,7 @@ public class EnemyAiTutorial : MonoBehaviour
     // ragdoll
     public Transform RagdollRoot;
     private Rigidbody[] rbs;
-    public Rigidbody rb;
+    private Rigidbody rb;
 
     public Rigidbody torsoRb;
 
@@ -59,7 +59,7 @@ public class EnemyAiTutorial : MonoBehaviour
             if (playerInSightRange && !playerInAttackRange) ChasePlayer();
             if (playerInAttackRange && playerInSightRange) AttackPlayer();
         }
-        
+        Debug.Log(agent.transform.position);
 
     }
 
@@ -150,17 +150,9 @@ public class EnemyAiTutorial : MonoBehaviour
     private void turnOffRagdoll()
     {
 
-        foreach (Rigidbody rb in rbs)
-        {
-            rb.isKinematic = true;
-        }
-        agent.enabled = true;
-        Vector3 bodyLoc = rbs[0].transform.position;
-        
-
         GameObject enemy = Instantiate(enemyObj, torsoRb.transform.position, Quaternion.identity);
-        
         Destroy(gameObject);
+        
         
     }
     public void OnTriggerEnter(Collider other)
@@ -178,11 +170,8 @@ public class EnemyAiTutorial : MonoBehaviour
 
                 // Normalize the direction to ensure consistent force magnitude
                 awayDirection.Normalize();
-                // foreach (Rigidbody rb in rbs)
-                // {
-                //     rb.AddForce(awayDirection * 50, ForceMode.Impulse);
-                // }
-                //rb.AddForce(awayDirection * 50, ForceMode.Impulse);
+
+                rb.AddForce(awayDirection * 20, ForceMode.Impulse);
                 
             }
             

@@ -243,14 +243,13 @@ MonoBehaviour:
   walkPointRange: 10
   timeBetweenAttacks: 3
   projectile: {fileID: 7136163231040013363, guid: b178ef5f51881407e9ad5443d2dbdcc1, type: 3}
-  sightRange: 50
+  sightRange: 100
   attackRange: 2
   playerInSightRange: 0
   playerInAttackRange: 0
   RagdollRoot: {fileID: 1816843001159791601}
-  rb: {fileID: 0}
   torsoRb: {fileID: 4629194880114553735}
-  enemyObj: {fileID: 6260658102102816299}
+  enemyObj: {fileID: 7755446284023417325, guid: 7a1288cfbcf7a4d31aecd97aab16dec4, type: 3}
   playerVelocity: {fileID: 0}
 --- !u!65 &2825849678476941155
 BoxCollider:
@@ -692,7 +691,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7741113010532773452}
   m_Layer: 0
-  m_Name: WorkingSoldier 1
+  m_Name: soldier2
   m_TagString: MeleeSoldier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
