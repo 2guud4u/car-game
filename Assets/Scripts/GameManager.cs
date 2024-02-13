@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     int _live = 3;
-    int _soul = 0;
+    public int _soul = 0;
 
     private void Awake()
     {
@@ -99,7 +99,7 @@ public class GameManager : MonoBehaviour
         soulText.text = "Score: " + _soul;
     }
 
-    void GameOver()
+    public void GameOver()
     {
         overText.gameObject.SetActive(true);
         button.gameObject.SetActive(true);

@@ -308,6 +308,7 @@ public class PrometeoCarController : MonoBehaviour
           TurnRight();
         }
         if(handbrakePTI.buttonPressed){
+          Debug.Log("Handbrake pressed");
           CancelInvoke("DecelerateCar");
           deceleratingCar = false;
           Handbrake();
@@ -350,6 +351,7 @@ public class PrometeoCarController : MonoBehaviour
           TurnRight();
         }
         if(isPressingSpace){
+          Debug.Log("Handbrake pressed");
           CancelInvoke("DecelerateCar");
           deceleratingCar = false;
           Handbrake();
