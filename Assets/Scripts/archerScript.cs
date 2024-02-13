@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyAiTutorial : MonoBehaviour
+public class archerScript : MonoBehaviour
 {
     public NavMeshAgent agent;
 
@@ -105,8 +105,8 @@ public class EnemyAiTutorial : MonoBehaviour
         {
             ///Attack code here
             Rigidbody rb = Instantiate(projectile, transform.position + transform.forward * 2, Quaternion.identity).GetComponent<Rigidbody>();
-            // rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            // rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
             ///End of attack code
 
             alreadyAttacked = true;
@@ -147,7 +147,7 @@ public class EnemyAiTutorial : MonoBehaviour
     {
         if(health > 0){
             GameObject enemy = Instantiate(enemyObj, torsoRb.transform.position, Quaternion.identity);
-            enemy.GetComponentInChildren<EnemyAiTutorial>().setHealth(health);
+            enemy.GetComponentInChildren<archerScript>().setHealth(health);
         }
         
         Destroy(gameObject);
