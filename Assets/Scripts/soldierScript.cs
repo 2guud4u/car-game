@@ -38,6 +38,8 @@ public class soldierScript : MonoBehaviour
     //player velocity obj
     public Rigidbody playerVelocity;
 
+    public GameObject soulPrefab;
+
     private void Awake()
     {
         player = GameObject.Find("Body").transform;
@@ -149,7 +151,12 @@ public class soldierScript : MonoBehaviour
             GameObject enemy = Instantiate(enemyObj, torsoRb.transform.position, Quaternion.identity);
             enemy.GetComponentInChildren<soldierScript>().setHealth(health);
         }
-        
+        else {
+            Vector3 soulPosition = new(torsoRb.transform.position.x, 1, torsoRb.transform.position.z);
+            Instantiate(soulPrefab, soulPosition, Quaternion.identity);
+            Debug.Log(transform.position);
+            Debug.Log(torsoRb.transform.position);
+        }
         Destroy(gameObject);
         
         
