@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public Button button;
 
     public static GameManager Instance;
+    public int _levelTime = 100;
 
     int _live = 3;
     public int _soul = 0;
@@ -32,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-       // timerText.text = "Time: " + Mathf.FloorToInt(Time.timeSinceLevelLoad);
+       timerText.text = "Time: " + (_levelTime - Mathf.FloorToInt(Time.timeSinceLevelLoad));
     }
 
     public void LiveIncrease()
@@ -90,7 +91,7 @@ public class GameManager : MonoBehaviour
     {
         _soul++;
         // soulText.text = "Score: " + _soul;
-        asoulText.text = "" + _soul;
+        soulText.text = "" + _soul;
     }
 
     public void GameOver()
