@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
        int currTime = _levelTime - Mathf.FloorToInt(Time.timeSinceLevelLoad);
        timerText.text = "Time: " + currTime;
        if (currTime <= 0){
-        GameOver();
+            GameOver();
        }
     }
 
