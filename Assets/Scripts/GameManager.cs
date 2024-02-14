@@ -33,7 +33,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-       timerText.text = "Time: " + (_levelTime - Mathf.FloorToInt(Time.timeSinceLevelLoad));
+       int currTime = _levelTime - Mathf.FloorToInt(Time.timeSinceLevelLoad);
+       timerText.text = "Time: " + currTime;
+       if (currTime <= 0){
+        GameOver();
+       }
     }
 
     public void LiveIncrease()
