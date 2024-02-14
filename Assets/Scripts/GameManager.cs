@@ -1,18 +1,18 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI soulText;
     public TextMeshProUGUI timerText;
-    public TextMeshProUGUI overText;
+    public GameObject gameOverScreen;
     public Sprite heartSprite;
     public Material unblock;
 
-    public Button button;
-
     public static GameManager Instance;
+    public int soulCondition = 1;
     public int _levelTime = 100;
 
     int _live = 3;
@@ -100,9 +100,25 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        overText.gameObject.SetActive(true);
-        button.gameObject.SetActive(true);
+        gameOverScreen.SetActive(true);
         Time.timeScale = 0;
     }
+
+    public void EndLevel()
+    {
+        gameOverScreen.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(Application.loadedLevel);
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
+
 
 }

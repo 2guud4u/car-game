@@ -4,15 +4,14 @@ public class EndPortal : MonoBehaviour
 {
     private Vector3 portalSize = new Vector3(10f, 20f, 1f);
     private bool _open = false;
-    private int soulCondition = 1;
     
     void Update()
     {
-        if (GameManager.Instance._soul >= soulCondition){
+        if (GameManager.Instance._soul >= GameManager.Instance.soulCondition){
             transform.localScale = portalSize;
             _open = true;
         }
-        if (GameManager.Instance._soul < soulCondition){
+        if (GameManager.Instance._soul < GameManager.Instance.soulCondition){
             transform.localScale = new Vector3(0f, 0f, 0f);
             _open = false;
         }
@@ -20,7 +19,7 @@ public class EndPortal : MonoBehaviour
     
     void OnCollisionEnter(Collision collision)
     {
-        if (_open){
+        if (_open && collision.gameObject.tag == "Player"){
             GameManager.Instance.GameOver();
         }
     }
