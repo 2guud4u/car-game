@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI timerText;
     public GameObject gameOverScreen;
     public Sprite heartSprite;
-    public Material unblock;
 
     public static GameManager Instance;
     public int soulCondition = 1;
