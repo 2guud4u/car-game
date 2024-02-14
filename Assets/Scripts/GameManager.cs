@@ -95,7 +95,7 @@ public class GameManager : MonoBehaviour
     {
         _soul++;
         // soulText.text = "Score: " + _soul;
-        soulText.text = "" + _soul;
+        soulText.text = _soul + "/" + soulCondition;
     }
 
     public void GameOver()
