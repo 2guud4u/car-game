@@ -89,7 +89,8 @@ public class GameManager : MonoBehaviour
     public void ScoreUpdate()
     {
         _soul++;
-        soulText.text = "Score: " + _soul;
+        // soulText.text = "Score: " + _soul;
+        asoulText.text = "" + _soul;
     }
 
     public void GameOver()
