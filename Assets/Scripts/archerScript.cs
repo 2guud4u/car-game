@@ -44,7 +44,7 @@ public class archerScript : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         rbs = RagdollRoot.GetComponentsInChildren<Rigidbody>();
         rb = GetComponent<Rigidbody>();
-        playerVelocity = GameObject.Find("realcar").GetComponent<Rigidbody>();
+        playerVelocity = GameObject.Find("Player").GetComponent<Rigidbody>();
     }
 
     private void Update()
