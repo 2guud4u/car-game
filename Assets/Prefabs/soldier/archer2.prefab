@@ -988,15 +988,17 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 0
   timeBetweenAttacks: 2
+  alreadyAttacked: 0
   projectile: {fileID: 1182356630499007861, guid: 492a2001658c94204a70d4f9976bf16b, type: 3}
   sightRange: 100
   attackRange: 20
   playerInSightRange: 0
   playerInAttackRange: 0
   RagdollRoot: {fileID: 6756374042748394630}
-  torsoRb: {fileID: 0}
+  torsoRb: {fileID: 1874851940746429201}
   enemyObj: {fileID: 7766698171360331718, guid: 023cb68372a5d44f2a2f885fc3442044, type: 3}
   playerVelocity: {fileID: 0}
+  soulPrefab: {fileID: 8165119391464487357, guid: 4b821a88424cb4dab80c119a2262a410, type: 3}
 --- !u!1 &7385042985879814377
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,6 +1188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7391242119549867063}
+  - component: {fileID: -9192109424704796632}
   m_Layer: 0
   m_Name: archer2
   m_TagString: MeleeSoldier
@@ -1209,3 +1212,15 @@ Transform:
   - {fileID: 6756374042748394630}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -180.555, z: 0}
+--- !u!114 &-9192109424704796632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7837427047887270170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b610f90031224496d8a0d48353d9718c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

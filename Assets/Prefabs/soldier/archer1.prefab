@@ -132,15 +132,17 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 0
   timeBetweenAttacks: 2
+  alreadyAttacked: 0
   projectile: {fileID: 1182356630499007861, guid: 492a2001658c94204a70d4f9976bf16b, type: 3}
   sightRange: 100
   attackRange: 20
   playerInSightRange: 0
   playerInAttackRange: 0
   RagdollRoot: {fileID: 5612254653717569823}
-  torsoRb: {fileID: 0}
+  torsoRb: {fileID: 8282774601001532865}
   enemyObj: {fileID: 7766698171360331718}
   playerVelocity: {fileID: 0}
+  soulPrefab: {fileID: 8165119391464487357, guid: 4b821a88424cb4dab80c119a2262a410, type: 3}
 --- !u!1 &3428857686667162400
 GameObject:
   m_ObjectHideFlags: 0
