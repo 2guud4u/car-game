@@ -4,7 +4,7 @@ using UnityEngine.AI;
 
 public class soldierScript : enemyScript
 {   
-    private void AttackPlayer()
+    public override void AttackPlayer()
     {
         //Make sure enemy doesn't move
         agent.SetDestination(transform.position);
