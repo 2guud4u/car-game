@@ -131,7 +131,7 @@ public class enemyScript : MonoBehaviour
     {
         if(health > 0){
             GameObject enemy = Instantiate(enemyObj, torsoRb.transform.position, Quaternion.identity);
-            enemy.GetComponentInChildren<archerScript>().setHealth(health);
+            enemy.GetComponentInChildren<enemyScript>().setHealth(health);
         }
         else {
             Vector3 soulPosition = new(torsoRb.transform.position.x, 1, torsoRb.transform.position.z);
