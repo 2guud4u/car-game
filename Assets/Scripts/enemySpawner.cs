@@ -26,7 +26,7 @@ public class enemySpawner : MonoBehaviour
     private void spawnEnemy(){
         // spawning left
        
-        Vector3 spawnPos = new Vector3(Random.Range(-4,33), 1.5f, Random.Range(50, 10));
+        Vector3 spawnPos = new Vector3(Random.Range(-40, 79), 1.5f, Random.Range(-280, 400));
         GameObject l = Instantiate(enemyPrefab, spawnPos, Quaternion.identity); 
             
 
