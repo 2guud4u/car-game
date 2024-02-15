@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -24,9 +21,11 @@ public class Health : MonoBehaviour
             Destroy(other.gameObject);
             GameManager.Instance.LiveIncrease();
         }
-        else if (other.CompareTag("Enemy"))
+        else if (other.CompareTag("Enemy") || other.CompareTag("Damage"))
         {
+            Destroy(other.gameObject); ;
             GameManager.Instance.LiveDecrease();
         }
     }
+
 }
