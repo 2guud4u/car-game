@@ -60,7 +60,7 @@ public class enemyScript : MonoBehaviour
             if (playerInSightRange && !playerInAttackRange) ChasePlayer();
             if (playerInAttackRange && playerInSightRange) AttackPlayer();
         }
-        Debug.Log(agent.transform.position);
+        // Debug.Log(agent.transform.position);
 
     }
 
@@ -151,10 +151,10 @@ public class enemyScript : MonoBehaviour
         {
             Rigidbody otherRb = other.gameObject.GetComponent<Rigidbody>();
             //Debug.Log("Player has entered the enemy's trigger");
-            Debug.Log(playerVelocity.velocity.magnitude);
+            // Debug.Log(playerVelocity.velocity.magnitude);
             if(playerVelocity.velocity.magnitude > 5)
             {
-                Debug.Log("Player has entered the enemy's trigger");
+                // Debug.Log("Player has entered the enemy's trigger");
                 TakeDamage(5);
                 turnOnRagdoll();
                 Vector3 awayDirection = transform.position - other.transform.position;

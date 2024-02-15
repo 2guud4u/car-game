@@ -9,7 +9,7 @@ public class Topple : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Topple");
+            // Debug.Log("Topple");
             Rigidbody rb = GetComponent<Rigidbody>();
             
             if (rb != null)
