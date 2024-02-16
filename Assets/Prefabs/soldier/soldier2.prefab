@@ -242,6 +242,7 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 10
   timeBetweenAttacks: 3
+  alreadyAttacked: 0
   projectile: {fileID: 7136163231040013363, guid: b178ef5f51881407e9ad5443d2dbdcc1, type: 3}
   sightRange: 100
   attackRange: 2
@@ -691,7 +692,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7741113010532773452}
-  - component: {fileID: 1869931548286365955}
   m_Layer: 0
   m_Name: soldier2
   m_TagString: MeleeSoldier
@@ -715,19 +715,6 @@ Transform:
   - {fileID: 1816843001159791601}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -180.555, z: 0}
---- !u!114 &1869931548286365955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6260658102102816299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b610f90031224496d8a0d48353d9718c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soulPrefab: {fileID: 8165119391464487357, guid: 4b821a88424cb4dab80c119a2262a410, type: 3}
 --- !u!1 &7782523312198360602
 GameObject:
   m_ObjectHideFlags: 0

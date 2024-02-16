@@ -13,7 +13,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(transform.position.y < -15)
+        {
+            GameManager.Instance.GameOver();
+        }
     }
 
     private void OnTriggerEnter(Collider collision) {

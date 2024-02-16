@@ -1188,7 +1188,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7391242119549867063}
-  - component: {fileID: -9192109424704796632}
   m_Layer: 0
   m_Name: archer2
   m_TagString: MeleeSoldier
@@ -1212,15 +1211,3 @@ Transform:
   - {fileID: 6756374042748394630}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -180.555, z: 0}
---- !u!114 &-9192109424704796632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7837427047887270170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b610f90031224496d8a0d48353d9718c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI soulText;
     public TextMeshProUGUI timerText;
     public GameObject gameOverScreen;
+    public GameObject gameWinScreen;
     public Sprite heartSprite;
 
     public static GameManager Instance;
@@ -101,6 +102,12 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOverScreen.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void GameWin()
+    {
+        gameWinScreen.SetActive(true);
         Time.timeScale = 0;
     }
 
