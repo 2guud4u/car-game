@@ -17,9 +17,11 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider collision) {
-        if(collision.gameObject.tag != "Soul") return;
-
-        Destroy(collision.gameObject);
-        GameManager.Instance.ScoreUpdate();
+        if(collision.gameObject.tag == "Soul")
+        {
+            Destroy(collision.gameObject.transform.parent.gameObject);
+            collision.gameObject.transform.parent.gameObject.SetActive(false);
+            GameManager.Instance.ScoreUpdate();
+        }
     }
 }
