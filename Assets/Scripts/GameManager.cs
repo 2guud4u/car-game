@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public Sprite heartSprite;
 
     public static GameManager Instance;
-    public int soulCondition = 1;
+    public int soulCondition = 10;
     public int _levelTime = 100;
 
     int _live = 3;
