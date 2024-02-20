@@ -1220,9 +1220,9 @@ MonoBehaviour:
   accelerationMultiplier: 6
   maxSteeringAngle: 35
   steeringSpeed: 0.5
-  brakeForce: 450
+  brakeForce: 600
   decelerationMultiplier: 2
-  handbrakeDriftMultiplier: 5
+  handbrakeDriftMultiplier: 55
   bodyMassCenter: {x: 0, y: 0, z: 0}
   frontLeftMesh: {fileID: 548325600501755091}
   frontLeftCollider: {fileID: 1289891234961462456}
@@ -1416,7 +1416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8265206809196243589, guid: 32e4090eebf4da94d80184fff513bad3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.3
+      value: -0.6
       objectReference: {fileID: 0}
     - target: {fileID: 8265206809196243589, guid: 32e4090eebf4da94d80184fff513bad3, type: 3}
       propertyPath: m_LocalPosition.y
