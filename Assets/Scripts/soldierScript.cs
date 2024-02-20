@@ -1,7 +1,7 @@
 
 using UnityEngine;
 using UnityEngine.AI;
-
+using System.Collections;
 public class soldierScript : enemyScript
 {   
     [SerializeField] float timeSwordIsDrawn;
@@ -27,7 +27,7 @@ public class soldierScript : enemyScript
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
             Invoke(nameof(HideSword), timeSwordIsDrawn);
         }
-        //turnOnRagdoll();
+        
         
     }
 
