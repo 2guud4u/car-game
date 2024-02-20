@@ -18,6 +18,7 @@ public class enemyScript : MonoBehaviour
     public float walkPointRange;
 
     //Attacking
+    public float timeBeforeFirstAttack;
     public float timeBetweenAttacks;
     public bool alreadyAttacked;
     public GameObject projectile;
@@ -38,6 +39,9 @@ public class enemyScript : MonoBehaviour
     //player velocity obj
     public Rigidbody playerVelocity;
     public GameObject soulPrefab;
+    
+    bool firstAttack = true;
+    bool soulDropped = false;
 
     private void Awake()
     {
@@ -56,12 +60,22 @@ public class enemyScript : MonoBehaviour
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
         //run if agent is enabled
         if(agent.enabled ){
-            if (!playerInSightRange && !playerInAttackRange) Patroling();
-            if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-            if (playerInAttackRange && playerInSightRange) AttackPlayer();
+            if (!playerInAttackRange) {
+                if(!playerInSightRange) {
+                    firstAttack = true;
+                    Patroling();
+                }
+                else { ChasePlayer(); }
+            }
+            else if(playerInAttackRange && playerInSightRange) {
+                if(firstAttack) {
+                    Invoke("ResetAttack", timeBeforeFirstAttack);
+                    alreadyAttacked = true;
+                    firstAttack = false;
+                }
+                else { AttackPlayer(); }
+            }
         }
-        // Debug.Log(agent.transform.position);
-
     }
 
     private void Patroling()
@@ -97,7 +111,13 @@ public class enemyScript : MonoBehaviour
 
     public virtual void AttackPlayer()
     {
-           
+        if (!alreadyAttacked)
+        {
+            ///Attack code here
+
+            alreadyAttacked = true;
+            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+        }
     }
     public void ResetAttack()
     {
@@ -133,14 +153,14 @@ public class enemyScript : MonoBehaviour
             GameObject enemy = Instantiate(enemyObj, torsoRb.transform.position, Quaternion.identity);
             enemy.GetComponentInChildren<enemyScript>().setHealth(health);
         }
-        else {
-            Vector3 soulPosition = new(torsoRb.transform.position.x, 1, torsoRb.transform.position.z);
-            Instantiate(soulPrefab, soulPosition, Quaternion.identity);
-        }
         Destroy(gameObject);
-        
-        
     }
+    
+    private void DropSoul() {
+        Vector3 soulPosition = new(torsoRb.transform.position.x, 1, torsoRb.transform.position.z);
+        Instantiate(soulPrefab, soulPosition, Quaternion.identity);
+    }
+
     private void setHealth(float health)
     {
         this.health = health;
@@ -156,6 +176,12 @@ public class enemyScript : MonoBehaviour
             {
                 // Debug.Log("Player has entered the enemy's trigger");
                 TakeDamage(5);
+
+                if(health <= 0 && !soulDropped) {
+                    soulDropped = true;
+                    Invoke("DropSoul", 1f);
+                }
+
                 turnOnRagdoll();
                 Vector3 awayDirection = transform.position - other.transform.position;
 

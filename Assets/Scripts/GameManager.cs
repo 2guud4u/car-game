@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI timerText;
     public GameObject gameOverScreen;
     public GameObject gameWinScreen;
+    public GameObject portalWarningScreen;
     public Sprite heartSprite;
 
     public static GameManager Instance;
@@ -37,7 +38,7 @@ public class GameManager : MonoBehaviour
        int currTime = _levelTime - Mathf.FloorToInt(Time.timeSinceLevelLoad);
        timerText.text = "Time: " + currTime;
        if (currTime <= 0){
-        GameOver();
+        GameOver("Time's up!");
        }
     }
 
@@ -87,7 +88,7 @@ public class GameManager : MonoBehaviour
 
         if (_live <= 0)
         {
-            GameOver();
+            GameOver("You died!");
         }
 
     }
@@ -99,9 +100,13 @@ public class GameManager : MonoBehaviour
         soulText.text = _soul + "/" + soulCondition;
     }
 
-    public void GameOver()
+    public void GameOver(string reason)
     {
         gameOverScreen.SetActive(true);
+        TextMeshProUGUI overText = GameObject.Find("OverText").GetComponent<TextMeshProUGUI>();
+        overText.text = reason;
+
+        // gameOverScreen.getChild
         Time.timeScale = 0;
     }
 
@@ -109,6 +114,17 @@ public class GameManager : MonoBehaviour
     {
         gameWinScreen.SetActive(true);
         Time.timeScale = 0;
+    }
+
+    public void PortalOpened()
+    {
+        portalWarningScreen.SetActive(true);
+        Invoke("HideWarningPortal", 4f);
+    }
+
+    public void HideWarningPortal()
+    {
+        portalWarningScreen.SetActive(false);
     }
 
     public void EndLevel()

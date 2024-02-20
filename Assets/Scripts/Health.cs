@@ -21,10 +21,16 @@ public class Health : MonoBehaviour
             Destroy(other.gameObject);
             GameManager.Instance.LiveIncrease();
         }
-        else if (other.CompareTag("Enemy") || other.CompareTag("Damage"))
+        else if (other.CompareTag("Damage"))
         {
-            Destroy(other.gameObject); ;
+            Destroy(other.gameObject);
             GameManager.Instance.LiveDecrease();
+        }
+        else if (other.CompareTag("Weapon"))
+        {
+            GameManager.Instance.LiveDecrease();
+            // other.gameObject.SetActive(false);
+            other.gameObject.tag = "Untagged";
         }
     }
 

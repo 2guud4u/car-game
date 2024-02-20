@@ -9,6 +9,9 @@ TagManager:
   - MeleeSoldier
   - Health
   - Enemy
+  - Damage
+  - Soul
+  - Weapon
   layers:
   - Default
   - TransparentFX

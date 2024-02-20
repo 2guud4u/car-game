@@ -4,6 +4,8 @@ using UnityEngine.AI;
 
 public class soldierScript : enemyScript
 {   
+    [SerializeField] float timeSwordIsDrawn;
+
     public override void AttackPlayer()
     {
         //Make sure enemy doesn't move
@@ -14,15 +16,33 @@ public class soldierScript : enemyScript
         if (!alreadyAttacked)
         {
             ///Attack code here
-            Rigidbody rb = Instantiate(projectile, transform.position + transform.forward * 2, Quaternion.identity).GetComponent<Rigidbody>();
+            // Rigidbody rb = Instantiate(projectile, transform.position + transform.forward * 2, Quaternion.identity).GetComponent<Rigidbody>();
             // rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             // rb.AddForce(transform.up * 8f, ForceMode.Impulse);
             ///End of attack code
+            DrawSword();
 
             alreadyAttacked = true;
+            
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            Invoke(nameof(HideSword), timeSwordIsDrawn);
         }
         //turnOnRagdoll();
         
+    }
+
+    public void DrawSword()
+    {
+        projectile.tag = "Weapon";
+        projectile.SetActive(true);
+    }
+
+    public void HideSword()
+    {
+        projectile.SetActive(false);
+    }
+
+    void OnDestroy() {
+        Destroy(projectile);
     }
 }

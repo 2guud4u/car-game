@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     {
         if(transform.position.y < -15)
         {
-            GameManager.Instance.GameOver();
+            GameManager.Instance.GameOver("You fell!");
         }
     }
 

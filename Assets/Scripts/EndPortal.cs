@@ -7,9 +7,10 @@ public class EndPortal : MonoBehaviour
     
     void Update()
     {
-        if (GameManager.Instance._soul >= GameManager.Instance.soulCondition){
+        if (GameManager.Instance._soul >= GameManager.Instance.soulCondition && !_open){
             transform.localScale = portalSize;
             _open = true;
+            GameManager.Instance.PortalOpened();
         }
         if (GameManager.Instance._soul < GameManager.Instance.soulCondition){
             transform.localScale = new Vector3(0f, 0f, 0f);

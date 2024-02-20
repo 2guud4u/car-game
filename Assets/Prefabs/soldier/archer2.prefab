@@ -984,10 +984,11 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
-  health: 0
+  health: 10
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 0
-  timeBetweenAttacks: 2
+  timeBeforeFirstAttack: 1
+  timeBetweenAttacks: 4
   alreadyAttacked: 0
   projectile: {fileID: 1182356630499007861, guid: 492a2001658c94204a70d4f9976bf16b, type: 3}
   sightRange: 100
