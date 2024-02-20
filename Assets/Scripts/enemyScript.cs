@@ -37,7 +37,7 @@ public class enemyScript : MonoBehaviour
     public GameObject enemyObj;
 
     //player velocity obj
-    public Rigidbody playerVelocity;
+    private Rigidbody playerVelocity;
     public GameObject soulPrefab;
     
     bool firstAttack = true;
