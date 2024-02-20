@@ -350,6 +350,7 @@ public class PrometeoCarController : MonoBehaviour
           TurnRight();
         }
         if(isPressingSpace){
+          //carRigidbody.AddForce(transform.forward * 1000 * Time.fixedDeltaTime);
           CancelInvoke("DecelerateCar");
           deceleratingCar = false;
           Handbrake();
