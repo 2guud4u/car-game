@@ -32,6 +32,10 @@ public class Health : MonoBehaviour
             // other.gameObject.SetActive(false);
             other.gameObject.tag = "Untagged";
         }
+        else if (other.CompareTag("BallistaBolt")){
+            GameManager.Instance.LiveDecrease();
+            
+        }
     }
 
 }

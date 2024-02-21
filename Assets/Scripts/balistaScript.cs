@@ -27,7 +27,7 @@ public class balistaScript : enemyScript
                 Vector3 directionToAim = (player.position + Vector3.down * 2.5f) - rb.position;
 
             // Apply force in the direction of the player
-                rb.AddForce(directionToAim.normalized * 300f, ForceMode.Impulse);
+                rb.AddForce(directionToAim.normalized * 1200f, ForceMode.Impulse);
                 alreadyAttacked = true;
                 Invoke(nameof(ResetAttack), timeBetweenAttacks);
             }
