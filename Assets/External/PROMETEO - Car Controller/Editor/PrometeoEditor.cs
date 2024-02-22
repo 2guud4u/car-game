@@ -46,6 +46,8 @@ public class PrometeoEditor : Editor{
   private SerializedProperty useEffects;
   private SerializedProperty RLWParticleSystem;
   private SerializedProperty RRWParticleSystem;
+  private SerializedProperty LVParticleSystem;
+  private SerializedProperty RVParticleSystem;
   private SerializedProperty RLWTireSkid;
   private SerializedProperty RRWTireSkid;
   //
@@ -103,8 +105,10 @@ public class PrometeoEditor : Editor{
     RRWParticleSystem = SO.FindProperty("RRWParticleSystem");
     RLWTireSkid = SO.FindProperty("RLWTireSkid");
     RRWTireSkid = SO.FindProperty("RRWTireSkid");
+    LVParticleSystem = SO.FindProperty("LVParticleSystem");
+    RVParticleSystem = SO.FindProperty("RVParticleSystem");
 
-    useUI = SO.FindProperty("useUI");
+        useUI = SO.FindProperty("useUI");
     carSpeedText = SO.FindProperty("carSpeedText");
 
     useSounds = SO.FindProperty("useSounds");
@@ -184,7 +188,11 @@ public class PrometeoEditor : Editor{
         EditorGUILayout.PropertyField(RLWTireSkid, new GUIContent("Rear Left Trail Renderer: "));
         EditorGUILayout.PropertyField(RRWTireSkid, new GUIContent("Rear Right Trail Renderer: "));
 
-    EditorGUILayout.EndToggleGroup();
+
+        EditorGUILayout.PropertyField(LVParticleSystem, new GUIContent("Left Vent: "));
+        EditorGUILayout.PropertyField(RVParticleSystem, new GUIContent("Right Vent: "));
+
+        EditorGUILayout.EndToggleGroup();
 
     //
     //
