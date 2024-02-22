@@ -128,7 +128,8 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
-  health: 10
+  totalHealth: 10
+  thresholdDamageVelocity: 5
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 0
   timeBeforeFirstAttack: 1
@@ -142,7 +143,6 @@ MonoBehaviour:
   RagdollRoot: {fileID: 5612254653717569823}
   torsoRb: {fileID: 8282774601001532865}
   enemyObj: {fileID: 7837427047887270170, guid: e20a9cadb311a4246bc97a0d79ac59b3, type: 3}
-  playerVelocity: {fileID: 0}
   soulPrefab: {fileID: 8165119391464487357, guid: 4b821a88424cb4dab80c119a2262a410, type: 3}
 --- !u!1 &3428857686667162400
 GameObject:
