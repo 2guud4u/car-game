@@ -334,10 +334,10 @@ public class PrometeoCarController : MonoBehaviour
         bool isPressingD = movementInput.x > 0;
 
         if(isPressingW){
-            Debug.Log(carSpeed);
+            // Debug.Log(carSpeed);
             if (Keyboard.current.shiftKey.wasPressedThisFrame && !isAcclerating)
             {
-                Debug.Log("accelerate");
+                // Debug.Log("accelerate");
                 maxSpeed *= 2;
                 accelerationMultiplier *= 2;
                 isAcclerating = true;
@@ -678,7 +678,7 @@ public class PrometeoCarController : MonoBehaviour
       //If the forces aplied to the rigidbody in the 'x' asis are greater than
       //3f, it means that the car lost its traction, then the car will start emitting particle systems.
       if(Mathf.Abs(localVelocityX) > 0.8f){
-        Debug.Log("Able to drift");
+        // Debug.Log("Able to drift");
         isDrifting = true;
       }else{
         isDrifting = false;

@@ -10,7 +10,8 @@ public class enemyScript : MonoBehaviour
 
     public LayerMask whatIsGround, whatIsPlayer;
 
-    public float health;
+    public float totalHealth;
+    public float thresholdDamageVelocity;
 
     //Patroling
     public Vector3 walkPoint;
@@ -40,11 +41,14 @@ public class enemyScript : MonoBehaviour
     private Rigidbody playerVelocity;
     public GameObject soulPrefab;
     
+
+    float health;
     bool firstAttack = true;
     bool soulDropped = false;
 
     private void Awake()
     {
+        health = totalHealth;
         player = GameObject.Find("Body").transform;
         agent = GetComponent<NavMeshAgent>();
         rbs = RagdollRoot.GetComponentsInChildren<Rigidbody>();
@@ -124,10 +128,10 @@ public class enemyScript : MonoBehaviour
         alreadyAttacked = false;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         health -= damage;
-
+        // Debug.Log(health + "/" + totalHealth);
     }
 
 
@@ -172,10 +176,11 @@ public class enemyScript : MonoBehaviour
             Rigidbody otherRb = other.gameObject.GetComponent<Rigidbody>();
             //Debug.Log("Player has entered the enemy's trigger");
             // Debug.Log(playerVelocity.velocity.magnitude);
-            if(playerVelocity.velocity.magnitude > 5)
+            if(playerVelocity.velocity.magnitude > thresholdDamageVelocity)
             {
                 // Debug.Log("Player has entered the enemy's trigger");
-                TakeDamage(5);
+                float speedBasedDamage = (thresholdDamageVelocity / 2) + Mathf.Log(playerVelocity.velocity.magnitude - (thresholdDamageVelocity / 2) + 1);
+                TakeDamage(speedBasedDamage);
 
                 if(health <= 0 && !soulDropped) {
                     soulDropped = true;
