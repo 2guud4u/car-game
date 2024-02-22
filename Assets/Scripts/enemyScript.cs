@@ -165,7 +165,7 @@ public class enemyScript : MonoBehaviour
     {
         this.health = health;
     }
-    public void OnTriggerEnter(Collider other)
+    public virtual void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player" || other.gameObject.tag == "Damage")
         {
@@ -195,5 +195,10 @@ public class enemyScript : MonoBehaviour
         }
         
     }
-
+    public Rigidbody[] GetRbs() {
+        return rbs;
+    }
+    public Rigidbody GetPlayerRigidbody() {
+        return playerVelocity;
+    }
 }
