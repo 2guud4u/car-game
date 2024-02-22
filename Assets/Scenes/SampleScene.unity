@@ -2892,6 +2892,7 @@ GameObject:
   m_Component:
   - component: {fileID: 911829357}
   - component: {fileID: 911829356}
+  - component: {fileID: 911829360}
   - component: {fileID: 911829358}
   - component: {fileID: 911829359}
   m_Layer: 0
@@ -2913,11 +2914,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bb4d5f5d3626874d8a6f7913443395d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soulText: {fileID: 186027445}
-  timerText: {fileID: 611470746}
-  gameOverScreen: {fileID: 903371996}
-  gameWinScreen: {fileID: 1366244114}
-  portalWarningScreen: {fileID: 653595586}
   heartSprite: {fileID: 21300000, guid: 3c00754ac11e85346a1ed326640b8546, type: 3}
   soulCondition: 10
   _levelTime: 240
@@ -2965,6 +2961,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnRate: 15
   enemyPrefab: {fileID: 525178914}
+--- !u!114 &911829360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911829355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f1c2e3b9522e4399bc480238fd2384b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soulText: {fileID: 186027445}
+  timerText: {fileID: 611470746}
+  gameOverText: {fileID: 169620283}
+  gameOverScreen: {fileID: 903371996}
+  gameWinScreen: {fileID: 1366244114}
+  portalWarningScreen: {fileID: 653595586}
+  heartSprite: {fileID: 0}
 --- !u!1 &923576666
 GameObject:
   m_ObjectHideFlags: 0

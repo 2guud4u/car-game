@@ -5,13 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public TextMeshProUGUI soulText;
-    public TextMeshProUGUI timerText;
-    public GameObject gameOverScreen;
-    public GameObject gameWinScreen;
-    public GameObject portalWarningScreen;
-    public Sprite heartSprite;
-
     public static GameManager Instance;
     public int soulCondition = 10;
     public int _levelTime = 100;
@@ -30,16 +23,16 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1;
-        soulText.text = _soul + "/" + soulCondition;
+        UIManager.Instance.UpdateSoulText(_soul, soulCondition);
     }
 
     void Update()
     {
-       int currTime = _levelTime - Mathf.FloorToInt(Time.timeSinceLevelLoad);
-       timerText.text = "Time: " + currTime;
-       if (currTime <= 0){
-        GameOver("Time's up!");
-       }
+        int currTime = _levelTime - Mathf.FloorToInt(Time.timeSinceLevelLoad);
+        UIManager.Instance.SetTimer(currTime);
+        if(currTime <= 0){
+            GameOver("Time's up!");
+        }
     }
 
     public void LiveIncrease()
@@ -96,40 +89,30 @@ public class GameManager : MonoBehaviour
     public void ScoreUpdate()
     {
         _soul++;
-        // soulText.text = "Score: " + _soul;
-        soulText.text = _soul + "/" + soulCondition;
+        UIManager.Instance.UpdateSoulText(_soul, soulCondition);
     }
 
     public void GameOver(string reason)
     {
-        gameOverScreen.SetActive(true);
-        TextMeshProUGUI overText = GameObject.Find("OverText").GetComponent<TextMeshProUGUI>();
-        overText.text = reason;
-
-        // gameOverScreen.getChild
+        UIManager.Instance.MakeVisible("GameOver", true);
+        UIManager.Instance.SetGameOverReason(reason);
         Time.timeScale = 0;
     }
 
     public void GameWin()
     {
-        gameWinScreen.SetActive(true);
+        UIManager.Instance.MakeVisible("GameWin", true);
         Time.timeScale = 0;
     }
 
     public void PortalOpened()
     {
-        portalWarningScreen.SetActive(true);
-        Invoke("HideWarningPortal", 4f);
-    }
-
-    public void HideWarningPortal()
-    {
-        portalWarningScreen.SetActive(false);
+        UIManager.Instance.MakeVisible("WarningPortal", true);
     }
 
     public void EndLevel()
     {
-        gameOverScreen.SetActive(true);
+        UIManager.Instance.MakeVisible("GameWin", true);
         Time.timeScale = 0;
     }
 
