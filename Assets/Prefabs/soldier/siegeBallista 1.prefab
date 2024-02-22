@@ -630,14 +630,15 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
-  health: 0
+  totalHealth: 0
+  thresholdDamageVelocity: 0
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 0
   timeBeforeFirstAttack: 0
   timeBetweenAttacks: 6
   alreadyAttacked: 1
   projectile: {fileID: 1913830896440844453, guid: 048ea57898fb5445a84f95636c795b42, type: 3}
-  sightRange: 10000
+  sightRange: 1000
   attackRange: 200
   playerInSightRange: 1
   playerInAttackRange: 1
