@@ -21,7 +21,7 @@ public class PrometeoCarController : MonoBehaviour
       [Space(20)]
       //[Header("CAR SETUP")]
       [Space(10)]
-      [Range(20, 300)]
+      [Range(20, 600)]
       public int maxSpeed = 90; //The maximum speed that the car can reach in km/h.
       [Range(10, 120)]
       public int maxReverseSpeed = 45; //The maximum speed that the car can reach while going on reverse in km/h.
@@ -365,7 +365,7 @@ public class PrometeoCarController : MonoBehaviour
           deceleratingCar = false;
           Handbrake();
         }
-        if(isPressingSpace){
+        if(Keyboard.current.spaceKey.wasReleasedThisFrame){
           RecoverTraction();
         }
         if(!isPressingS && !isPressingW){
@@ -668,8 +668,12 @@ public class PrometeoCarController : MonoBehaviour
       // drifting value has been reached. It will increase smoothly by using the variable Time.deltaTime.
       driftingAxis = driftingAxis + (Time.deltaTime);
       float secureStartingPoint = driftingAxis * FLWextremumSlip * handbrakeDriftMultiplier;
+        FLwheelFriction.stiffness = 1.5f;
+        FRwheelFriction.stiffness = 1.5f;
+        RRwheelFriction.stiffness = 1.5f;
+        RLwheelFriction.stiffness = 1.5f;
 
-      if(secureStartingPoint < FLWextremumSlip){
+      if (secureStartingPoint < FLWextremumSlip){
         driftingAxis = FLWextremumSlip / (FLWextremumSlip * handbrakeDriftMultiplier);
       }
       if(driftingAxis > 1f){
@@ -754,16 +758,21 @@ public class PrometeoCarController : MonoBehaviour
 
     // This function is used to recover the traction of the car when the user has stopped using the car's handbrake.
     public void RecoverTraction(){
-      isTractionLocked = false;
+        isTractionLocked = false;
       driftingAxis = driftingAxis - (Time.deltaTime / 1.5f);
       if(driftingAxis < 0f){
         driftingAxis = 0f;
       }
 
-      //If the 'driftingAxis' value is not 0f, it means that the wheels have not recovered their traction.
-      //We are going to continue decreasing the sideways friction of the wheels until we reach the initial
-      // car's grip.
-      if(FLwheelFriction.extremumSlip > FLWextremumSlip){
+        FLwheelFriction.stiffness = 2f;
+        FRwheelFriction.stiffness = 2f;
+        RLwheelFriction.stiffness = 2f;
+        RRwheelFriction.stiffness = 2f;
+
+        //If the 'driftingAxis' value is not 0f, it means that the wheels have not recovered their traction.
+        //We are going to continue decreasing the sideways friction of the wheels until we reach the initial
+        // car's grip.
+        if (FLwheelFriction.extremumSlip > FLWextremumSlip){
         FLwheelFriction.extremumSlip = FLWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
         frontLeftCollider.sidewaysFriction = FLwheelFriction;
 
@@ -791,8 +800,9 @@ public class PrometeoCarController : MonoBehaviour
         RRwheelFriction.extremumSlip = RRWextremumSlip;
         rearRightCollider.sidewaysFriction = RRwheelFriction;
 
+
         driftingAxis = 0f;
-      }
+    }
     }
 
     
