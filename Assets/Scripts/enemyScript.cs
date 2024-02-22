@@ -167,7 +167,7 @@ public class enemyScript : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Damage")
         {
             Rigidbody otherRb = other.gameObject.GetComponent<Rigidbody>();
             //Debug.Log("Player has entered the enemy's trigger");
@@ -193,6 +193,7 @@ public class enemyScript : MonoBehaviour
             }
             
         }
+        
     }
 
 }

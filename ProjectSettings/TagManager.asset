@@ -12,6 +12,7 @@ TagManager:
   - Damage
   - Soul
   - Weapon
+  - BallistaBolt
   layers:
   - Default
   - TransparentFX
