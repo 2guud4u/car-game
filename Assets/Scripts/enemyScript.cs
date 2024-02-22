@@ -167,12 +167,18 @@ public class enemyScript : MonoBehaviour
     }
     public virtual void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Damage")
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Damage" || other.gameObject.tag == "Projectile")
         {
             Rigidbody otherRb = other.gameObject.GetComponent<Rigidbody>();
-            //Debug.Log("Player has entered the enemy's trigger");
-            // Debug.Log(playerVelocity.velocity.magnitude);
-            if(playerVelocity.velocity.magnitude > 5)
+            Vector3 RbVelocity;
+            if(other.gameObject.tag == "Player"){
+                RbVelocity = playerVelocity.velocity;
+            }
+            else{
+                RbVelocity = otherRb.velocity;
+            }
+
+            if(RbVelocity.magnitude > 5)
             {
                 // Debug.Log("Player has entered the enemy's trigger");
                 TakeDamage(5);
@@ -188,9 +194,10 @@ public class enemyScript : MonoBehaviour
                 // Normalize the direction to ensure consistent force magnitude
                 awayDirection.Normalize();
 
-                rb.AddForce(awayDirection * 10, ForceMode.Impulse);
+                rb.AddForce(awayDirection * RbVelocity.magnitude, ForceMode.Impulse);
                 
             }
+
             
         }
         

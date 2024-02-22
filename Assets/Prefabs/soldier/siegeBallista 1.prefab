@@ -638,7 +638,7 @@ MonoBehaviour:
   alreadyAttacked: 1
   projectile: {fileID: 1913830896440844453, guid: 048ea57898fb5445a84f95636c795b42, type: 3}
   sightRange: 10000
-  attackRange: 300
+  attackRange: 200
   playerInSightRange: 1
   playerInAttackRange: 1
   RagdollRoot: {fileID: 8927013964166087080}
@@ -686,8 +686,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 8.366683, y: 7.6614566, z: 12.420366}
+  m_Center: {x: 0.08488626, y: 4.0000005, z: -1.6232094}
 --- !u!54 &1105344126411814828
 Rigidbody:
   m_ObjectHideFlags: 0

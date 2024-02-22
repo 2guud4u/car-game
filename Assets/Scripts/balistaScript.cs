@@ -24,11 +24,11 @@ public class balistaScript : enemyScript
                 Rigidbody rb = Instantiate(projectile, transform.position + transform.forward * 2 + Vector3.down*3f, rotationToPlayer).GetComponent<Rigidbody>();
                 // rb.AddForce(transform.forward * 100f, ForceMode.Impulse);
                 // rb.AddForce(transform.up * 8f, ForceMode.Impulse);
-                Vector3 aimRandomness = new Vector3(Random.Range(-3f, -3f), Random.Range(-3f, 3f), Random.Range(-3f, 3f));
-                Vector3 directionToAim = (aimRandomness +player.position + Vector3.down * 2.5f) - rb.position;
+                Vector3 aimRandomness = new Vector3(Random.Range(-4f, -4f), Random.Range(-4f, 4f), Random.Range(-4f, 4f));
+                Vector3 directionToAim = (aimRandomness +player.position + Vector3.down * 1.5f) - rb.position;
 
             // Apply force in the direction of the player
-                rb.AddForce(directionToAim.normalized * 1200f, ForceMode.Impulse);
+                rb.AddForce(directionToAim.normalized * 900f, ForceMode.Impulse);
                 alreadyAttacked = true;
                 Invoke(nameof(ResetAttack), timeBetweenAttacks);
             }
