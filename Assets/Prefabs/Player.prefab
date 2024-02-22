@@ -1215,14 +1215,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0fefceefe666bb4682b272ec8c5bdd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 190
+  maxSpeed: 150
   maxReverseSpeed: 45
-  accelerationMultiplier: 6
+  accelerationMultiplier: 10
   maxSteeringAngle: 35
   steeringSpeed: 0.5
   brakeForce: 600
-  decelerationMultiplier: 2
-  handbrakeDriftMultiplier: 55
+  decelerationMultiplier: 10
+  handbrakeDriftMultiplier: 56
   bodyMassCenter: {x: 0, y: 0, z: 0}
   frontLeftMesh: {fileID: 548325600501755091}
   frontLeftCollider: {fileID: 1289891234961462456}

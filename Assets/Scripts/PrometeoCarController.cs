@@ -21,7 +21,7 @@ public class PrometeoCarController : MonoBehaviour
       [Space(20)]
       //[Header("CAR SETUP")]
       [Space(10)]
-      [Range(20, 190)]
+      [Range(20, 300)]
       public int maxSpeed = 90; //The maximum speed that the car can reach in km/h.
       [Range(10, 120)]
       public int maxReverseSpeed = 45; //The maximum speed that the car can reach while going on reverse in km/h.
@@ -145,6 +145,7 @@ public class PrometeoCarController : MonoBehaviour
       float localVelocityX;
       bool deceleratingCar;
       bool touchControlsSetup = false;
+      bool isAcclerating;
       /*
       The following variables are used to store information about sideways friction of the wheels (such as
       extremumSlip,extremumValue, asymptoteSlip, asymptoteValue and stiffness). We change this values to
@@ -291,9 +292,9 @@ public class PrometeoCarController : MonoBehaviour
       if (useTouchControls && touchControlsSetup){
 
         if(throttlePTI.buttonPressed){
-          CancelInvoke("DecelerateCar");
-          deceleratingCar = false;
-          GoForward();
+            CancelInvoke("DecelerateCar");
+            deceleratingCar = false;
+            GoForward();
         }
         if(reversePTI.buttonPressed){
           CancelInvoke("DecelerateCar");
@@ -333,9 +334,18 @@ public class PrometeoCarController : MonoBehaviour
         bool isPressingD = movementInput.x > 0;
 
         if(isPressingW){
-          CancelInvoke("DecelerateCar");
-          deceleratingCar = false;
-          GoForward();
+            Debug.Log(carSpeed);
+            if (Keyboard.current.shiftKey.wasPressedThisFrame && !isAcclerating)
+            {
+                Debug.Log("accelerate");
+                maxSpeed *= 2;
+                accelerationMultiplier *= 2;
+                isAcclerating = true;
+                Invoke("ResetSpeed", 3f);
+            }
+            CancelInvoke("DecelerateCar");
+            deceleratingCar = false;
+            GoForward();
         }
         if(isPressingS){
           CancelInvoke("DecelerateCar");
@@ -375,6 +385,13 @@ public class PrometeoCarController : MonoBehaviour
       // We call the method AnimateWheelMeshes() in order to match the wheel collider movements with the 3D meshes of the wheels.
       AnimateWheelMeshes();
 
+    }
+
+    public void ResetSpeed()
+    {
+        maxSpeed /= 2;
+        accelerationMultiplier /= 2;
+        isAcclerating = false;
     }
 
     // This method converts the car speed data from float to string, and then set the text of the UI carSpeedText with this value.
