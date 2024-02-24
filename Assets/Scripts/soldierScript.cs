@@ -16,10 +16,6 @@ public class soldierScript : enemyScript
         if (!alreadyAttacked)
         {
             ///Attack code here
-            // Rigidbody rb = Instantiate(projectile, transform.position + transform.forward * 2, Quaternion.identity).GetComponent<Rigidbody>();
-            // rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            // rb.AddForce(transform.up * 8f, ForceMode.Impulse);
-            ///End of attack code
             DrawSword();
 
             alreadyAttacked = true;
@@ -34,12 +30,14 @@ public class soldierScript : enemyScript
     public void DrawSword()
     {
         projectile.tag = "Weapon";
-        projectile.SetActive(true);
+        // projectile.SetActive(true);
+        AnimateAttack();
     }
 
     public void HideSword()
     {
-        projectile.SetActive(false);
+        projectile.tag = "Untagged";
+        // projectile.SetActive(false);
     }
 
     void OnDestroy() {
