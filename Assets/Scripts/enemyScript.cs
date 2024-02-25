@@ -47,7 +47,6 @@ public class enemyScript : MonoBehaviour
     bool soulDropped = false;
 
     public AudioClip damageEnemySound;
-    public AudioClip damageCarSound;
     public AudioSource _audioSource;
 
     private void Awake()

@@ -15,12 +15,16 @@ public class GameManager : MonoBehaviour
 
     Rigidbody playerRigidbody;
 
+    public AudioClip winSound;
+    private AudioSource _audioSource;
+
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
         }
+        _audioSource = GetComponent<AudioSource>();
     }
 
     void Start()
@@ -108,6 +112,8 @@ public class GameManager : MonoBehaviour
     {
         UIManager.Instance.MakeVisible("GameWin", true);
         Time.timeScale = 0;
+        MusicManager.Instance.StopAudio();
+        _audioSource.PlayOneShot(winSound);
     }
 
     public void PortalOpened()

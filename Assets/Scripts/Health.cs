@@ -2,10 +2,15 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
 
+    public AudioClip swordSound;
+    public AudioClip arrowSound;
+    private AudioSource _audioSource;
+
+    // Start is called before the first frame update
+    private void Start()
+    {
+        _audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -25,16 +30,18 @@ public class Health : MonoBehaviour
         {
             Destroy(other.gameObject);
             GameManager.Instance.LiveDecrease();
+            _audioSource.PlayOneShot(swordSound);
         }
         else if (other.CompareTag("Weapon"))
         {
             GameManager.Instance.LiveDecrease();
             // other.gameObject.SetActive(false);
             other.gameObject.tag = "Untagged";
+            _audioSource.PlayOneShot(swordSound);
         }
         else if (other.CompareTag("BallistaBolt")){
             GameManager.Instance.LiveDecrease();
-            
+            _audioSource.PlayOneShot(arrowSound);
         }
     }
 
