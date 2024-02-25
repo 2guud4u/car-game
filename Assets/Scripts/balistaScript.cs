@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class balistaScript : enemyScript
 {
-    // Start is called before the first frame update
-
-
     // Update is called once per frame
     public override void AttackPlayer()
         {
@@ -51,6 +48,7 @@ public class balistaScript : enemyScript
                 // Normalize the direction to ensure consistent force magnitude
                 awayDirection.Normalize();
 
+                _audioSource.PlayOneShot(damageEnemySound);
                 
                 BreakApart(awayDirection, GetPlayerRigidbody().velocity.magnitude);
             }

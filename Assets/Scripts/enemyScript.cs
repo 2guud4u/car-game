@@ -46,6 +46,10 @@ public class enemyScript : MonoBehaviour
     bool firstAttack = true;
     bool soulDropped = false;
 
+    public AudioClip damageEnemySound;
+    public AudioClip damageCarSound;
+    public AudioSource _audioSource;
+
     private void Awake()
     {
         health = totalHealth;
@@ -54,6 +58,7 @@ public class enemyScript : MonoBehaviour
         rbs = RagdollRoot.GetComponentsInChildren<Rigidbody>();
         rb = GetComponent<Rigidbody>();
         playerVelocity = GameObject.Find("Player").GetComponent<Rigidbody>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -177,6 +182,7 @@ public class enemyScript : MonoBehaviour
             Vector3 RbVelocity;
             if(other.gameObject.tag == "Player"){
                 RbVelocity = playerVelocity.velocity;
+                _audioSource.PlayOneShot(damageEnemySound);
             }
             else{
                 RbVelocity = otherRb.velocity;
