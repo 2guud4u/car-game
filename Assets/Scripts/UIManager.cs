@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 {
     public TextMeshProUGUI soulText;
     public TextMeshProUGUI timerText;
+    public TextMeshProUGUI speedText;
     public TextMeshProUGUI gameOverText;
     public GameObject gameOverScreen;
     public GameObject gameWinScreen;
@@ -24,7 +25,12 @@ public class UIManager : MonoBehaviour
 
     public void SetTimer(int time)
     {
-        timerText.text = "Time: " + time;
+        timerText.text = "Time Left: " + time;
+    }
+
+    public void SetSpeedometer(float speed)
+    {
+        speedText.text = (int) speed + " MPH";
     }
     
     public void UpdateSoulText(int currentSouls, int soulCondition)

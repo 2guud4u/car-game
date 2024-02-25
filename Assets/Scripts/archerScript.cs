@@ -7,7 +7,6 @@ public class archerScript : enemyScript
     public override void AttackPlayer()
     {
         //Make sure enemy doesn't move
-        print(agent.enabled);
         agent.SetDestination(transform.position);
 
         transform.LookAt(player);
