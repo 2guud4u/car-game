@@ -3305,7 +3305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 544841040}
   soulCondition: 10
-  _levelTime: 10
+  _levelTime: 120
   _soul: 0
   winSound: {fileID: 8300000, guid: 9dcb8342575de014385c916bc36f2cbb, type: 3}
   loseSound: {fileID: 8300000, guid: a291bcde85e8dc644970188d88745e66, type: 3}
