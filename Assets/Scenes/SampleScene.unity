@@ -1812,7 +1812,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 78f4925c70a2b424393f2d478207f2df, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1918,7 +1918,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3305,9 +3305,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 544841040}
   soulCondition: 10
-  _levelTime: 240
+  _levelTime: 10
   _soul: 0
   winSound: {fileID: 8300000, guid: 9dcb8342575de014385c916bc36f2cbb, type: 3}
+  loseSound: {fileID: 8300000, guid: a291bcde85e8dc644970188d88745e66, type: 3}
 --- !u!4 &911829357
 Transform:
   m_ObjectHideFlags: 0
@@ -3383,13 +3384,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cb66435da4f0ab441b1fd24544c3e337, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.651
+  m_Volume: 0.302
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 79
+  Priority: 76
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -5297,6 +5298,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1549785665}
     m_Modifications:
+    - target: {fileID: 311025917743816579, guid: 552e2f4de388f3a48a5ef5f2d47fd334, type: 3}
+      propertyPath: crashSound
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3816837551861723546, guid: 552e2f4de388f3a48a5ef5f2d47fd334, type: 3}
       propertyPath: m_Name
       value: Tower (4)
@@ -7327,9 +7332,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 31eda9cfac5ab7246809cb8f1327577c, type: 3}
     - target: {fileID: 7072663419360656089, guid: 274c289bb4bfd4ff88d84b6408515d43, type: 3}
+      propertyPath: heartSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e72d36e9dcf30894eb7c7ccbbc51e209, type: 3}
+    - target: {fileID: 7072663419360656089, guid: 274c289bb4bfd4ff88d84b6408515d43, type: 3}
       propertyPath: swordSound
       value: 
-      objectReference: {fileID: 8300000, guid: 78f4925c70a2b424393f2d478207f2df, type: 3}
+      objectReference: {fileID: 8300000, guid: 006a638c89e0c7e4e9bf2a62d09186c0, type: 3}
     - target: {fileID: 9123778990672274763, guid: 274c289bb4bfd4ff88d84b6408515d43, type: 3}
       propertyPath: m_Name
       value: Player

@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     Rigidbody playerRigidbody;
 
     public AudioClip winSound;
+    public AudioClip loseSound;
     private AudioSource _audioSource;
 
     private void Awake()
@@ -106,6 +107,9 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.MakeVisible("GameOver", true);
         UIManager.Instance.SetGameOverReason(reason);
         Time.timeScale = 0;
+        // this isn't working for some reason
+        //MusicManager.Instance.StopAudio();
+        //_audioSource.PlayOneShot(winSound);
     }
 
     public void GameWin()

@@ -5,10 +5,20 @@ public class Topple : MonoBehaviour
     public float toppleForce = 100f;
     public float toppleTorque = 100f;
 
+    public AudioClip crashSound;
+    private AudioSource _audioSource;
+
+    // Start is called before the first frame update
+    private void Awake()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            _audioSource.PlayOneShot(crashSound);
             // Debug.Log("Topple");
             Rigidbody rb = GetComponent<Rigidbody>();
             

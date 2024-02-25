@@ -5,10 +5,11 @@ public class Health : MonoBehaviour
 
     public AudioClip swordSound;
     public AudioClip arrowSound;
+    public AudioClip heartSound;
     private AudioSource _audioSource;
 
     // Start is called before the first frame update
-    private void Start()
+    private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
     }
@@ -25,6 +26,8 @@ public class Health : MonoBehaviour
         {
             Destroy(other.gameObject);
             GameManager.Instance.LiveIncrease();
+            // should we play if already at full hearts?
+            _audioSource.PlayOneShot(heartSound);
         }
         else if (other.CompareTag("Damage"))
         {
