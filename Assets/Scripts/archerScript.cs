@@ -13,6 +13,8 @@ public class archerScript : enemyScript
 
         if (!alreadyAttacked)
         {
+            AnimateAttack();
+
             Vector3 attackRandomness = new Vector3(Random.Range(-3f, 3f), Random.Range(-3f, 3f), Random.Range(-3f, 3f));
             ///Attack code here
             Rigidbody rb = Instantiate(projectile, transform.position + transform.forward * 2, Quaternion.identity).GetComponent<Rigidbody>();

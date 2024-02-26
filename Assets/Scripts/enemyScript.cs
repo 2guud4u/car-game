@@ -1,4 +1,5 @@
 
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -34,6 +35,7 @@ public class enemyScript : MonoBehaviour
     private Rigidbody rb;
 
     public Rigidbody torsoRb;
+    private Animator animator;
 
     public GameObject enemyObj;
 
@@ -54,6 +56,7 @@ public class enemyScript : MonoBehaviour
         rbs = RagdollRoot.GetComponentsInChildren<Rigidbody>();
         rb = GetComponent<Rigidbody>();
         playerVelocity = GameObject.Find("Player").GetComponent<Rigidbody>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -80,6 +83,8 @@ public class enemyScript : MonoBehaviour
                 else { AttackPlayer(); }
             }
         }
+
+        Animate();
     }
 
     private void Patroling()
@@ -115,14 +120,9 @@ public class enemyScript : MonoBehaviour
 
     public virtual void AttackPlayer()
     {
-        if (!alreadyAttacked)
-        {
-            ///Attack code here
-
-            alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
-        }
+        AnimateAttack();
     }
+
     public void ResetAttack()
     {
         alreadyAttacked = false;
@@ -142,12 +142,13 @@ public class enemyScript : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, sightRange);
     }
-    private void turnOnRagdoll()
+    private void turnOnRagdoll(Vector3 force)
     {
         agent.enabled = false;
-        foreach (Rigidbody rb in rbs)
+        animator.enabled = false;
+        foreach (Rigidbody limbRb in rbs)
         {
-            rb.isKinematic = false;
+            limbRb.isKinematic = false;
         }
         Invoke(nameof(turnOffRagdoll), 8f);
     }
@@ -194,12 +195,16 @@ public class enemyScript : MonoBehaviour
                     Invoke("DropSoul", 1f);
                 }
 
-                turnOnRagdoll();
                 Vector3 awayDirection = transform.position - other.transform.position;
-
-                // Normalize the direction to ensure consistent force magnitude
                 awayDirection.Normalize();
 
+                turnOnRagdoll(awayDirection * RbVelocity.magnitude);
+                // Vector3 awayDirection = transform.position - other.transform.position;
+
+                // Normalize the direction to ensure consistent force magnitude
+                // awayDirection.Normalize();
+
+                rb.isKinematic = false;
                 rb.AddForce(awayDirection * RbVelocity.magnitude, ForceMode.Impulse);
                 
             }
@@ -213,5 +218,15 @@ public class enemyScript : MonoBehaviour
     }
     public Rigidbody GetPlayerRigidbody() {
         return playerVelocity;
+    }
+
+    public void Animate()
+    {
+        animator.SetBool("isWalking", walkPointSet);
+    }
+
+    public void AnimateAttack()
+    {
+        animator.SetBool("isAttacking", true);
     }
 }
