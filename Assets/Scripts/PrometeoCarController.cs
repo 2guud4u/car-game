@@ -77,6 +77,8 @@ public class PrometeoCarController : MonoBehaviour
       // The following particle systems are used as tire smoke when the car drifts.
       public ParticleSystem RLWParticleSystem;
       public ParticleSystem RRWParticleSystem;
+      public ParticleSystem LVParticleSystem;
+      public ParticleSystem RVParticleSystem;
 
       [Space(10)]
       // The following trail renderers are used as tire skids when the car loses traction.
@@ -337,7 +339,9 @@ public class PrometeoCarController : MonoBehaviour
             // Debug.Log(carSpeed);
             if (Keyboard.current.shiftKey.wasPressedThisFrame && !isAcclerating)
             {
-                // Debug.Log("accelerate");
+                    // Debug.Log("accelerate");
+                LVParticleSystem.Play();
+                RVParticleSystem.Play();
                 maxSpeed *= 2;
                 accelerationMultiplier *= 2;
                 isAcclerating = true;
