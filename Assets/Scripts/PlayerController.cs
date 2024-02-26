@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public AudioClip collectSoul;
+    private AudioSource _audioSource;
+    // Start is called before the first frame update
+    private void Awake()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +32,7 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject.transform.parent.gameObject);
             collision.gameObject.transform.parent.gameObject.SetActive(false);
             GameManager.Instance.ScoreUpdate();
+            _audioSource.PlayOneShot(collectSoul);
         }
     }
 }
