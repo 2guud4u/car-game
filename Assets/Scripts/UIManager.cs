@@ -27,6 +27,7 @@ public class UIManager : MonoBehaviour
     {
         timerText.enabled = true;
         soulText.enabled = true;
+        speedText.enabled = true;
         soul.SetActive(true);
     }
 

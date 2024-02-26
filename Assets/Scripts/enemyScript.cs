@@ -84,7 +84,7 @@ public class enemyScript : MonoBehaviour
             }
         }
 
-        Animate();
+        if(animator != null) { Animate(); }
     }
 
     private void Patroling()
@@ -154,6 +154,7 @@ public class enemyScript : MonoBehaviour
     }
     private void turnOffRagdoll()
     {
+        animator.enabled = true;
         if(health > 0){
             GameObject enemy = Instantiate(enemyObj, torsoRb.transform.position, Quaternion.identity);
             enemy.GetComponentInChildren<enemyScript>().setHealth(health);

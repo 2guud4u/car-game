@@ -325,7 +325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8925939114002673813}
-  - component: {fileID: 2745242913703135027}
+  - component: {fileID: 6667005683288414656}
   m_Layer: 0
   m_Name: animator
   m_TagString: Untagged
@@ -349,7 +349,7 @@ Transform:
   - {fileID: 6756374042748394630}
   m_Father: {fileID: 7391242119549867063}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &2745242913703135027
+--- !u!95 &6667005683288414656
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -360,7 +360,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 0ea9b07366ac543afbf5202f66bee9f7, type: 2}
-  m_CullingMode: 2
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
