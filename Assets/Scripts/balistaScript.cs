@@ -44,13 +44,13 @@ public class balistaScript : enemyScript
             {
                 // Debug.Log("Player has entered the enemy's trigger");
                 
-
                 
                 Vector3 awayDirection = transform.position - other.transform.position;
 
                 // Normalize the direction to ensure consistent force magnitude
                 awayDirection.Normalize();
 
+                _audioSource.PlayOneShot(damageSound);
                 
                 BreakApart(awayDirection, GetPlayerRigidbody().velocity.magnitude);
             }
