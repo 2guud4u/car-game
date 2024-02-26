@@ -6,10 +6,13 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public GameObject player;
     public int soulCondition = 10;
     public int _levelTime;
 
     public int _soul = 0;
+
+    Rigidbody playerRigidbody;
 
     private void Awake()
     {
@@ -21,6 +24,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        playerRigidbody = player.GetComponent<Rigidbody>();
         Time.timeScale = 1;
         UIManager.Instance.UpdateSoulText(_soul, soulCondition);
     }
@@ -29,7 +33,8 @@ public class GameManager : MonoBehaviour
     {
         int currTime = _levelTime - Mathf.FloorToInt(Time.timeSinceLevelLoad);
         UIManager.Instance.SetTimer(currTime);
-        if (currTime <= 0){
+        UIManager.Instance.SetSpeedometer(playerRigidbody.velocity.magnitude);
+        if(currTime <= 0){
             GameOver("Time's up!");
         }else if (Health.Instance.currentHealth <= 0)
         {
