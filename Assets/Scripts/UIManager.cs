@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject gameWinScreen;
     public GameObject portalWarningScreen;
-    public Sprite heartSprite;
+    public GameObject soul;
     public static UIManager Instance;
 
     private void Awake()
@@ -20,6 +20,13 @@ public class UIManager : MonoBehaviour
         {
             Instance = this;
         }
+    }
+
+    void Start()
+    {
+        timerText.enabled = true;
+        soulText.enabled = true;
+        soul.SetActive(true);
     }
 
     public void SetTimer(int time)

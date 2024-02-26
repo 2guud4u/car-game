@@ -7,9 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public int soulCondition = 10;
-    public int _levelTime = 100;
+    public int _levelTime;
 
-    int _live = 3;
     public int _soul = 0;
 
     private void Awake()
@@ -30,60 +29,12 @@ public class GameManager : MonoBehaviour
     {
         int currTime = _levelTime - Mathf.FloorToInt(Time.timeSinceLevelLoad);
         UIManager.Instance.SetTimer(currTime);
-        if(currTime <= 0){
+        if (currTime <= 0){
             GameOver("Time's up!");
-        }
-    }
-
-    public void LiveIncrease()
-    {
-        if(_live < 5)
-        {
-            GameObject lastHeart = null;
-            float bigX = float.NegativeInfinity;
-
-            foreach (GameObject heart in GameObject.FindGameObjectsWithTag("Heart"))
-            {
-                if (heart.transform.position.x > bigX)
-                {
-                    bigX = heart.transform.position.x;
-                    lastHeart = heart;
-                }
-            }
-
-            if (lastHeart != null)
-            {
-                Instantiate(lastHeart, new Vector3(lastHeart.transform.position.x + 102.45f, lastHeart.transform.position.y, lastHeart.transform.position.z),
-                    lastHeart.transform.rotation, lastHeart.transform.parent);
-                _live++;
-            }
-        }
-
-    }
-
-    public void LiveDecrease()
-    {
-        _live--;
-
-        GameObject lastHeart = null;
-        float bigX = float.NegativeInfinity;
-
-        foreach (GameObject heart in GameObject.FindGameObjectsWithTag("Heart"))
-        {
-            if (heart.transform.position.x > bigX)
-            {
-                bigX = heart.transform.position.x;
-                lastHeart = heart;
-            }
-        }
-
-        Destroy(lastHeart);
-
-        if (_live <= 0)
+        }else if (Health.Instance.currentHealth <= 0)
         {
             GameOver("You died!");
         }
-
     }
 
     public void ScoreUpdate()
