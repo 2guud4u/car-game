@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour
     public AudioClip loseSound;
     private AudioSource _audioSource;
 
+    public AudioSource engine;
+    public AudioSource drift;
+
     private void Awake()
     {
         if (Instance == null)
@@ -68,6 +71,7 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.MakeVisible("GameWin", true);
         Time.timeScale = 0;
         MusicManager.Instance.StopAudio();
+        StopAudio();
         _audioSource.PlayOneShot(winSound);
     }
 
@@ -90,6 +94,16 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene("SampleScene");
+    }
+
+    public void StopAudio()
+    {
+        if (engine != null){
+            engine.Stop();
+        } 
+        if (drift != null){
+            drift.Stop();
+        }
     }
 
 
