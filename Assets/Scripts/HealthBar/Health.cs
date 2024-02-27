@@ -17,6 +17,10 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
         _audioSource = GetComponent<AudioSource>();
     }
 
