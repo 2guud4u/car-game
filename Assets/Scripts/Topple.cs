@@ -16,7 +16,7 @@ public class Topple : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("MeleeSoldier"))
         {
             _audioSource.PlayOneShot(crashSound);
             // Debug.Log("Topple");

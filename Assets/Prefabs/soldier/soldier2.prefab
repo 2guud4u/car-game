@@ -34,7 +34,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7371570226658971950}
   - {fileID: 3076188826095055755}
   m_Father: {fileID: 8871147816973990066}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -898,7 +897,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2355371553709359121}
   - component: {fileID: 1674879608395619801}
-  - component: {fileID: 2028924615793066796}
+  - component: {fileID: 6298273851468817834}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -931,39 +930,8 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6260658102102816299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33f78b295626c43aca180c1122fdc18f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 8832225473015316650}
-  player: {fileID: 0}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 72
-  whatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 64
-  totalHealth: 10
-  thresholdDamageVelocity: 5
-  walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 10
-  timeBeforeFirstAttack: 0.2
-  timeBetweenAttacks: 2
-  alreadyAttacked: 0
-  projectile: {fileID: 8444596416081312918}
-  sightRange: 100
-  attackRange: 2
-  playerInSightRange: 0
-  playerInAttackRange: 0
-  RagdollRoot: {fileID: 2223123200884218499}
-  torsoRb: {fileID: 2563034305587830198}
-  enemyObj: {fileID: 7755446284023417325, guid: 7a1288cfbcf7a4d31aecd97aab16dec4, type: 3}
-  soulPrefab: {fileID: 8165119391464487357, guid: 4b821a88424cb4dab80c119a2262a410, type: 3}
-  damageSound: {fileID: 8300000, guid: c66f0a1b12f7e044ea1e129253ecf62c, type: 3}
-  _audioSource: {fileID: 0}
-  timeSwordIsDrawn: 0.5
+  m_GameObject: {fileID: 3070108914268341379}
+  m_CullTransparentMesh: 1
 --- !u!54 &6298273851468817834
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -971,29 +939,26 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3070108914268341379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &3133073583019331791
 GameObject:
   m_ObjectHideFlags: 0
@@ -1880,18 +1845,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7136163231040013363, guid: b178ef5f51881407e9ad5443d2dbdcc1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5947462927890298757}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b178ef5f51881407e9ad5443d2dbdcc1, type: 3}
 --- !u!4 &3076188826095055755 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 483307877983754285, guid: b178ef5f51881407e9ad5443d2dbdcc1, type: 3}
-  m_PrefabInstance: {fileID: 1601457466561280165}
+  m_PrefabInstance: {fileID: 3172183972871760806}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8444596416081312918 stripped
+--- !u!1 &5696317003949502357 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7136163231040013363, guid: b178ef5f51881407e9ad5443d2dbdcc1, type: 3}
-  m_PrefabInstance: {fileID: 1601457466561280165}
+  m_PrefabInstance: {fileID: 3172183972871760806}
   m_PrefabAsset: {fileID: 0}
