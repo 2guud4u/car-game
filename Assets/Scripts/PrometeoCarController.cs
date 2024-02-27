@@ -528,7 +528,6 @@ public class PrometeoCarController : MonoBehaviour
       //3f, it means that the car is losing traction, then the car will start emitting particle systems.
       if(Mathf.Abs(localVelocityX) > 2.5f){
         isDrifting = true;
-        DriftCarPS();
       }else{
         isDrifting = false;
         DriftCarPS();

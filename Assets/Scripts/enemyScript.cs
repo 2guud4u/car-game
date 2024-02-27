@@ -191,6 +191,7 @@ public class enemyScript : MonoBehaviour
         this.health = health;
         
     }
+
     public virtual void OnTriggerEnter(Collider other)
     {
         
@@ -207,8 +208,10 @@ public class enemyScript : MonoBehaviour
                 RbVelocity = otherRb.velocity;
             }
 
-            
-            if(RbVelocity.magnitude > thresholdDamageVelocity)
+            Vector3 awayDirection = transform.position - other.transform.position;
+            awayDirection.Normalize();
+
+            if (RbVelocity.magnitude > thresholdDamageVelocity)
             {
                 // Debug.Log("Player has entered the enemy's trigger");
                 float speedBasedDamage = (thresholdDamageVelocity / 2) + Mathf.Log(playerVelocity.velocity.magnitude - (thresholdDamageVelocity / 2) + 1);
@@ -219,8 +222,8 @@ public class enemyScript : MonoBehaviour
                     Invoke("DropSoul", 1f);
                 }
 
-                Vector3 awayDirection = transform.position - other.transform.position;
-                awayDirection.Normalize();
+                //Vector3 awayDirection = transform.position - other.transform.position;
+                //awayDirection.Normalize();
 
                 turnOnRagdoll(awayDirection * RbVelocity.magnitude);
                 // Vector3 awayDirection = transform.position - other.transform.position;
@@ -230,15 +233,28 @@ public class enemyScript : MonoBehaviour
 
                 rb.isKinematic = false;
                 rb.AddForce(awayDirection * RbVelocity.magnitude, ForceMode.Impulse);
-                
-            } else{
-                Debug.Log("not fast enough" + RbVelocity.magnitude);
-            }
 
+            }
+            else
+            {
+                rb.isKinematic = false;
+                rb.AddForce(awayDirection * 1f, ForceMode.Acceleration);
+            }
             
         }
         
     }
+
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.tag == "Player")
+    //    {
+    //        Vector3 awayDirection = transform.position - collision.transform.position;
+    //        awayDirection.Normalize();
+    //        rb.isKinematic = false;
+    //        rb.AddForce(awayDirection * 1f, ForceMode.Acceleration);
+    //    }
+    //}
     public Rigidbody[] GetRbs() {
         return rbs;
     }
