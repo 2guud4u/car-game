@@ -61,7 +61,7 @@ public class Health : MonoBehaviour
         {
             Destroy(other.gameObject);
             LiveDecrease();
-            _audioSource.PlayOneShot(swordSound); // change this one
+            _audioSource.PlayOneShot(arrowSound); 
         }
         else if (other.CompareTag("Weapon"))
         {
