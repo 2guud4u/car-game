@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6662e4f34924a4ef89db91c0d2a4e46d
+guid: fc4378141bf8c40f69fa8ce0b84220c1
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Tusks
-    second: {fileID: -6827231008430960224, guid: d91c49c61bfca4cb5b95370b1edb3a0d, type: 3}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Wool
-    second: {fileID: -9111239756329900561, guid: d91c49c61bfca4cb5b95370b1edb3a0d, type: 3}
+      name: 455A64
+    second: {fileID: 2100000, guid: 8a18012ffa43d43cc94e24c4f0a784d2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
