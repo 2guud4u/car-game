@@ -195,7 +195,7 @@ public class enemyScript : MonoBehaviour
         
         if (other.gameObject.tag == "Player" || other.gameObject.tag == "Damage" || other.gameObject.tag == "Projectile")
         {
-            Debug.Log("Enemy has entered the trigger");
+            
             Rigidbody otherRb = other.gameObject.GetComponent<Rigidbody>();
             Vector3 RbVelocity;
             if(other.gameObject.tag == "Player"){
