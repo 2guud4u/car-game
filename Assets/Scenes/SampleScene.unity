@@ -3700,11 +3700,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1821000340}
-  soulCondition: 10
+  soulCondition: 0
   _levelTime: 240
   _soul: 0
   winSound: {fileID: 8300000, guid: 9dcb8342575de014385c916bc36f2cbb, type: 3}
   loseSound: {fileID: 8300000, guid: a291bcde85e8dc644970188d88745e66, type: 3}
+  engine: {fileID: 534985250}
+  drift: {fileID: 1764452985}
 --- !u!4 &911829357
 Transform:
   m_ObjectHideFlags: 0
