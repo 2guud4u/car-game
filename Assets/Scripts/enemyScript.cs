@@ -167,7 +167,7 @@ public class enemyScript : MonoBehaviour
         foreach (Rigidbody limbRb in rbs)
         {
             limbRb.isKinematic = false;
-            limbRb.AddForce(force*5, ForceMode.Impulse);
+            limbRb.AddForce(force*2, ForceMode.Impulse);
         }
         Invoke(nameof(turnOffRagdoll), 8f);
     }
