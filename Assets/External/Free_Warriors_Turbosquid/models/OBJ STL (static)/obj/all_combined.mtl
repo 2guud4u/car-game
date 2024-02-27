@@ -1,0 +1,133 @@
+newmtl egyptian_green_B_textureSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd egyptian_green_B_texture.jpg
+Ni 1.00
+newmtl egyptian_red_B_textureSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd egyptian_red_B_texture.jpg
+Ni 1.00
+newmtl lambert4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd viking_green_C_texture.jpg
+Ni 1.00
+newmtl lambert7SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd viking_column_texture.jpg
+Ni 1.00
+newmtl pasted__lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd viking_green_weapons_texture.jpg
+Ni 1.00
+newmtl pasted__pasted__pasted__lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd egyptian_weapons_texture.jpg
+Ni 1.00
+newmtl pasted__pasted__pasted__lambert2SG1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd egyptian_pillar_texture.jpg
+Ni 1.00
+newmtl pasted__pasted__pasted__surfaceShader4SG1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd roman_red_D_texture.jpg
+Ni 1.00
+newmtl pasted__pasted__pasted__surfaceShader9SG1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd roman_red_clothes_texture.jpg
+Ni 1.00
+newmtl pasted__polySurface35SG2
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd egyptian_blue_B_texture.jpg
+Ni 1.00
+newmtl pasted__surfaceShader7SG2
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd roman_weapons_texture.jpg
+Ni 1.00
+newmtl roman_blue_D_textureSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd roman_blue_D_texture.jpg
+Ni 1.00
+newmtl roman_green_clothes_textureSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd roman_green_clothes_texture.jpg
+Ni 1.00
+newmtl roman_red_D_texture1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd roman_green_D_texture.jpg
+Ni 1.00
+newmtl roman_red__clothes_texture2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd roman_blue_clothes_texture.jpg
+Ni 1.00
+newmtl viking_blue_E_textureSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd viking_blue_C_texture.jpg
+Ni 1.00
+newmtl viking_green_weapons_texture1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd viking_blue_weapons_texture.jpg
+Ni 1.00
+newmtl viking_green_weapons_texture2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd viking_red_weapons_texture.jpg
+Ni 1.00
+newmtl viking_red_E_textureSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd viking_red_C_texture.jpg
+Ni 1.00
