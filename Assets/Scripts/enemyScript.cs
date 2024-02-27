@@ -68,7 +68,11 @@ public class enemyScript : MonoBehaviour
         //healthBar.UpdateHealthBar(health, totalHealth);
 
     }
+    private void Start()
+    {
+        healthBar = GetComponentInChildren<EnemyHealthBar>();
 
+    }
     private void Update()
     {
         //Check for sight and attack range
@@ -95,6 +99,9 @@ public class enemyScript : MonoBehaviour
         }
 
         if(animator != null) { Animate(); }
+        if(healthBar){
+            healthBar.UpdateHealthBar(health, totalHealth);
+        }
     }
 
     private void Patroling()
@@ -185,8 +192,10 @@ public class enemyScript : MonoBehaviour
     }
     public virtual void OnTriggerEnter(Collider other)
     {
+        
         if (other.gameObject.tag == "Player" || other.gameObject.tag == "Damage" || other.gameObject.tag == "Projectile")
         {
+            Debug.Log("Enemy has entered the trigger");
             Rigidbody otherRb = other.gameObject.GetComponent<Rigidbody>();
             Vector3 RbVelocity;
             if(other.gameObject.tag == "Player"){
@@ -221,6 +230,8 @@ public class enemyScript : MonoBehaviour
                 rb.isKinematic = false;
                 rb.AddForce(awayDirection * RbVelocity.magnitude, ForceMode.Impulse);
                 
+            } else{
+                Debug.Log("not fast enough" + RbVelocity.magnitude);
             }
 
             

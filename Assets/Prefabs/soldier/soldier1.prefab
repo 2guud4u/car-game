@@ -101,17 +101,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1102648170757914492}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.02375}
   m_LocalScale: {x: 0.005, y: 0.005, z: 0.005}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5500465442681953983}
-  m_Father: {fileID: 1706811749859354242}
+  m_Father: {fileID: 2649679971869346833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.93}
+  m_AnchoredPosition: {x: 0, y: 0.75375}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2707174311338832608
@@ -676,6 +676,7 @@ Transform:
   - {fileID: 1840527328840384006}
   - {fileID: 8551212382813580627}
   - {fileID: 7250774575898835268}
+  - {fileID: 6299284562545314837}
   m_Father: {fileID: 4817571721194827099}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2424369177688746236
@@ -1372,7 +1373,6 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4778008976096343753}
-  - {fileID: 6299284562545314837}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -180.555, z: 0}
 --- !u!114 &6424328489575032744
@@ -1396,7 +1396,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   totalHealth: 10
-  thresholdDamageVelocity: 5
+  thresholdDamageVelocity: 1
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 10
   timeBeforeFirstAttack: 0.2
@@ -1409,7 +1409,7 @@ MonoBehaviour:
   playerInAttackRange: 0
   RagdollRoot: {fileID: 4817571721194827099}
   torsoRb: {fileID: 2366165302533377760}
-  enemyObj: {fileID: 7172998336206582375, guid: 951d8f5d6ac904df793470d15091c1a1, type: 3}
+  enemyObj: {fileID: 1964293779585569652, guid: d8045bdbf639b403aae81bd3998a57b2, type: 3}
   soulPrefab: {fileID: 8165119391464487357, guid: 4b821a88424cb4dab80c119a2262a410, type: 3}
   damageSound: {fileID: 8300000, guid: c66f0a1b12f7e044ea1e129253ecf62c, type: 3}
   _audioSource: {fileID: 0}
