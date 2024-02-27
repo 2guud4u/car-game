@@ -51,6 +51,9 @@ public class enemyScript : MonoBehaviour
     public AudioClip damageSound;
     public AudioSource _audioSource;
 
+    public int maxHealth = 10;
+
+    [SerializeField] EnemyHealthBar healthBar;
     private void Awake()
     {
         health = totalHealth;
@@ -61,6 +64,9 @@ public class enemyScript : MonoBehaviour
         playerVelocity = GameObject.Find("Player").GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
         _audioSource = GetComponent<AudioSource>();
+        healthBar = GetComponentInChildren<EnemyHealthBar>();
+        //healthBar.UpdateHealthBar(health, totalHealth);
+
     }
 
     private void Update()
@@ -135,6 +141,7 @@ public class enemyScript : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
+        healthBar.UpdateHealthBar(health, totalHealth);
         // Debug.Log(health + "/" + totalHealth);
     }
 
@@ -174,6 +181,7 @@ public class enemyScript : MonoBehaviour
     private void setHealth(float health)
     {
         this.health = health;
+        
     }
     public virtual void OnTriggerEnter(Collider other)
     {
