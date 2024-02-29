@@ -75,12 +75,13 @@ public class enemyScript : MonoBehaviour
     }
     private void Update()
     {
+
         //Check for sight and attack range
         //Debug.Log("Checking for sight and attack range");
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
         //run if agent is enabled
-        if(agent.enabled ){
+        if(agent.enabled && agent.isOnNavMesh ){
             if (!playerInAttackRange) {
                 if(!playerInSightRange) {
                     firstAttack = true;
