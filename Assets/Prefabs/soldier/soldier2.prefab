@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6744756256182527349}
   - component: {fileID: 4935736185368069105}
   - component: {fileID: 9039101901454042207}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: arm_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 8695655248159167463}
   - component: {fileID: 6306446214109841820}
   - component: {fileID: 2468022844889728247}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 6965775233866826704}
   - component: {fileID: 2410776805086216356}
   - component: {fileID: 20246742045436822}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: soldier2
   m_TagString: MeleeSoldier
   m_Icon: {fileID: 0}
@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 8031777258037408974}
   - component: {fileID: 8399076267386194861}
   - component: {fileID: 3822461887340927422}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -721,7 +721,7 @@ GameObject:
   - component: {fileID: 7249250326440040140}
   - component: {fileID: 2587240907244568875}
   - component: {fileID: 616993592225584655}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: leg_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -898,7 +898,7 @@ GameObject:
   - component: {fileID: 2355371553709359121}
   - component: {fileID: 1674879608395619801}
   - component: {fileID: 6298273851468817834}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -972,7 +972,7 @@ GameObject:
   - component: {fileID: 403308098103368829}
   - component: {fileID: 4300917808070802780}
   - component: {fileID: 5573616272509191450}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1107,7 +1107,7 @@ GameObject:
   - component: {fileID: 3842670694900001044}
   - component: {fileID: 6945669322677175412}
   - component: {fileID: 3115543262414268333}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1185,7 +1185,7 @@ GameObject:
   - component: {fileID: 699069949706836063}
   - component: {fileID: 8027293987257720568}
   - component: {fileID: 5712179643211836233}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: leg_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1360,7 +1360,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8780426802104178323}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1401,7 +1401,7 @@ GameObject:
   - component: {fileID: 4785318626065022235}
   - component: {fileID: 5160639698778196419}
   - component: {fileID: 4573190912266329271}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: arm_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1578,7 +1578,7 @@ GameObject:
   - component: {fileID: 1814026911922490419}
   - component: {fileID: 1687831775790876220}
   - component: {fileID: 4669982309046501908}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1679,7 +1679,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3566615425905391019}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1714,7 +1714,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3089469797510719544}
   - component: {fileID: 2132419182777952006}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1821,6 +1821,10 @@ PrefabInstance:
     - target: {fileID: 7136163231040013363, guid: b178ef5f51881407e9ad5443d2dbdcc1, type: 3}
       propertyPath: m_Name
       value: sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 7136163231040013363, guid: b178ef5f51881407e9ad5443d2dbdcc1, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7136163231040013363, guid: b178ef5f51881407e9ad5443d2dbdcc1, type: 3}
       propertyPath: m_IsActive

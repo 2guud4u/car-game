@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2066863876156054428}
   - component: {fileID: 1102507880406298765}
   - component: {fileID: 443560101089312364}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: body_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 8527219105973997540}
   - component: {fileID: 7250577380570100331}
   - component: {fileID: 2409004503754691891}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: flag_21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1879954822185901642}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 4489249457531114186}
   - component: {fileID: 4924472845668282835}
   - component: {fileID: 442151613176709888}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheelFrontLeft_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 4356809455927902386}
   - component: {fileID: 4515887332155547218}
   - component: {fileID: 4129872339258848842}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: flag_20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -582,7 +582,7 @@ GameObject:
   - component: {fileID: 1520862727566287053}
   - component: {fileID: 1105344126411814828}
   - component: {fileID: 5357671382685472300}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: siegeBallista 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -649,6 +649,8 @@ MonoBehaviour:
   soulPrefab: {fileID: 0}
   damageSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
   _audioSource: {fileID: 0}
+  maxHealth: 10
+  healthBar: {fileID: 0}
 --- !u!195 &1534564050731123167
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -828,7 +830,7 @@ GameObject:
   - component: {fileID: 1401247232779654248}
   - component: {fileID: 448747802429573263}
   - component: {fileID: 3434762809229548762}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheelFrontRight_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -962,7 +964,7 @@ GameObject:
   - component: {fileID: 569589153331957823}
   - component: {fileID: 1522954434128951628}
   - component: {fileID: 2067986657598343401}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: arrow_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
