@@ -263,6 +263,7 @@ public class PrometeoCarController : MonoBehaviour
             Debug.LogWarning(ex);
           }
         }
+                        
 
     }
 
@@ -340,7 +341,7 @@ public class PrometeoCarController : MonoBehaviour
             if (Keyboard.current.shiftKey.wasPressedThisFrame && !isAcclerating)
             {
                 Debug.Log("accelerate");
-                carRigidbody.AddForce(transform.forward * 200000000 * Time.fixedDeltaTime);
+                carRigidbody.AddForce((transform.up *500000)+(transform.forward * 200000000) * Time.fixedDeltaTime);
                 LVParticleSystem.Play();
                 RVParticleSystem.Play();
                 maxSpeed *= 2;
