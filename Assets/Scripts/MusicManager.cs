@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class MusicManager : MonoBehaviour
 {
     public static MusicManager Instance;
-    public AudioSource _audioSource;
+    AudioSource _audioSource;
     bool _isPlayingLowVolume = false;
     float _startingVolume;
 
