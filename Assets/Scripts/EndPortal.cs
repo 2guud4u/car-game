@@ -16,6 +16,10 @@ public class EndPortal : MonoBehaviour
             transform.localScale = new Vector3(0f, 0f, 0f);
             _open = false;
         }
+        //growth
+        if(_open){
+            transform.localScale = portalSize+(new Vector3(1f, 1f, 1f)*(GameManager.Instance._soul-10));
+        }
     }
     
     void OnCollisionEnter(Collision collision)
