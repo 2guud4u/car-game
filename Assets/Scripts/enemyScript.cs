@@ -216,12 +216,6 @@ public class enemyScript : MonoBehaviour
             {
                 // Debug.Log("Player has entered the enemy's trigger");
                 float speedBasedDamage = (thresholdDamageVelocity / 2) + Mathf.Log(playerVelocity.velocity.magnitude - (thresholdDamageVelocity / 2) + 1);
-                TakeDamage(speedBasedDamage);
-
-                if(health <= 0 && !soulDropped) {
-                    soulDropped = true;
-                    Invoke("DropSoul", 1f);
-                }
 
                 //Vector3 awayDirection = transform.position - other.transform.position;
                 //awayDirection.Normalize();
@@ -235,15 +229,23 @@ public class enemyScript : MonoBehaviour
                 rb.isKinematic = false;
                 rb.AddForce(awayDirection * RbVelocity.magnitude, ForceMode.Impulse);
 
+                TakeDamage(speedBasedDamage);
+
+                if (health <= 0 && !soulDropped)
+                {
+                    soulDropped = true;
+                    Invoke("DropSoul", 1f);
+                }
+
             }
             else
             {
                 rb.isKinematic = false;
                 rb.AddForce(awayDirection * 1f, ForceMode.Acceleration);
             }
-            
+
         }
-        
+
     }
 
     //private void OnCollisionEnter(Collision collision)
