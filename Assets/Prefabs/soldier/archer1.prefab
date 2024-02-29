@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5612254653717569823}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 220667070631593781}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7392785626521196896}
   - component: {fileID: 5371963042799452511}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 6198682068127082341}
   - component: {fileID: 4413955593388367589}
   - component: {fileID: 4107842023576294276}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 1858860964177504842}
   - component: {fileID: 3342756861004539375}
   - component: {fileID: 686566870735393061}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: weapon-spear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 8174833612006590700}
   - component: {fileID: 2560794845359948023}
   - component: {fileID: 8898832117821219778}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: arm_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -476,7 +476,7 @@ GameObject:
   - component: {fileID: 4745391593695762384}
   - component: {fileID: 4519130880629283957}
   - component: {fileID: 2922530250940795345}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: arm_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -654,7 +654,7 @@ GameObject:
   - component: {fileID: 8511284425970293430}
   - component: {fileID: 6038371838779947795}
   - component: {fileID: 6911528521708969075}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -758,7 +758,7 @@ GameObject:
   - component: {fileID: 5549350594390571963}
   - component: {fileID: 9107867264456063596}
   - component: {fileID: 2926215521869523528}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -862,7 +862,7 @@ GameObject:
   - component: {fileID: 5806350032590914431}
   - component: {fileID: 7355928332499377871}
   - component: {fileID: 2403040761490857144}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: leg_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1039,7 +1039,7 @@ GameObject:
   - component: {fileID: 3021687297715647452}
   - component: {fileID: 1048357259222644727}
   - component: {fileID: 2382706383464066425}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1117,7 +1117,7 @@ GameObject:
   - component: {fileID: 3273557442881730340}
   - component: {fileID: 6925457086134077623}
   - component: {fileID: 4947580264245918509}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: archer1
   m_TagString: MeleeSoldier
   m_Icon: {fileID: 0}
@@ -1360,7 +1360,7 @@ GameObject:
   - component: {fileID: 70076629937333712}
   - component: {fileID: 2910713713526418781}
   - component: {fileID: 3356461941309438589}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1540,7 +1540,7 @@ GameObject:
   - component: {fileID: 7119461905073710293}
   - component: {fileID: 59624633793215526}
   - component: {fileID: 6095777147294901710}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: leg_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1719,7 +1719,7 @@ GameObject:
   - component: {fileID: 2013777172917989879}
   - component: {fileID: 8282774601001532865}
   - component: {fileID: 2185626287523717939}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}

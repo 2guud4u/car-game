@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8085598370836194604}
   - component: {fileID: 3478644874608196693}
   - component: {fileID: 7794974715247074008}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 2707174311338832608}
   - component: {fileID: 8063149187748252602}
   - component: {fileID: 7568737903679675958}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 2988640236517063170}
   - component: {fileID: 5870516746809004077}
   - component: {fileID: 6545170109825561915}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 6041321746384051479}
   - component: {fileID: 5934378938537569229}
   - component: {fileID: 1809308469956377254}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: leg_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -548,7 +548,7 @@ GameObject:
   - component: {fileID: 5500465442681953983}
   - component: {fileID: 165978553233598412}
   - component: {fileID: 4727402030885712030}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -653,7 +653,7 @@ GameObject:
   - component: {fileID: 1164502306940338045}
   - component: {fileID: 2366165302533377760}
   - component: {fileID: 4039168299378435201}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -787,7 +787,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4778008976096343753}
   - component: {fileID: 4040110747242232650}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -840,7 +840,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1084724622717935279}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -876,7 +876,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4817571721194827099}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -915,7 +915,7 @@ GameObject:
   - component: {fileID: 1786335769487506849}
   - component: {fileID: 5603823733481970953}
   - component: {fileID: 49539213621495655}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: arm_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1094,7 +1094,7 @@ GameObject:
   - component: {fileID: 326421280554534389}
   - component: {fileID: 4603722076657830589}
   - component: {fileID: 8511092895436677566}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1172,7 +1172,7 @@ GameObject:
   - component: {fileID: 3687797004543468032}
   - component: {fileID: 2881807415516869830}
   - component: {fileID: 3347711709452157436}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: arm_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1352,7 +1352,7 @@ GameObject:
   - component: {fileID: 4136276402491776987}
   - component: {fileID: 6913561624664220867}
   - component: {fileID: 3469392663142742498}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: soldier1
   m_TagString: MeleeSoldier
   m_Icon: {fileID: 0}
@@ -1596,7 +1596,7 @@ GameObject:
   - component: {fileID: 3324488169145006060}
   - component: {fileID: 7251756183742412170}
   - component: {fileID: 6380787206904897474}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: leg_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1827,6 +1827,10 @@ PrefabInstance:
       value: sword
       objectReference: {fileID: 0}
     - target: {fileID: 7136163231040013363, guid: b178ef5f51881407e9ad5443d2dbdcc1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7136163231040013363, guid: b178ef5f51881407e9ad5443d2dbdcc1, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -1961,6 +1965,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8f80e9a467d8143b79e8aa424b6af9a1, type: 3}
       propertyPath: m_Name
       value: weapon-sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8f80e9a467d8143b79e8aa424b6af9a1, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
