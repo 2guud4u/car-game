@@ -2,6 +2,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
 
 public class enemyScript : MonoBehaviour
 {
@@ -50,7 +51,7 @@ public class enemyScript : MonoBehaviour
 
     public AudioClip damageSound;
     public AudioSource _audioSource;
-
+    public GameObject particleEffect;
     public int maxHealth = 10;
 
     [SerializeField] EnemyHealthBar healthBar;
@@ -66,7 +67,6 @@ public class enemyScript : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         healthBar = GetComponentInChildren<EnemyHealthBar>();
         //healthBar.UpdateHealthBar(health, totalHealth);
-
     }
     private void Start()
     {
@@ -178,7 +178,10 @@ public class enemyScript : MonoBehaviour
         if(health > 0){
             GameObject enemy = Instantiate(enemyObj, torsoRb.transform.position, Quaternion.identity);
             enemy.GetComponentInChildren<enemyScript>().setHealth(health);
+        } else {
+            ParticleManager.Instance.PlayEffect(particleEffect, torsoRb.transform.position, 1f);
         }
+        
         Destroy(gameObject);
     }
     
@@ -274,4 +277,6 @@ public class enemyScript : MonoBehaviour
     {
         animator.SetBool("isAttacking", true);
     }
+
+
 }
