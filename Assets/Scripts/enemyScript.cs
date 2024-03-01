@@ -50,6 +50,7 @@ public class enemyScript : MonoBehaviour
 
     public AudioClip damageSound;
     public AudioSource _audioSource;
+    public GameObject particleEffect;
 
     public int maxHealth = 10;
 
@@ -178,6 +179,8 @@ public class enemyScript : MonoBehaviour
         if(health > 0){
             GameObject enemy = Instantiate(enemyObj, torsoRb.transform.position, Quaternion.identity);
             enemy.GetComponentInChildren<enemyScript>().setHealth(health);
+        } else {
+            ParticleManager.Instance.PlayEffect(particleEffect, torsoRb.transform.position, 1f);
         }
         Destroy(gameObject);
     }

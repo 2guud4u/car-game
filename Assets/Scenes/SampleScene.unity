@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641228, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -434,6 +434,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &97042152 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1079960968680998730, guid: 274c289bb4bfd4ff88d84b6408515d43, type: 3}
+  m_PrefabInstance: {fileID: 8915698468346902517}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &100222958
 GameObject:
   m_ObjectHideFlags: 0
@@ -2957,11 +2962,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5000780848895129782, guid: 552e2f4de388f3a48a5ef5f2d47fd334, type: 3}
   m_PrefabInstance: {fileID: 521135885}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &534985250 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6509107911518946013, guid: 274c289bb4bfd4ff88d84b6408515d43, type: 3}
-  m_PrefabInstance: {fileID: 8915698468346902517}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &549573938 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3285854563772982815, guid: c446b91220a574c1781c06671c3ec473, type: 3}
@@ -5328,6 +5328,7 @@ GameObject:
   - component: {fileID: 911829358}
   - component: {fileID: 911829359}
   - component: {fileID: 911829362}
+  - component: {fileID: 911829363}
   - component: {fileID: 911829361}
   m_Layer: 0
   m_Name: Manager
@@ -5354,8 +5355,8 @@ MonoBehaviour:
   _soul: 0
   winSound: {fileID: 8300000, guid: 9dcb8342575de014385c916bc36f2cbb, type: 3}
   loseSound: {fileID: 8300000, guid: a291bcde85e8dc644970188d88745e66, type: 3}
-  engine: {fileID: 534985250}
-  drift: {fileID: 1764452985}
+  engine: {fileID: 97042152}
+  drift: {fileID: 2140897660}
 --- !u!4 &911829357
 Transform:
   m_ObjectHideFlags: 0
@@ -5528,6 +5529,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 0}
+--- !u!114 &911829363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911829355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cc5a907d8757ee48bad3e6f5740b028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &923576666
 GameObject:
   m_ObjectHideFlags: 0
@@ -9371,11 +9384,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751940809}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!82 &1764452985 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 948152206913624100, guid: 274c289bb4bfd4ff88d84b6408515d43, type: 3}
-  m_PrefabInstance: {fileID: 8915698468346902517}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1817078179
 GameObject:
   m_ObjectHideFlags: 0
@@ -10866,6 +10874,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 552e2f4de388f3a48a5ef5f2d47fd334, type: 3}
+--- !u!82 &2140897660 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7166664391785324358, guid: 274c289bb4bfd4ff88d84b6408515d43, type: 3}
+  m_PrefabInstance: {fileID: 8915698468346902517}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &763222555727436858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11319,6 +11332,18 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 560519734}
+    - target: {fileID: 1079960968680998730, guid: 274c289bb4bfd4ff88d84b6408515d43, type: 3}
+      propertyPath: m_Volume
+      value: 0.346
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079960968680998730, guid: 274c289bb4bfd4ff88d84b6408515d43, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079960968680998730, guid: 274c289bb4bfd4ff88d84b6408515d43, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3037586494179886776, guid: 274c289bb4bfd4ff88d84b6408515d43, type: 3}
       propertyPath: m_Size.x
       value: 4.5831413
@@ -11375,6 +11400,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7166664391785324358, guid: 274c289bb4bfd4ff88d84b6408515d43, type: 3}
+      propertyPath: m_Volume
+      value: 0.306
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166664391785324358, guid: 274c289bb4bfd4ff88d84b6408515d43, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7741980937519634574, guid: 274c289bb4bfd4ff88d84b6408515d43, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7741980937519634574, guid: 274c289bb4bfd4ff88d84b6408515d43, type: 3}
+      propertyPath: m_Volume
+      value: 0.528
+      objectReference: {fileID: 0}
     - target: {fileID: 8347270430931767399, guid: 274c289bb4bfd4ff88d84b6408515d43, type: 3}
       propertyPath: healthBar
       value: 
@@ -11383,8 +11424,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedComponents:
+    - {fileID: 6050488136762167185, guid: 274c289bb4bfd4ff88d84b6408515d43, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 5138840972374116126, guid: 274c289bb4bfd4ff88d84b6408515d43, type: 3}
+    - {fileID: 625189109911268148, guid: 274c289bb4bfd4ff88d84b6408515d43, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 274c289bb4bfd4ff88d84b6408515d43, type: 3}
