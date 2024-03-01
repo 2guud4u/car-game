@@ -2,6 +2,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
 
 public class enemyScript : MonoBehaviour
 {
@@ -50,7 +51,7 @@ public class enemyScript : MonoBehaviour
 
     public AudioClip damageSound;
     public AudioSource _audioSource;
-
+    public GameObject particleEffect;
     public int maxHealth = 10;
 
     [SerializeField] EnemyHealthBar healthBar;
@@ -66,7 +67,6 @@ public class enemyScript : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         healthBar = GetComponentInChildren<EnemyHealthBar>();
         //healthBar.UpdateHealthBar(health, totalHealth);
-
     }
     private void Start()
     {
@@ -174,12 +174,21 @@ public class enemyScript : MonoBehaviour
     }
     private void turnOffRagdoll()
     {
+        bool _playingEffect = false;
         animator.enabled = true;
         if(health > 0){
             GameObject enemy = Instantiate(enemyObj, torsoRb.transform.position, Quaternion.identity);
             enemy.GetComponentInChildren<enemyScript>().setHealth(health);
+        } else {
+            //_playingEffect = true;
+            ParticleController.Instance.PlayEffect(particleEffect, torsoRb.transform.position, 0.5f);
         }
-        Destroy(gameObject);
+        
+        // only destroy the game object if the effect isn't being played
+        // otherwise is called in co routine
+        if (!_playingEffect){
+            Destroy(gameObject);
+        }
     }
     
     private void DropSoul() {
@@ -272,4 +281,6 @@ public class enemyScript : MonoBehaviour
     {
         animator.SetBool("isAttacking", true);
     }
+
+
 }

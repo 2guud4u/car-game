@@ -1608,6 +1608,7 @@ MonoBehaviour:
   soulPrefab: {fileID: 8165119391464487357, guid: 4b821a88424cb4dab80c119a2262a410, type: 3}
   damageSound: {fileID: 8300000, guid: c66f0a1b12f7e044ea1e129253ecf62c, type: 3}
   _audioSource: {fileID: 0}
+  particleEffect: {fileID: 4121091811543088291, guid: ddf4ea2625767fd4bb4153e7e4009ad5, type: 3}
   maxHealth: 10
   healthBar: {fileID: 0}
 --- !u!82 &3451387189292569205
