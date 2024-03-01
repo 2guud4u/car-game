@@ -174,21 +174,15 @@ public class enemyScript : MonoBehaviour
     }
     private void turnOffRagdoll()
     {
-        bool _playingEffect = false;
         animator.enabled = true;
         if(health > 0){
             GameObject enemy = Instantiate(enemyObj, torsoRb.transform.position, Quaternion.identity);
             enemy.GetComponentInChildren<enemyScript>().setHealth(health);
         } else {
-            //_playingEffect = true;
-            ParticleController.Instance.PlayEffect(particleEffect, torsoRb.transform.position, 0.5f);
+            ParticleManager.Instance.PlayEffect(particleEffect, torsoRb.transform.position, 1f);
         }
         
-        // only destroy the game object if the effect isn't being played
-        // otherwise is called in co routine
-        if (!_playingEffect){
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
     }
     
     private void DropSoul() {

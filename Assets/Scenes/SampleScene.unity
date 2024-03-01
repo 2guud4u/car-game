@@ -4331,6 +4331,7 @@ GameObject:
   - component: {fileID: 911829358}
   - component: {fileID: 911829359}
   - component: {fileID: 911829362}
+  - component: {fileID: 911829363}
   - component: {fileID: 911829361}
   m_Layer: 0
   m_Name: Manager
@@ -4531,6 +4532,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 0}
+--- !u!114 &911829363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911829355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cc5a907d8757ee48bad3e6f5740b028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &923576666
 GameObject:
   m_ObjectHideFlags: 0
@@ -10355,7 +10368,7 @@ MonoBehaviour:
   soulPrefab: {fileID: 8165119391464487357, guid: 4b821a88424cb4dab80c119a2262a410, type: 3}
   damageSound: {fileID: 8300000, guid: c66f0a1b12f7e044ea1e129253ecf62c, type: 3}
   _audioSource: {fileID: 0}
-  particleEffect: {fileID: 4121091811527957601, guid: ddf4ea2625767fd4bb4153e7e4009ad5, type: 3}
+  particleEffect: {fileID: 4121091811543088291, guid: ddf4ea2625767fd4bb4153e7e4009ad5, type: 3}
   maxHealth: 10
   healthBar: {fileID: 0}
 --- !u!1 &5978982971051584519

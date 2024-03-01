@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ParticleController : MonoBehaviour
+public class ParticleManager : MonoBehaviour
 {
-    public static ParticleController Instance;
+    public static ParticleManager Instance;
 
     private void Awake()
     {
@@ -32,9 +32,6 @@ public class ParticleController : MonoBehaviour
             
             StopEffects(effect);
             Destroy(newParticleEffect);
-            /* if (remove) {
-                Destroy(gameObject);
-            } */
         }
     }
 
