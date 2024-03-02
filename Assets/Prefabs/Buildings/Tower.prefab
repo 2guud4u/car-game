@@ -324,7 +324,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5732042042175628401}
-  - component: {fileID: 314931402094909062}
   m_Layer: 7
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -347,20 +346,3 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5000780848895129782}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &314931402094909062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5321235227388409154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69440bcdfcf0c4e60a54b22daaec1a2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
-  volume: 0.6
-  collisionTags:
-  - Player
-  - MeleeSoldier

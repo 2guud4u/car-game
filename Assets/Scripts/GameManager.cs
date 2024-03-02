@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Diagnostics.Tracing;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class GameManager : MonoBehaviour
     public int _levelTime;
 
     public int _soul = 0;
+    public string nextLevel;
 
     Rigidbody playerRigidbody;
 
@@ -85,8 +87,14 @@ public class GameManager : MonoBehaviour
 
     public void EndLevel()
     {
-        UIManager.Instance.MakeVisible("GameWin", true);
-        Time.timeScale = 0;
+        if(nextLevel == "GameWin")
+        {
+            GameWin();
+        }
+        else
+        {
+            SceneManager.LoadScene(nextLevel);
+        }
     }
 
     public void RestartLevel()

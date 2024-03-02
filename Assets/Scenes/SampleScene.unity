@@ -5353,6 +5353,7 @@ MonoBehaviour:
   soulCondition: 10
   _levelTime: 240
   _soul: 0
+  nextLevel: Level1
   winSound: {fileID: 8300000, guid: 9dcb8342575de014385c916bc36f2cbb, type: 3}
   loseSound: {fileID: 8300000, guid: a291bcde85e8dc644970188d88745e66, type: 3}
   engine: {fileID: 97042152}

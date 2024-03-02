@@ -1389,11 +1389,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 50
+  currentHealth: 100
   healthBar: {fileID: 0}
   swordSound: {fileID: 8300000, guid: 006a638c89e0c7e4e9bf2a62d09186c0, type: 3}
   arrowSound: {fileID: 8300000, guid: 31eda9cfac5ab7246809cb8f1327577c, type: 3}
   heartSound: {fileID: 8300000, guid: e72d36e9dcf30894eb7c7ccbbc51e209, type: 3}
+  damageEffect: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4, type: 3}
 --- !u!82 &7741980937519634574
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1839,6 +1840,26 @@ PrefabInstance:
       propertyPath: SizeBySpeedModule.curve.minMaxState
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6797484483416101543, guid: 3c2b3403f85bfdd45a7ae9437581cba7, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 0.76862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 6797484483416101543, guid: 3c2b3403f85bfdd45a7ae9437581cba7, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6797484483416101543, guid: 3c2b3403f85bfdd45a7ae9437581cba7, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.r
+      value: 0.93730885
+      objectReference: {fileID: 0}
+    - target: {fileID: 6797484483416101543, guid: 3c2b3403f85bfdd45a7ae9437581cba7, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.m_ColorSpace
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269192727327325567, guid: 3c2b3403f85bfdd45a7ae9437581cba7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: de65a2efa6cc3435681ae8a8378cfdd6, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2005,6 +2026,26 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.scalar
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6797484483416101543, guid: 3c2b3403f85bfdd45a7ae9437581cba7, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 0.76862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 6797484483416101543, guid: 3c2b3403f85bfdd45a7ae9437581cba7, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6797484483416101543, guid: 3c2b3403f85bfdd45a7ae9437581cba7, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.r
+      value: 0.9411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 6797484483416101543, guid: 3c2b3403f85bfdd45a7ae9437581cba7, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.m_ColorSpace
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269192727327325567, guid: 3c2b3403f85bfdd45a7ae9437581cba7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: de65a2efa6cc3435681ae8a8378cfdd6, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

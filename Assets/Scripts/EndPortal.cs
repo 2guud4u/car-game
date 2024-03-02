@@ -21,7 +21,7 @@ public class EndPortal : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if (_open && collision.gameObject.tag == "Player"){
-            GameManager.Instance.GameWin();
+            GameManager.Instance.EndLevel();
         }
     }
 }
