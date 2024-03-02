@@ -19,7 +19,6 @@ public class Topple : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("MeleeSoldier"))
         {
             _audioSource.PlayOneShot(crashSound);
-            // Debug.Log("Topple");
             Rigidbody rb = GetComponent<Rigidbody>();
             
             if (rb != null)

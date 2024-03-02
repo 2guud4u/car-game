@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7817231919514933102}
   - component: {fileID: 4142062097676467453}
   - component: {fileID: 4327992113476529114}
+  - component: {fileID: 8722341910571902159}
   m_Layer: 7
   m_Name: Wall
   m_TagString: Untagged
@@ -248,6 +249,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8722341910571902159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2664317985647767603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69440bcdfcf0c4e60a54b22daaec1a2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  volume: 0.6
+  collisionTags:
+  - Player
+  - MeleeSoldier
 --- !u!1 &3816837551861723546
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,6 +275,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5000780848895129782}
+  - component: {fileID: 1537354645488992272}
   m_Layer: 7
   m_Name: Tower
   m_TagString: SpawnPoint
@@ -281,6 +300,21 @@ Transform:
   - {fileID: 5732042042175628401}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1537354645488992272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3816837551861723546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716da79e03ef16848bccc602088216ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toppleForce: 100
+  toppleTorque: 100
+  crashSound: {fileID: 0}
 --- !u!1 &5321235227388409154
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,6 +324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5732042042175628401}
+  - component: {fileID: 314931402094909062}
   m_Layer: 7
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -312,3 +347,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5000780848895129782}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &314931402094909062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5321235227388409154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69440bcdfcf0c4e60a54b22daaec1a2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  volume: 0.6
+  collisionTags:
+  - Player
+  - MeleeSoldier
