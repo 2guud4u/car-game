@@ -13,6 +13,7 @@ public class Health : MonoBehaviour
     public AudioClip arrowSound;
     public AudioClip heartSound;
     private AudioSource _audioSource;
+    public GameObject damageEffect;
 
     // Start is called before the first frame update
     private void Awake()
@@ -59,16 +60,18 @@ public class Health : MonoBehaviour
         }
         else if (other.CompareTag("Damage"))
         {
+            ParticleManager.Instance.PlayEffect(damageEffect, other.transform.position, 1f);
             Destroy(other.gameObject);
             LiveDecrease();
             _audioSource.PlayOneShot(arrowSound); 
         }
         else if (other.CompareTag("Weapon"))
         {
-             LiveDecrease();
+            LiveDecrease();
             // other.gameObject.SetActive(false);
             other.gameObject.tag = "Untagged";
             _audioSource.PlayOneShot(swordSound);
+            ParticleManager.Instance.PlayEffect(damageEffect, other.transform.position, 1f);
         }
         else if (other.CompareTag("BallistaBolt")){
             LiveDecrease();
