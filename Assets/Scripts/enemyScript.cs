@@ -54,7 +54,7 @@ public class enemyScript : MonoBehaviour
 
     public int maxHealth = 10;
 
-    [SerializeField] EnemyHealthBar healthBar;
+    [SerializeField] GameObject healthBar;
     private void Awake()
     {
         health = totalHealth;
@@ -65,14 +65,7 @@ public class enemyScript : MonoBehaviour
         playerVelocity = GameObject.Find("Player").GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
         _audioSource = GetComponent<AudioSource>();
-        healthBar = GetComponentInChildren<EnemyHealthBar>();
-        //healthBar.UpdateHealthBar(health, totalHealth);
-
-    }
-    private void Start()
-    {
-        healthBar = GetComponentInChildren<EnemyHealthBar>();
-
+        if(healthBar != null) { healthBar.GetComponent<HealthBar>().SetMaxHealth(maxHealth); }
     }
     private void Update()
     {
@@ -101,9 +94,9 @@ public class enemyScript : MonoBehaviour
         }
 
         if(animator != null) { Animate(); }
-        if(healthBar){
-            healthBar.UpdateHealthBar(health, totalHealth);
-        }
+        // if(healthBar){
+        //     healthBar.SetHealth((int) health);
+        // }
     }
 
     private void Patroling()
@@ -150,7 +143,8 @@ public class enemyScript : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
-        healthBar.UpdateHealthBar(health, totalHealth);
+        healthBar.SetActive(true);
+        healthBar.GetComponent<HealthBar>().SetHealth((int) health);
         // Debug.Log(health + "/" + totalHealth);
     }
 
