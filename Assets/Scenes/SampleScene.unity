@@ -5357,6 +5357,7 @@ MonoBehaviour:
   loseSound: {fileID: 8300000, guid: a291bcde85e8dc644970188d88745e66, type: 3}
   engine: {fileID: 97042152}
   drift: {fileID: 2140897660}
+  damagedCar: {fileID: 4121091811543088291, guid: ddf4ea2625767fd4bb4153e7e4009ad5, type: 3}
 --- !u!4 &911829357
 Transform:
   m_ObjectHideFlags: 0
@@ -10747,7 +10748,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -25, y: -99.59491}
+  m_AnchoredPosition: {x: -25, y: -99.594894}
   m_SizeDelta: {x: 0, y: -41.190193}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &2087912866
@@ -11328,6 +11329,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 560519734}
+    - target: {fileID: 334288503679474534, guid: 274c289bb4bfd4ff88d84b6408515d43, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 984181790618763574, guid: 274c289bb4bfd4ff88d84b6408515d43, type: 3}
       propertyPath: healthBar
       value: 

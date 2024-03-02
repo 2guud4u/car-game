@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
 
     public AudioSource engine;
     public AudioSource drift;
+    public GameObject damagedCar;
 
     private void Awake()
     {
@@ -44,7 +45,9 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.SetSpeedometer(playerRigidbody.velocity.magnitude);
         if(currTime <= 0){
             GameOver("Time's up!");
-        }else if (Health.Instance.currentHealth <= 0)
+        } else if (Health.Instance.currentHealth <= 50) {
+            ParticleManager.Instance.PlayEffect(damagedCar, player.transform.position, 1f);
+        } else if (Health.Instance.currentHealth <= 0)
         {
             GameOver("You died!");
         }
