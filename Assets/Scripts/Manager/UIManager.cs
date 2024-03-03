@@ -66,17 +66,17 @@ public class UIManager : MonoBehaviour
             portalWarningScreen.SetActive(visibility);
             Invoke("HideWarningPortal", 4f);
         }
-        else if (item == "GameStart")
+        else if (item == "GameStart" && gameStart != null)
         {
             Time.timeScale = 0;
             gameStart.SetActive(visibility);
             StartCoroutine(HideGameStart());
         }
-        else if (item == "HealthPrompt")
+        else if (item == "HealthPrompt" && healthPrompt != null)
         {
             healthPrompt.SetActive(visibility);
         }
-        else if (item == "EnemyPrompt")
+        else if (item == "EnemyPrompt" && enemyPrompt != null)
         {
             enemyPrompt.SetActive(visibility);
             cam.GetComponent<CameraPan>().enabled = true;

@@ -13,7 +13,7 @@ public class Health : MonoBehaviour
     public AudioClip arrowSound;
     public AudioClip heartSound;
     private AudioSource _audioSource;
-    private bool flag = false;
+    public bool flag = false;
 
     // Start is called before the first frame update
     private void Awake()
