@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641228, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1154,6 +1154,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 334288503679474534, guid: 274c289bb4bfd4ff88d84b6408515d43, type: 3}
+      propertyPath: flag
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 334288503679474534, guid: 274c289bb4bfd4ff88d84b6408515d43, type: 3}
       propertyPath: healthBar
       value: 
@@ -7848,15 +7852,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1899445756}
+  soldier: {fileID: 0}
   soulCondition: 50
   _levelTime: 300
   _soul: 0
-  nextLevel: GameWin
   winSound: {fileID: 8300000, guid: 9dcb8342575de014385c916bc36f2cbb, type: 3}
   loseSound: {fileID: 8300000, guid: a291bcde85e8dc644970188d88745e66, type: 3}
   engine: {fileID: 0}
   drift: {fileID: 0}
-  damagedCar: {fileID: 0}
 --- !u!82 &1126513776
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8013,6 +8016,12 @@ MonoBehaviour:
   gameOverScreen: {fileID: 1159563824}
   gameWinScreen: {fileID: 1647215603}
   portalWarningScreen: {fileID: 1648625892}
+  gameStart: {fileID: 0}
+  healthPrompt: {fileID: 0}
+  enemyPrompt: {fileID: 0}
+  soldier: {fileID: 0}
+  player: {fileID: 0}
+  cam: {fileID: 0}
   soul: {fileID: 893944083}
 --- !u!4 &1126513781
 Transform:
