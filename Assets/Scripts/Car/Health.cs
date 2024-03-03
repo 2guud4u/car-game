@@ -41,41 +41,36 @@ public class Health : MonoBehaviour
         }
     }
 
-    void LiveIncrease()
+    public void LiveIncrease(int increase)
     {
-        currentHealth += 10;
+        currentHealth += increase;
         healthBar.SetHealth(currentHealth);
+        _audioSource.PlayOneShot(heartSound);
     }
 
-    void LiveDecrease() 
+    void LiveDecrease(int decrease) 
     { 
-        currentHealth -= 10;
+        currentHealth -= decrease;
         healthBar.SetHealth(currentHealth);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Health"))
+        if (other.CompareTag("Damage"))
         {
             Destroy(other.gameObject);
-            LiveIncrease();
-            _audioSource.PlayOneShot(heartSound);
-        }
-        else if (other.CompareTag("Damage"))
-        {
-            Destroy(other.gameObject);
-            LiveDecrease();
+            LiveDecrease(10);
             _audioSource.PlayOneShot(arrowSound); 
         }
         else if (other.CompareTag("Weapon"))
         {
-             LiveDecrease();
+             LiveDecrease(10);
             // other.gameObject.SetActive(false);
             other.gameObject.tag = "Untagged";
             _audioSource.PlayOneShot(swordSound);
         }
         else if (other.CompareTag("BallistaBolt")){
-            LiveDecrease();
+            LiveDecrease(10);
             _audioSource.PlayOneShot(arrowSound);
         }
     }
