@@ -2,17 +2,16 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Diagnostics.Tracing;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public GameObject player;
+    public GameObject soldier;
     public int soulCondition = 10;
     public int _levelTime;
 
     public int _soul = 0;
-    public string nextLevel;
 
     Rigidbody playerRigidbody;
 
@@ -22,7 +21,7 @@ public class GameManager : MonoBehaviour
 
     public AudioSource engine;
     public AudioSource drift;
-    public GameObject damagedCar;
+    enemySpawner[] spawners;
 
     private void Awake()
     {
@@ -38,6 +37,12 @@ public class GameManager : MonoBehaviour
         playerRigidbody = player.GetComponent<Rigidbody>();
         Time.timeScale = 1;
         UIManager.Instance.UpdateSoulText(_soul, soulCondition);
+        UIManager.Instance.MakeVisible("GameStart", true);
+        spawners = GetComponents<enemySpawner>();
+        foreach(enemySpawner spawner in spawners)
+        {
+            spawner.enabled = false;
+        }
     }
 
     void Update()
@@ -47,11 +52,17 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.SetSpeedometer(playerRigidbody.velocity.magnitude);
         if(currTime <= 0){
             GameOver("Time's up!");
-        } else if (Health.Instance.currentHealth <= 50) {
-            ParticleManager.Instance.PlayEffect(damagedCar, player.transform.position, 1f);
-        } else if (Health.Instance.currentHealth <= 0)
+        }else if (Health.Instance.currentHealth <= 0)
         {
             GameOver("You died!");
+        }
+
+        if(soldier == null)
+        {
+            foreach (enemySpawner spawner in spawners)
+            {
+                spawner.enabled = true;
+            }
         }
     }
 
@@ -87,14 +98,8 @@ public class GameManager : MonoBehaviour
 
     public void EndLevel()
     {
-        if(nextLevel == "GameWin")
-        {
-            GameWin();
-        }
-        else
-        {
-            SceneManager.LoadScene(nextLevel);
-        }
+        UIManager.Instance.MakeVisible("GameWin", true);
+        Time.timeScale = 0;
     }
 
     public void RestartLevel()
@@ -102,7 +107,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void RestartGame()
+    public void NextLevel()
     {
         SceneManager.LoadScene("SampleScene");
     }
