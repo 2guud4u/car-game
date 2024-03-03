@@ -147,7 +147,7 @@ public class PrometeoCarController : MonoBehaviour
       float localVelocityX;
       bool deceleratingCar;
       bool touchControlsSetup = false;
-      bool isAcclerating;
+      bool isAccelerating;
       /*
       The following variables are used to store information about sideways friction of the wheels (such as
       extremumSlip,extremumValue, asymptoteSlip, asymptoteValue and stiffness). We change this values to
@@ -338,15 +338,15 @@ public class PrometeoCarController : MonoBehaviour
 
         if(isPressingW){
             // Debug.Log(carSpeed);
-            if (Keyboard.current.shiftKey.wasPressedThisFrame && !isAcclerating)
+            if (Keyboard.current.shiftKey.wasPressedThisFrame && !isAccelerating)
             {
-                Debug.Log("accelerate");
-                carRigidbody.AddForce((transform.up *500000)+(transform.forward * 200000000) * Time.fixedDeltaTime);
+                // Debug.Log("accelerate");
+                carRigidbody.AddForce((transform.up * 10000 + transform.forward * 100000000) * Time.fixedDeltaTime);
                 LVParticleSystem.Play();
                 RVParticleSystem.Play();
                 maxSpeed *= 2;
                 accelerationMultiplier *= 2;
-                isAcclerating = true;
+                isAccelerating = true;
                 Invoke("ResetSpeed", 3f);
             }
             CancelInvoke("DecelerateCar");
@@ -397,7 +397,7 @@ public class PrometeoCarController : MonoBehaviour
     {
         maxSpeed /= 2;
         accelerationMultiplier /= 2;
-        isAcclerating = false;
+        isAccelerating = false;
     }
 
     // This method converts the car speed data from float to string, and then set the text of the UI carSpeedText with this value.
@@ -423,8 +423,9 @@ public class PrometeoCarController : MonoBehaviour
       if(useSounds){
         try{
           if(carEngineSound != null){
-            float engineSoundPitch = initialCarEngineSoundPitch + (Mathf.Abs(carRigidbody.velocity.magnitude) / 25f);
-            carEngineSound.pitch = engineSoundPitch;
+            // float engineSoundPitch = initialCarEngineSoundPitch + Math.Min(1, Mathf.Abs(carRigidbody.velocity.magnitude) / 50f);
+            // carEngineSound.pitch = engineSoundPitch;
+            carEngineSound.pitch = Mathf.Clamp(initialCarEngineSoundPitch + carRigidbody.velocity.magnitude / 25f, initialCarEngineSoundPitch, 3);
           }
           if((isDrifting) || (isTractionLocked && Mathf.Abs(carSpeed) > 12f)){
             if(!tireScreechSound.isPlaying){
