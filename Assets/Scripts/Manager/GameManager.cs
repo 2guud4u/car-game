@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public GameObject player;
+    public GameObject soldier;
     public int soulCondition = 10;
     public int _levelTime;
 
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     public AudioSource engine;
     public AudioSource drift;
+    enemySpawner[] spawners;
 
     private void Awake()
     {
@@ -35,6 +37,12 @@ public class GameManager : MonoBehaviour
         playerRigidbody = player.GetComponent<Rigidbody>();
         Time.timeScale = 1;
         UIManager.Instance.UpdateSoulText(_soul, soulCondition);
+        UIManager.Instance.MakeVisible("GameStart", true);
+        spawners = GetComponents<enemySpawner>();
+        foreach(enemySpawner spawner in spawners)
+        {
+            spawner.enabled = false;
+        }
     }
 
     void Update()
@@ -47,6 +55,14 @@ public class GameManager : MonoBehaviour
         }else if (Health.Instance.currentHealth <= 0)
         {
             GameOver("You died!");
+        }
+
+        if(soldier == null)
+        {
+            foreach (enemySpawner spawner in spawners)
+            {
+                spawner.enabled = true;
+            }
         }
     }
 
@@ -91,7 +107,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void RestartGame()
+    public void NextLevel()
     {
         SceneManager.LoadScene("SampleScene");
     }
