@@ -1197,6 +1197,7 @@ GameObject:
   - component: {fileID: 1809551278637998733}
   - component: {fileID: 334288503679474534}
   - component: {fileID: 7741980937519634574}
+  - component: {fileID: 8931164698799327272}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1389,12 +1390,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 80
+  currentHealth: 100
   healthBar: {fileID: 0}
   swordSound: {fileID: 8300000, guid: 006a638c89e0c7e4e9bf2a62d09186c0, type: 3}
   arrowSound: {fileID: 8300000, guid: 31eda9cfac5ab7246809cb8f1327577c, type: 3}
   heartSound: {fileID: 8300000, guid: e72d36e9dcf30894eb7c7ccbbc51e209, type: 3}
-  flag: 0
+  flag: 1
 --- !u!82 &7741980937519634574
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1491,6 +1492,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8931164698799327272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9123778990672274763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e36de0d9285b4acf94fa78487d455e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1537506307883314042
 PrefabInstance:
   m_ObjectHideFlags: 0
