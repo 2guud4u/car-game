@@ -75,7 +75,6 @@ public class UIManager : MonoBehaviour
         else if (item == "HealthPrompt")
         {
             healthPrompt.SetActive(visibility);
-            healthPrompt.transform.GetChild(2).gameObject.SetActive(false);   
         }
         else if (item == "EnemyPrompt")
         {
@@ -100,10 +99,12 @@ public class UIManager : MonoBehaviour
 
     public void HideHealthPrompt()
     {
-        healthPrompt.transform.GetChild(1).gameObject.SetActive(false);
-        healthPrompt.transform.GetChild(2).gameObject.SetActive(true);
+        healthPrompt.transform.GetChild(0).gameObject.SetActive(false);
+        healthPrompt.transform.GetChild(2).gameObject.SetActive(false);
+        healthPrompt.transform.GetChild(1).gameObject.SetActive(true);
+        healthPrompt.transform.GetChild(3).gameObject.SetActive(true);
         player.GetComponent<PlayerInput>().enabled = false;
-        Invoke("Next", 1f);
+        Invoke("Next", 2f);
     }
 
     public void HideEnemyPrompt()
