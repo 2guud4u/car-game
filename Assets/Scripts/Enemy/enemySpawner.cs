@@ -31,8 +31,8 @@ public class enemySpawner : MonoBehaviour
        
         //Vector3 spawnPos = new Vector3(Random.Range(-40, 79), 1.5f, Random.Range(-280, 400));
         //GameObject l = Instantiate(enemyPrefab, spawnPos, Quaternion.identity); 
-        int random = Random.Range(0, spawnPoints.Length);
-        GameObject l = Instantiate(enemyPrefab, spawnPoints[random].transform.Find("SpawnPoint").transform.position, Quaternion.identity);
+        int random = Mathf.Min(spawnPoints.Length, Random.Range(0, spawnPoints.Length));
+        GameObject l = Instantiate(enemyPrefab, spawnPoints[random].transform.position, Quaternion.identity);
 
     }
 }
