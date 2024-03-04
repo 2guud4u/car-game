@@ -82,7 +82,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4742473837712756890, guid: cce66f6ad2b184459a1baf0ccf4b63ba, type: 3}
       propertyPath: m_LODs.Array.data[0].screenRelativeHeight
-      value: 0.26465628
+      value: 0.3388496
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

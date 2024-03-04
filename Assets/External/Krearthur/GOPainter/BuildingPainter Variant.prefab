@@ -1,0 +1,235 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7519555286386167466
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 28499325556500221, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 28499325556500221, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 28499325556500221, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: paintObjectIds.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 28499325556500221, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: paintObjectIds.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 28499325556500221, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: paintObjectIds.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 28499325556500221, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: paintObjectIds.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 28499325556500221, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: paintObjectIds.Array.data[3]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 28499325556500221, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: paintObjectIds.Array.data[4]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 28499325556500221, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: paintObjectIds.Array.data[5]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: active
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: padding
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: gridSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: gridSize.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: gridSize.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: hideCanvas
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: snapToGrid
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: brushRadius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: canvasLayer
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: dynamicGrid
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: paintCanvas
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: rotationStep
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: placeOffset.x
+      value: 8.110992
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: placeOffset.y
+      value: 0.0070180893
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: placeOffset.z
+      value: 28.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: alignWithStroke
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: MASK_CANVAS_ONLY
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: MASK_ONLY_OBJECTS
+      value: -13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: placementOffset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: placementOffset.z
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: sameScaleForObjects
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: paintObjects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: paintObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 7167244691680515013, guid: b7ed1ab136b0e45b190b8934d55596b4, type: 3}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: paintObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 3887249643254864195, guid: 2618f92a1f4a44c5dbdd65e312efd334, type: 3}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: paintObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 3400635389875273467, guid: 201397c1787b9284789d4914603ecbeb, type: 3}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: paintObjects.Array.data[3]
+      value: 
+      objectReference: {fileID: 3571459167195635449, guid: 79f00eb615b8a52469522bfc077631d2, type: 3}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: paintObjects.Array.data[4]
+      value: 
+      objectReference: {fileID: 8466313297055494288, guid: 5c11f4ab849016741a77888aacfb0208, type: 3}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: paintObjects.Array.data[5]
+      value: 
+      objectReference: {fileID: 154356442682283624, guid: 1dfb0d24a6590034cac64fa2f18dcfd9, type: 3}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: paintObjects.Array.data[6]
+      value: 
+      objectReference: {fileID: 291237974353550130, guid: 435767a7aff82c3448447ddef95c306b, type: 3}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: paintObjects.Array.data[7]
+      value: 
+      objectReference: {fileID: 9197831201899055588, guid: 53b322b9927975545bb67415ca4be4f3, type: 3}
+    - target: {fileID: 2035126763994278536, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: paintObjects.Array.data[8]
+      value: 
+      objectReference: {fileID: 6654728687783360882, guid: bd8af8f73f6acde4590ecab958f6e6ad, type: 3}
+    - target: {fileID: 2035126763994278537, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: m_Pitch
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278539, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278539, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278539, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278539, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278539, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278539, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278539, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278539, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278539, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278539, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278543, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: m_Name
+      value: BuildingPainter Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035126763994278543, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5572294290695061681, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9d2af0a0539325947a0d424e1e4af2b6, type: 3}
