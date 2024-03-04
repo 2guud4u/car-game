@@ -1,20 +1,26 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
+using System.Linq;
 
 public class enemySpawner : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] float spawnRate = 5.0f;
-    public GameObject enemyPrefab;
+    [SerializeField] float spawnRange;
     GameObject[] spawnPoints;
+    public int maxEnemiesNearby;
+    public LayerMask spawnLayer;
+    public LayerMask enemyLayer;
+    public GameObject enemyPrefab;
+    GameObject player;
     // Update is called once per frame
     //public AudioSource audioSource;
     void Start()
     {
         spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
+        player = GameObject.Find("Player");
         StartCoroutine(SpawnWithDelayCoroutine());
-        
     }
     IEnumerator SpawnWithDelayCoroutine(){
         while(true){
@@ -22,17 +28,18 @@ public class enemySpawner : MonoBehaviour
             spawnEnemy();
             //audioSource.Play();
         }
-        
-        
-       
     }
     private void spawnEnemy(){
-        // spawning left
-       
-        //Vector3 spawnPos = new Vector3(Random.Range(-40, 79), 1.5f, Random.Range(-280, 400));
-        //GameObject l = Instantiate(enemyPrefab, spawnPos, Quaternion.identity); 
-        int random = Mathf.Min(spawnPoints.Length, Random.Range(0, spawnPoints.Length));
-        GameObject l = Instantiate(enemyPrefab, spawnPoints[random].transform.position, Quaternion.identity);
+        Collider[] nearSpawnPoints = Physics.OverlapSphere(player.transform.position, spawnRange, spawnLayer, QueryTriggerInteraction.Collide);
+        Collider[] nearEnemies = Physics.OverlapSphere(player.transform.position, spawnRange, enemyLayer, QueryTriggerInteraction.Collide);
+        int nearEnemiesCount = nearEnemies.Where(c => c.gameObject.transform.parent == null).ToArray().Length;
+
+        int random = Mathf.Min(nearSpawnPoints.Length, Random.Range(0, nearSpawnPoints.Length));
+        if(nearEnemiesCount < maxEnemiesNearby)
+        {
+            Debug.Log(nearEnemiesCount);
+            GameObject l = Instantiate(enemyPrefab, nearSpawnPoints[random].gameObject.transform.position, Quaternion.identity);
+        }
 
     }
 }
