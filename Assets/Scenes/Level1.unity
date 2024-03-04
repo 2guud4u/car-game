@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641228, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9913,7 +9913,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -248.99998, y: 0, z: -499}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 516631912}
@@ -20374,6 +20374,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Castle2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3887249643254864195, guid: 2618f92a1f4a44c5dbdd65e312efd334, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8646579835613097627, guid: 2618f92a1f4a44c5dbdd65e312efd334, type: 3}
       propertyPath: m_LocalPosition.x
       value: 58.491085
@@ -24736,6 +24740,10 @@ PrefabInstance:
     - target: {fileID: 716105277944282843, guid: d1d449dec8f3e4e9198a2f3e8bba1a35, type: 3}
       propertyPath: m_Name
       value: BallistaCastle
+      objectReference: {fileID: 0}
+    - target: {fileID: 716105277944282843, guid: d1d449dec8f3e4e9198a2f3e8bba1a35, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1455929055775260507, guid: d1d449dec8f3e4e9198a2f3e8bba1a35, type: 3}
       propertyPath: m_LocalPosition.x
@@ -37399,6 +37407,10 @@ PrefabInstance:
     - target: {fileID: 3887249643254864195, guid: 2618f92a1f4a44c5dbdd65e312efd334, type: 3}
       propertyPath: m_Name
       value: Castle2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887249643254864195, guid: 2618f92a1f4a44c5dbdd65e312efd334, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646579835613097627, guid: 2618f92a1f4a44c5dbdd65e312efd334, type: 3}
       propertyPath: m_LocalPosition.x
@@ -69709,7 +69721,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2004580240
 Transform:
   m_ObjectHideFlags: 0

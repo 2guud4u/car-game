@@ -18,7 +18,8 @@ public class CollisionSound : MonoBehaviour
     // Update is called once per frame
     private void OnCollisionEnter(Collision collision)
     {
-        if(collisionTags.Any(tag => collision.gameObject.CompareTag(tag)))
+        GameObject other = collision.gameObject;
+        if(collision.relativeVelocity.magnitude > 10 && collisionTags.Any(tag => other.CompareTag(tag)))
         {
             audioSource.PlayOneShot(collisionSound, volume);
         }
