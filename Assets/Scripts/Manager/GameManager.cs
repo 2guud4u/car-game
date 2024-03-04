@@ -72,6 +72,12 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.UpdateSoulText(_soul, soulCondition);
     }
 
+    public void DecreaseSoul()
+    {
+        _soul--;
+        UIManager.Instance.UpdateSoulText(_soul, soulCondition);
+    }
+    
     public void GameOver(string reason)
     {
         UIManager.Instance.MakeVisible("GameOver", true);

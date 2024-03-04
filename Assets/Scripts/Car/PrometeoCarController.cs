@@ -337,17 +337,27 @@ public class PrometeoCarController : MonoBehaviour
         bool isPressingD = movementInput.x > 0;
 
         if(isPressingW){
-            // Debug.Log(carSpeed);
+            
             if (Keyboard.current.shiftKey.wasPressedThisFrame && !isAccelerating)
             {
+              if(GameManager.Instance._soul > 0){
                 carRigidbody.AddForce((transform.forward * 200000000) * Time.fixedDeltaTime);
                 LVParticleSystem.Play();
                 RVParticleSystem.Play();
                 maxSpeed *= 2;
                 accelerationMultiplier *= 2;
                 isAccelerating = true;
+                GameManager.Instance.DecreaseSoul();
                 Invoke("ResetSpeed", 3f);
+              }else{
+                UIManager.Instance.MakeVisible("BoosterWarning", true);
+              }
+                
+                
+
+                
             }
+            
             CancelInvoke("DecelerateCar");
             deceleratingCar = false;
             GoForward();

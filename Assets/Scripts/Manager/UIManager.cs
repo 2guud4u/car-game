@@ -11,6 +11,8 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI speedText;
     public TextMeshProUGUI gameOverText;
+
+    public GameObject BoosterWarning;
     public GameObject gameOverScreen;
     public GameObject gameWinScreen;
     public GameObject portalWarningScreen;
@@ -84,7 +86,16 @@ public class UIManager : MonoBehaviour
             soldier.GetComponent<NavMeshAgent>().enabled = true;
             Invoke("HideEnemyPrompt", 4f);
         }
+        else if(item == "BoosterWarning"){
+            Debug.Log("BoosterWarning");
+            BoosterWarning.SetActive(visibility);
+            Invoke("turnOffBoosterWarning", 1.5f);
+        }
 
+    }
+    public void turnOffBoosterWarning()
+    {
+        BoosterWarning.SetActive(false);
     }
 
     public void SetGameOverReason(string reason)
