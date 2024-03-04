@@ -13,6 +13,8 @@ public class Health : MonoBehaviour
     public AudioClip arrowSound;
     public AudioClip heartSound;
     private AudioSource _audioSource;
+    public GameObject carSmoke;
+    public int smokeThreshold = 30;
     public bool flag = false;
 
     // Start is called before the first frame update
@@ -38,6 +40,8 @@ public class Health : MonoBehaviour
         {
             flag = true;
             UIManager.Instance.HideHealthPrompt();
+        } else if (currentHealth <= smokeThreshold){
+            ParticleManager.Instance.PlayEffect(carSmoke, transform.position, 1f);
         }
     }
 
