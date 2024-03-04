@@ -639,8 +639,8 @@ MonoBehaviour:
   timeBetweenAttacks: 6
   alreadyAttacked: 1
   projectile: {fileID: 1913830896440844453, guid: 048ea57898fb5445a84f95636c795b42, type: 3}
-  sightRange: 1000
-  attackRange: 200
+  sightRange: 100
+  attackRange: 100
   playerInSightRange: 1
   playerInAttackRange: 1
   RagdollRoot: {fileID: 8927013964166087080}
@@ -649,6 +649,8 @@ MonoBehaviour:
   soulPrefab: {fileID: 0}
   damageSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
   _audioSource: {fileID: 0}
+  particleEffect: {fileID: 0}
+  timeToUpdateBehavior: 0.5
   maxHealth: 10
   healthBar: {fileID: 0}
 --- !u!195 &1534564050731123167

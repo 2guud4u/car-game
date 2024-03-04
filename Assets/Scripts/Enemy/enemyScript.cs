@@ -52,9 +52,12 @@ public class enemyScript : MonoBehaviour
     public AudioSource _audioSource;
     public GameObject particleEffect;
 
-    public int maxHealth = 10;
+    public float timeToUpdateBehavior; // update current behavior every x seconds
 
+    public int maxHealth = 10;
     [SerializeField] GameObject healthBar;
+    protected bool doesMove = true;
+
     private void Awake()
     {
         health = totalHealth;
@@ -66,17 +69,18 @@ public class enemyScript : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         _audioSource = GetComponent<AudioSource>();
         if(healthBar != null) { healthBar.GetComponent<HealthBar>().SetMaxHealth(maxHealth); }
+        InvokeRepeating("UpdateBehavior", Random.Range(0f, 1f), timeToUpdateBehavior);
     }
-    private void Update()
-    {
 
+    private void UpdateBehavior()
+    {
         //Check for sight and attack range
         //Debug.Log("Checking for sight and attack range");
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
         //run if agent is enabled
-        if(agent.enabled && agent.isOnNavMesh ){
-            if (!playerInAttackRange) {
+        if(agent.enabled && agent.isOnNavMesh){
+            if (!playerInAttackRange && doesMove) {
                 if(!playerInSightRange) {
                     firstAttack = true;
                     Patroling();
@@ -94,9 +98,6 @@ public class enemyScript : MonoBehaviour
         }
 
         if(animator != null) { Animate(); }
-        // if(healthBar){
-        //     healthBar.SetHealth((int) health);
-        // }
     }
 
     private void Patroling()
