@@ -80,10 +80,30 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4165545876323012845, guid: cce66f6ad2b184459a1baf0ccf4b63ba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: cce66f6ad2b184459a1baf0ccf4b63ba, type: 3}
+      propertyPath: m_LODs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4742473837712756890, guid: cce66f6ad2b184459a1baf0ccf4b63ba, type: 3}
       propertyPath: m_LODs.Array.data[0].screenRelativeHeight
-      value: 0.3388496
+      value: 0.19745499
       objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: cce66f6ad2b184459a1baf0ccf4b63ba, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: cce66f6ad2b184459a1baf0ccf4b63ba, type: 3}
+      propertyPath: m_LODs.Array.data[0].renderers.Array.data[0].renderer
+      value: 
+      objectReference: {fileID: 534597611016667656}
+    - target: {fileID: 4742473837712756890, guid: cce66f6ad2b184459a1baf0ccf4b63ba, type: 3}
+      propertyPath: m_LODs.Array.data[1].renderers.Array.data[0].renderer
+      value: 
+      objectReference: {fileID: 8738908812737611578}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -92,6 +112,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 8416147418579406392}
   m_SourcePrefab: {fileID: 100100000, guid: cce66f6ad2b184459a1baf0ccf4b63ba, type: 3}
+--- !u!23 &534597611016667656 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2423097855117850845, guid: cce66f6ad2b184459a1baf0ccf4b63ba, type: 3}
+  m_PrefabInstance: {fileID: 2795564495553215189}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3029443469927614340 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cce66f6ad2b184459a1baf0ccf4b63ba, type: 3}
@@ -118,3 +143,8 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.15, y: 2.66152, z: 0.15}
   m_Center: {x: -0.02, y: 1.3149905, z: 0}
+--- !u!23 &8738908812737611578 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -2338212239285862929, guid: cce66f6ad2b184459a1baf0ccf4b63ba, type: 3}
+  m_PrefabInstance: {fileID: 2795564495553215189}
+  m_PrefabAsset: {fileID: 0}

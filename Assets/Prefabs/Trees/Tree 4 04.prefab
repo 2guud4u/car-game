@@ -64,9 +64,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: -6496843504041691670, guid: 6756bad960fdb440886dad9e738b8c22, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -199049106532508235, guid: 6756bad960fdb440886dad9e738b8c22, type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -199049106532508235, guid: 6756bad960fdb440886dad9e738b8c22, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6756bad960fdb440886dad9e738b8c22, type: 3}
       propertyPath: m_Name
@@ -81,9 +89,25 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4742473837712756890, guid: 6756bad960fdb440886dad9e738b8c22, type: 3}
-      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
-      value: 0.33543408
+      propertyPath: m_LODs.Array.size
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 6756bad960fdb440886dad9e738b8c22, type: 3}
+      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
+      value: 0.25056008
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 6756bad960fdb440886dad9e738b8c22, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 6756bad960fdb440886dad9e738b8c22, type: 3}
+      propertyPath: m_LODs.Array.data[0].renderers.Array.data[0].renderer
+      value: 
+      objectReference: {fileID: 5622744057762256199}
+    - target: {fileID: 4742473837712756890, guid: 6756bad960fdb440886dad9e738b8c22, type: 3}
+      propertyPath: m_LODs.Array.data[1].renderers.Array.data[0].renderer
+      value: 
+      objectReference: {fileID: 6216102383272133524}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -118,3 +142,13 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.375, y: 4.760679, z: 0.375}
   m_Center: {x: 0, y: 2.3803394, z: 0}
+--- !u!23 &5622744057762256199 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7128606602981219353, guid: 6756bad960fdb440886dad9e738b8c22, type: 3}
+  m_PrefabInstance: {fileID: 3236427876700555614}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &6216102383272133524 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -383348924107355446, guid: 6756bad960fdb440886dad9e738b8c22, type: 3}
+  m_PrefabInstance: {fileID: 3236427876700555614}
+  m_PrefabAsset: {fileID: 0}

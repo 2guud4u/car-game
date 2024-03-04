@@ -155,6 +155,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: -2706283445295137742, guid: d99460deebf074c90b932b520addf639, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 457352417508598633, guid: d99460deebf074c90b932b520addf639, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -172,9 +176,25 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4742473837712756890, guid: d99460deebf074c90b932b520addf639, type: 3}
-      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
-      value: 0.34228247
+      propertyPath: m_LODs.Array.size
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: d99460deebf074c90b932b520addf639, type: 3}
+      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
+      value: 0.20024027
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: d99460deebf074c90b932b520addf639, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: d99460deebf074c90b932b520addf639, type: 3}
+      propertyPath: m_LODs.Array.data[0].renderers.Array.data[0].renderer
+      value: 
+      objectReference: {fileID: 7424468246128781457}
+    - target: {fileID: 4742473837712756890, guid: d99460deebf074c90b932b520addf639, type: 3}
+      propertyPath: m_LODs.Array.data[1].renderers.Array.data[0].renderer
+      value: 
+      objectReference: {fileID: 908182135504444624}
     - target: {fileID: 4742473837712756890, guid: d99460deebf074c90b932b520addf639, type: 3}
       propertyPath: m_LODs.Array.data[2].renderers.Array.data[0].renderer
       value: 
@@ -224,5 +244,10 @@ BoxCollider:
 --- !u!4 &2895924012308295723 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d99460deebf074c90b932b520addf639, type: 3}
+  m_PrefabInstance: {fileID: 3439302018711525312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &7424468246128781457 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -3984603208739061935, guid: d99460deebf074c90b932b520addf639, type: 3}
   m_PrefabInstance: {fileID: 3439302018711525312}
   m_PrefabAsset: {fileID: 0}
