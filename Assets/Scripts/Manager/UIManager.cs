@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -39,6 +40,13 @@ public class UIManager : MonoBehaviour
         soulText.enabled = true;
         speedText.enabled = true;
         soul.SetActive(true);
+    }
+
+    private void Update()
+    {
+        if(SceneManager.GetActiveScene().name == "Tutorial" && Keyboard.current.shiftKey.wasPressedThisFrame){
+            turnOffBoosterWarning();
+        }
     }
 
     public void SetTimer(int time)
@@ -89,7 +97,11 @@ public class UIManager : MonoBehaviour
         else if(item == "BoosterWarning"){
             Debug.Log("BoosterWarning");
             BoosterWarning.SetActive(visibility);
-            Invoke("turnOffBoosterWarning", 1.5f);
+            if(SceneManager.GetActiveScene().name != "Tutorial")
+            {
+                Invoke("turnOffBoosterWarning", 2f);
+            }
+            
         }
 
     }

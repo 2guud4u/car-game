@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public AudioSource engine;
     public AudioSource drift;
     enemySpawner[] spawners;
+    private bool hasCalled = false;
 
     private void Awake()
     {
@@ -63,6 +64,12 @@ public class GameManager : MonoBehaviour
             {
                 spawner.enabled = true;
             }
+        }
+
+        if(_soul == 1 && SceneManager.GetActiveScene().name == "Tutorial" && !hasCalled)
+        {
+            UIManager.Instance.MakeVisible("BoosterWarning", true);
+            hasCalled = true;
         }
     }
 
@@ -115,7 +122,7 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Level1");
     }
 
     public void StopAudio()

@@ -166,7 +166,7 @@ public class enemyScript : MonoBehaviour
             limbRb.isKinematic = false;
             limbRb.AddForce(force*2, ForceMode.Impulse);
         }
-        Invoke(nameof(turnOffRagdoll), 8f);
+        Invoke(nameof(turnOffRagdoll), 4f);
     }
     private void turnOffRagdoll()
     {
@@ -218,14 +218,14 @@ public class enemyScript : MonoBehaviour
                 //Vector3 awayDirection = transform.position - other.transform.position;
                 //awayDirection.Normalize();
 
-                turnOnRagdoll(awayDirection * RbVelocity.magnitude);
+                turnOnRagdoll(0.2f * awayDirection * RbVelocity.magnitude);
                 // Vector3 awayDirection = transform.position - other.transform.position;
 
                 // Normalize the direction to ensure consistent force magnitude
                 // awayDirection.Normalize();
 
                 rb.isKinematic = false;
-                rb.AddForce(awayDirection * RbVelocity.magnitude, ForceMode.Impulse);
+                rb.AddForce(0.2f * awayDirection * RbVelocity.magnitude, ForceMode.Impulse);
 
                 TakeDamage(speedBasedDamage);
 

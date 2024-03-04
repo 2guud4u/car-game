@@ -12,6 +12,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PrometeoCarController : MonoBehaviour
 {
@@ -350,7 +351,10 @@ public class PrometeoCarController : MonoBehaviour
                 GameManager.Instance.DecreaseSoul();
                 Invoke("ResetSpeed", 3f);
               }else{
-                UIManager.Instance.MakeVisible("BoosterWarning", true);
+                if(SceneManager.GetActiveScene().name != "Tutorial")
+                {
+                    UIManager.Instance.MakeVisible("BoosterWarning", true);
+                }   
               }
                 
                 

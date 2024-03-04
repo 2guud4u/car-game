@@ -18,7 +18,7 @@ public class EndPortal : MonoBehaviour
         }
         //growth
         if(_open){
-            transform.localScale = portalSize+(new Vector3(1f, 1f, 1f)*(GameManager.Instance._soul-10));
+            transform.localScale = portalSize+(new Vector3(1f, 1f, 1f)*(GameManager.Instance._soul/ GameManager.Instance.soulCondition));
         }
     }
     

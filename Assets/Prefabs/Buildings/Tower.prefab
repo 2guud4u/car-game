@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4142062097676467453}
   - component: {fileID: 4327992113476529114}
   - component: {fileID: 8722341910571902159}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,12 +262,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
-  particles: {fileID: 0}
   volume: 0.6
   collisionTags:
   - Player
   - MeleeSoldier
-  soundThreshold: 0
 --- !u!1 &3816837551861723546
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,7 +276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5000780848895129782}
   - component: {fileID: 1537354645488992272}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +297,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 618342610942771000}
-  - {fileID: 7238288243275131661}
+  - {fileID: 6275879283315455488}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1537354645488992272
@@ -317,7 +315,7 @@ MonoBehaviour:
   toppleForce: 100
   toppleTorque: 100
   crashSound: {fileID: 0}
---- !u!1001 &6971750112434631901
+--- !u!1001 &6029009221842397648
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -327,11 +325,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 338668293189033936, guid: 3a1801b4f8f934d0bb825654f84ae03a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.42128
+      value: 10.273
       objectReference: {fileID: 0}
     - target: {fileID: 338668293189033936, guid: 3a1801b4f8f934d0bb825654f84ae03a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7623749
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 338668293189033936, guid: 3a1801b4f8f934d0bb825654f84ae03a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -374,8 +372,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a1801b4f8f934d0bb825654f84ae03a, type: 3}
---- !u!4 &7238288243275131661 stripped
+--- !u!4 &6275879283315455488 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 338668293189033936, guid: 3a1801b4f8f934d0bb825654f84ae03a, type: 3}
-  m_PrefabInstance: {fileID: 6971750112434631901}
+  m_PrefabInstance: {fileID: 6029009221842397648}
   m_PrefabAsset: {fileID: 0}
