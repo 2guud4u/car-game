@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7396577323237094099}
-  - component: {fileID: 5648082128301200347}
   - component: {fileID: 2167093708779482628}
   - component: {fileID: 837938946312244942}
   - component: {fileID: 2674553871724304518}
+  - component: {fileID: 2556116338777325008}
   m_Layer: 0
   m_Name: wallDoor
   m_TagString: Untagged
@@ -41,33 +41,6 @@ Transform:
   - {fileID: 8548960089246573597}
   m_Father: {fileID: 2925579088429406187}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &5648082128301200347
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1205833184595639575}
-  serializedVersion: 4
-  m_Mass: 500
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &2167093708779482628
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -85,7 +58,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 5.349027, y: 12.969305, z: 9.989836}
   m_Center: {x: 4.4, y: 6.5004263, z: -4.986105}
@@ -198,10 +171,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
   - Player
   - MeleeSoldier
+--- !u!54 &2556116338777325008
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205833184595639575}
+  serializedVersion: 4
+  m_Mass: 500
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1386985497513686730
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,10 +212,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7828782335469651654}
-  - component: {fileID: 6821545232169373574}
   - component: {fileID: 6464307322894928644}
   - component: {fileID: 2946232056071862468}
   - component: {fileID: 4873296268149700337}
+  - component: {fileID: 7794634933597171972}
   m_Layer: 0
   m_Name: wall (1)
   m_TagString: Untagged
@@ -238,33 +239,6 @@ Transform:
   - {fileID: 2036961065696040491}
   m_Father: {fileID: 2925579088429406187}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!54 &6821545232169373574
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1386985497513686730}
-  serializedVersion: 4
-  m_Mass: 500
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &6464307322894928644
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -395,10 +369,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
   - Player
   - MeleeSoldier
+--- !u!54 &7794634933597171972
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386985497513686730}
+  serializedVersion: 4
+  m_Mass: 500
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3745034742561891435
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,10 +624,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2501043912219478391}
-  - component: {fileID: 6049472787354131078}
   - component: {fileID: 5868124048559410576}
   - component: {fileID: 7753654820008980287}
   - component: {fileID: 3843043605526889551}
+  - component: {fileID: 78459193502025391}
   m_Layer: 0
   m_Name: wall
   m_TagString: Untagged
@@ -649,33 +651,6 @@ Transform:
   - {fileID: 6121550690485484008}
   m_Father: {fileID: 2925579088429406187}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!54 &6049472787354131078
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4944552782044276428}
-  serializedVersion: 4
-  m_Mass: 500
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &5868124048559410576
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -806,10 +781,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
   - Player
   - MeleeSoldier
+--- !u!54 &78459193502025391
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4944552782044276428}
+  serializedVersion: 4
+  m_Mass: 500
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5084649466361534348
 GameObject:
   m_ObjectHideFlags: 0
@@ -1139,10 +1142,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7497609522854837790}
-  - component: {fileID: 3252322043994974620}
   - component: {fileID: 5844858216188442215}
   - component: {fileID: 7748495820093742695}
   - component: {fileID: 6467087847602310036}
+  - component: {fileID: 1638039366266746969}
   m_Layer: 0
   m_Name: wall (2)
   m_TagString: Untagged
@@ -1166,33 +1169,6 @@ Transform:
   - {fileID: 2638421056585472834}
   m_Father: {fileID: 2925579088429406187}
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
---- !u!54 &3252322043994974620
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6740860694942587777}
-  serializedVersion: 4
-  m_Mass: 500
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &5844858216188442215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1323,10 +1299,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
   - Player
   - MeleeSoldier
+--- !u!54 &1638039366266746969
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6740860694942587777}
+  serializedVersion: 4
+  m_Mass: 500
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7167244691680515013
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,10 +1542,10 @@ GameObject:
   - component: {fileID: 2339692590361355096}
   - component: {fileID: 1525130945140124342}
   - component: {fileID: 9187988989957089029}
-  - component: {fileID: 3255564418224591967}
   - component: {fileID: 2168599078552754710}
   - component: {fileID: 7810439525802788519}
   - component: {fileID: 9106362133609729257}
+  - component: {fileID: 8509245022411118164}
   m_Layer: 0
   m_Name: towerSquareBaseBorder
   m_TagString: Untagged
@@ -1636,33 +1640,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 4.5, z: 10}
   m_Center: {x: 5, y: 2.25, z: 5}
---- !u!54 &3255564418224591967
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8593208573601471415}
-  serializedVersion: 4
-  m_Mass: 500
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &2168599078552754710
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1793,10 +1770,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
   - Player
   - MeleeSoldier
+--- !u!54 &8509245022411118164
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8593208573601471415}
+  serializedVersion: 4
+  m_Mass: 500
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8845884608322414855
 GameObject:
   m_ObjectHideFlags: 0

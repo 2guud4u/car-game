@@ -166,7 +166,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -204,9 +204,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
-  - Player
+  - PlayerWide
   - MeleeSoldier
 --- !u!82 &970273838762797691
 AudioSource:
@@ -363,7 +364,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -401,9 +402,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
-  - Player
+  - PlayerWide
   - MeleeSoldier
 --- !u!82 &1427985363750653240
 AudioSource:
@@ -880,7 +882,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -918,9 +920,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
-  - Player
+  - PlayerWide
   - MeleeSoldier
 --- !u!82 &1644632861853163120
 AudioSource:
@@ -1247,7 +1250,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1285,9 +1288,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
-  - Player
+  - PlayerWide
   - MeleeSoldier
 --- !u!82 &7411133765759605325
 AudioSource:
@@ -1814,7 +1818,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1852,9 +1856,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
-  - Player
+  - PlayerWide
   - MeleeSoldier
 --- !u!82 &7067417623064105550
 AudioSource:
@@ -2011,7 +2016,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2049,9 +2054,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
-  - Player
+  - PlayerWide
   - MeleeSoldier
 --- !u!82 &353345765045735071
 AudioSource:
@@ -2261,7 +2267,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2299,9 +2305,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
-  - Player
+  - PlayerWide
   - MeleeSoldier
 --- !u!82 &6969689193757880731
 AudioSource:
@@ -2534,7 +2541,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2551,9 +2558,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
-  - Player
+  - PlayerWide
   - MeleeSoldier
 --- !u!82 &2390120061062611876
 AudioSource:
@@ -2897,7 +2905,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2957,9 +2965,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
-  - Player
+  - PlayerWide
   - MeleeSoldier
 --- !u!82 &2344747862710976959
 AudioSource:

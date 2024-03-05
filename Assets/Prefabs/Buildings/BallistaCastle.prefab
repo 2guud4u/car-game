@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 4938822725177097031}
   - component: {fileID: 4019903228422196045}
   - component: {fileID: 8865844538825038056}
-  - component: {fileID: 1109115219969769252}
   m_Layer: 0
   m_Name: wallNarrow (7)
   m_TagString: Untagged
@@ -112,7 +111,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -150,11 +149,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
-  - Player
+  - Playe
   - MeleeSoldier
-  soundThreshold: 0
 --- !u!82 &8865844538825038056
 AudioSource:
   m_ObjectHideFlags: 0
@@ -251,22 +250,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1109115219969769252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 334510155662752743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c5a4659cbf344f69b1e125ac2cd8519, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particles: {fileID: 0}
-  volume: 0
-  collisionTags: []
-  burstThreshold: 0
 --- !u!1 &490504031409897653
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +265,6 @@ GameObject:
   - component: {fileID: 4090399091912135539}
   - component: {fileID: 3855217463435027927}
   - component: {fileID: 784060859086281338}
-  - component: {fileID: 6325725145464238265}
   m_Layer: 0
   m_Name: wallNarrowCorner (3)
   m_TagString: Untagged
@@ -379,7 +361,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -417,11 +399,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
-  - Player
+  - Playe
   - MeleeSoldier
-  soundThreshold: 0
 --- !u!82 &784060859086281338
 AudioSource:
   m_ObjectHideFlags: 0
@@ -518,22 +500,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6325725145464238265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 490504031409897653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c5a4659cbf344f69b1e125ac2cd8519, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particles: {fileID: 0}
-  volume: 0
-  collisionTags: []
-  burstThreshold: 0
 --- !u!1 &716105277944282843
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,7 +644,6 @@ GameObject:
   - component: {fileID: 3966234893295364868}
   - component: {fileID: 6400089092821129049}
   - component: {fileID: 6058972180946871018}
-  - component: {fileID: 7238834346186425873}
   m_Layer: 0
   m_Name: wallNarrowCorner (1)
   m_TagString: Untagged
@@ -775,7 +740,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -813,11 +778,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
-  - Player
+  - Playe
   - MeleeSoldier
-  soundThreshold: 0
 --- !u!82 &6058972180946871018
 AudioSource:
   m_ObjectHideFlags: 0
@@ -914,22 +879,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7238834346186425873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1237867529472146929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c5a4659cbf344f69b1e125ac2cd8519, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particles: {fileID: 0}
-  volume: 0
-  collisionTags: []
-  burstThreshold: 0
 --- !u!1 &1543149727593642173
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,7 +894,6 @@ GameObject:
   - component: {fileID: 2133011470662193177}
   - component: {fileID: 1465735534840785902}
   - component: {fileID: 999106993936230970}
-  - component: {fileID: 6565527548787804118}
   m_Layer: 0
   m_Name: wallNarrow (6)
   m_TagString: Untagged
@@ -1042,7 +990,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1080,11 +1028,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
-  - Player
+  - Playe
   - MeleeSoldier
-  soundThreshold: 0
 --- !u!82 &999106993936230970
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1181,22 +1129,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6565527548787804118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1543149727593642173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c5a4659cbf344f69b1e125ac2cd8519, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particles: {fileID: 0}
-  volume: 0
-  collisionTags: []
-  burstThreshold: 0
 --- !u!1 &2143032748526867302
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,7 +1194,6 @@ GameObject:
   - component: {fileID: 6193503446370086816}
   - component: {fileID: 734978219802074001}
   - component: {fileID: 3055811450242723429}
-  - component: {fileID: 1116434063276252155}
   m_Layer: 0
   m_Name: wallNarrowGate
   m_TagString: Untagged
@@ -1312,7 +1243,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1329,11 +1260,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
-  - Player
+  - Playe
   - MeleeSoldier
-  soundThreshold: 0
 --- !u!82 &3055811450242723429
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1430,22 +1361,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1116434063276252155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2463988405334047389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c5a4659cbf344f69b1e125ac2cd8519, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particles: {fileID: 0}
-  volume: 0
-  collisionTags: []
-  burstThreshold: 0
 --- !u!1 &3141446933041842341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1461,7 +1376,6 @@ GameObject:
   - component: {fileID: 2652479060760627405}
   - component: {fileID: 1364062873725959769}
   - component: {fileID: 2256094953420595813}
-  - component: {fileID: 4972990633511075531}
   m_Layer: 0
   m_Name: wallNarrow (5)
   m_TagString: Untagged
@@ -1558,7 +1472,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1596,11 +1510,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
-  - Player
+  - Playe
   - MeleeSoldier
-  soundThreshold: 0
 --- !u!82 &2256094953420595813
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1697,22 +1611,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4972990633511075531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3141446933041842341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c5a4659cbf344f69b1e125ac2cd8519, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particles: {fileID: 0}
-  volume: 0
-  collisionTags: []
-  burstThreshold: 0
 --- !u!1 &4585146188720649010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1781,7 +1679,6 @@ GameObject:
   - component: {fileID: 6018140535137173560}
   - component: {fileID: 2832724929606035203}
   - component: {fileID: 8873948210654785443}
-  - component: {fileID: 5050294183032810956}
   m_Layer: 0
   m_Name: wallNarrowCorner (2)
   m_TagString: Untagged
@@ -1878,7 +1775,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1916,11 +1813,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
-  - Player
+  - Playe
   - MeleeSoldier
-  soundThreshold: 0
 --- !u!82 &8873948210654785443
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2017,22 +1914,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5050294183032810956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5216701256364372268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c5a4659cbf344f69b1e125ac2cd8519, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particles: {fileID: 0}
-  volume: 0
-  collisionTags: []
-  burstThreshold: 0
 --- !u!1 &5351611918714464947
 GameObject:
   m_ObjectHideFlags: 0
@@ -2048,7 +1929,6 @@ GameObject:
   - component: {fileID: 3334043524767689125}
   - component: {fileID: 2099385520105989003}
   - component: {fileID: 5173665411296615118}
-  - component: {fileID: 4769449207984886901}
   m_Layer: 0
   m_Name: wallNarrow (1)
   m_TagString: Untagged
@@ -2145,7 +2025,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2183,11 +2063,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
-  - Player
+  - Playe
   - MeleeSoldier
-  soundThreshold: 0
 --- !u!82 &5173665411296615118
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2284,22 +2164,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4769449207984886901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5351611918714464947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c5a4659cbf344f69b1e125ac2cd8519, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particles: {fileID: 0}
-  volume: 0
-  collisionTags: []
-  burstThreshold: 0
 --- !u!1 &5393336600221013275
 GameObject:
   m_ObjectHideFlags: 0
@@ -2315,7 +2179,6 @@ GameObject:
   - component: {fileID: 9177083896041858566}
   - component: {fileID: 7303237545688920051}
   - component: {fileID: 2095184086967413202}
-  - component: {fileID: 6203898466161197106}
   m_Layer: 0
   m_Name: wallNarrow (4)
   m_TagString: Untagged
@@ -2412,7 +2275,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2450,11 +2313,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
-  - Player
+  - Playe
   - MeleeSoldier
-  soundThreshold: 0
 --- !u!82 &2095184086967413202
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2551,22 +2414,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6203898466161197106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5393336600221013275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c5a4659cbf344f69b1e125ac2cd8519, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particles: {fileID: 0}
-  volume: 0
-  collisionTags: []
-  burstThreshold: 0
 --- !u!1 &6823442902521842470
 GameObject:
   m_ObjectHideFlags: 0
@@ -2582,7 +2429,6 @@ GameObject:
   - component: {fileID: 7694535790395323683}
   - component: {fileID: 3981494602045965411}
   - component: {fileID: 7163234240870822267}
-  - component: {fileID: 4462837784696780877}
   m_Layer: 0
   m_Name: wallNarrow (8)
   m_TagString: Untagged
@@ -2679,7 +2525,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2717,11 +2563,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
-  - Player
+  - Playe
   - MeleeSoldier
-  soundThreshold: 0
 --- !u!82 &7163234240870822267
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2818,22 +2664,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4462837784696780877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6823442902521842470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c5a4659cbf344f69b1e125ac2cd8519, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particles: {fileID: 0}
-  volume: 0
-  collisionTags: []
-  burstThreshold: 0
 --- !u!1 &6836387402172197412
 GameObject:
   m_ObjectHideFlags: 0
@@ -2849,7 +2679,6 @@ GameObject:
   - component: {fileID: 1376290153756419181}
   - component: {fileID: 184566019044854511}
   - component: {fileID: 3740389070963943576}
-  - component: {fileID: 8559811526658184399}
   m_Layer: 0
   m_Name: wallNarrowCorner
   m_TagString: Untagged
@@ -2946,7 +2775,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2984,11 +2813,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
-  - Player
+  - Playe
   - MeleeSoldier
-  soundThreshold: 0
 --- !u!82 &3740389070963943576
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3085,22 +2914,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8559811526658184399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6836387402172197412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c5a4659cbf344f69b1e125ac2cd8519, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particles: {fileID: 0}
-  volume: 0
-  collisionTags: []
-  burstThreshold: 0
 --- !u!1 &7336661690566616790
 GameObject:
   m_ObjectHideFlags: 0
@@ -3116,7 +2929,6 @@ GameObject:
   - component: {fileID: 3696932014908728031}
   - component: {fileID: 6286552690868361093}
   - component: {fileID: 4054770181972548778}
-  - component: {fileID: 607992440186855675}
   m_Layer: 0
   m_Name: wallNarrow (2)
   m_TagString: Untagged
@@ -3213,7 +3025,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3251,11 +3063,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
-  - Player
+  - Playe
   - MeleeSoldier
-  soundThreshold: 0
 --- !u!82 &4054770181972548778
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3352,22 +3164,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &607992440186855675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7336661690566616790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c5a4659cbf344f69b1e125ac2cd8519, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particles: {fileID: 0}
-  volume: 0
-  collisionTags: []
-  burstThreshold: 0
 --- !u!1 &8220848188766645245
 GameObject:
   m_ObjectHideFlags: 0
@@ -3383,7 +3179,6 @@ GameObject:
   - component: {fileID: 4497843883141292260}
   - component: {fileID: 3262720078594721446}
   - component: {fileID: 436900391883402995}
-  - component: {fileID: 2796423586912241615}
   m_Layer: 0
   m_Name: wallNarrow
   m_TagString: Untagged
@@ -3480,7 +3275,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3518,11 +3313,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
-  - Player
+  - Playe
   - MeleeSoldier
-  soundThreshold: 0
 --- !u!82 &436900391883402995
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3619,22 +3414,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2796423586912241615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8220848188766645245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c5a4659cbf344f69b1e125ac2cd8519, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particles: {fileID: 0}
-  volume: 0
-  collisionTags: []
-  burstThreshold: 0
 --- !u!1 &8465231069762787362
 GameObject:
   m_ObjectHideFlags: 0
@@ -3650,7 +3429,6 @@ GameObject:
   - component: {fileID: 7053417312730989715}
   - component: {fileID: 5988506339740320277}
   - component: {fileID: 7466736609300989443}
-  - component: {fileID: 4351666385556104916}
   m_Layer: 0
   m_Name: wallNarrow (3)
   m_TagString: Untagged
@@ -3747,7 +3525,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3785,11 +3563,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
   collisionTags:
-  - Player
+  - Playe
   - MeleeSoldier
-  soundThreshold: 0
 --- !u!82 &7466736609300989443
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3886,22 +3664,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4351666385556104916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8465231069762787362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c5a4659cbf344f69b1e125ac2cd8519, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particles: {fileID: 0}
-  volume: 0
-  collisionTags: []
-  burstThreshold: 0
 --- !u!1 &9179248721723828947
 GameObject:
   m_ObjectHideFlags: 0

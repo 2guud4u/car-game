@@ -16,6 +16,7 @@ TagManager:
   - Projectile
   - Building
   - SpawnPoint
+  - PlayerWide
   layers:
   - Default
   - TransparentFX
