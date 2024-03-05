@@ -4,7 +4,7 @@ using UnityEngine.AI;
 using System.Collections;
 public class soldierScript : enemyScript
 {   
-    [SerializeField] float timeSwordIsDrawn;
+    float timeSwordIsDrawn = 0.7f;
 
     public override void AttackPlayer()
     {
@@ -16,12 +16,12 @@ public class soldierScript : enemyScript
         if (!alreadyAttacked)
         {
             ///Attack code here
+            AnimateAttack();
             DrawSword();
 
             alreadyAttacked = true;
             
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
-            Invoke(nameof(HideSword), timeSwordIsDrawn);
         }
         
         
@@ -31,7 +31,7 @@ public class soldierScript : enemyScript
     {
         projectile.tag = "Weapon";
         // projectile.SetActive(true);
-        AnimateAttack();
+        Invoke(nameof(HideSword), timeSwordIsDrawn);
     }
 
     public void HideSword()

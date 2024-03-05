@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public int _levelTime;
 
     public int _soul = 0;
+    public string nextLevel;
 
     Rigidbody playerRigidbody;
 
@@ -122,7 +123,7 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(nextLevel);
     }
 
     public void StopAudio()

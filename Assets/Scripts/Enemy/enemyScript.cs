@@ -173,7 +173,10 @@ public class enemyScript : MonoBehaviour
         animator.enabled = true;
         if(health > 0){
             GameObject enemy = Instantiate(enemyObj, torsoRb.transform.position, Quaternion.identity);
-            enemy.GetComponentInChildren<enemyScript>().setHealth(health);
+            enemyScript enemyScript = enemy.GetComponentInChildren<enemyScript>();
+            enemyScript.setHealth(health);
+            enemyScript.healthBar.GetComponent<HealthBar>().SetHealth((int) health);
+            enemyScript.healthBar.SetActive(healthBar.activeSelf);
         } else {
             ParticleManager.Instance.PlayEffect(particleEffect, torsoRb.transform.position, 1f);
         }
@@ -188,7 +191,6 @@ public class enemyScript : MonoBehaviour
     private void setHealth(float health)
     {
         this.health = health;
-        
     }
 
     public virtual void OnTriggerEnter(Collider other)
@@ -265,11 +267,11 @@ public class enemyScript : MonoBehaviour
 
     public void Animate()
     {
-        animator.SetBool("isWalking", walkPointSet);
+        animator.SetBool("isWalking", agent.enabled && agent.remainingDistance > 0);
     }
 
     public void AnimateAttack()
     {
-        animator.SetBool("isAttacking", true);
+        animator.SetTrigger("isAttacking");
     }
 }

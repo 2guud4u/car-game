@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI gameOverText;
 
     public GameObject BoosterWarning;
+    public GameObject GoalWarning;
     public GameObject gameOverScreen;
     public GameObject gameWinScreen;
     public GameObject portalWarningScreen;
@@ -25,6 +26,7 @@ public class UIManager : MonoBehaviour
     public Camera cam;
     public GameObject soul;
     public static UIManager Instance;
+    int tutorialStep = 0;
 
     private void Awake()
     {
@@ -46,6 +48,7 @@ public class UIManager : MonoBehaviour
     {
         if(SceneManager.GetActiveScene().name == "Tutorial" && Keyboard.current.shiftKey.wasPressedThisFrame){
             turnOffBoosterWarning();
+            Invoke("ShowGoalWarning", 2f);
         }
     }
 
@@ -76,17 +79,17 @@ public class UIManager : MonoBehaviour
             portalWarningScreen.SetActive(visibility);
             Invoke("HideWarningPortal", 4f);
         }
-        else if (item == "GameStart" && gameStart != null)
+        else if (item == "GameStart" && tutorialStep == 0 && gameStart != null)
         {
-            Time.timeScale = 0;
+            // Time.timeScale = 0;
             gameStart.SetActive(visibility);
             StartCoroutine(HideGameStart());
         }
-        else if (item == "HealthPrompt" && healthPrompt != null)
+        else if (item == "HealthPrompt" && tutorialStep == 1 && healthPrompt != null)
         {
             healthPrompt.SetActive(visibility);
         }
-        else if (item == "EnemyPrompt" && enemyPrompt != null)
+        else if (item == "EnemyPrompt" && tutorialStep == 2 && enemyPrompt != null)
         {
             enemyPrompt.SetActive(visibility);
             cam.GetComponent<CameraPan>().enabled = true;
@@ -94,20 +97,35 @@ public class UIManager : MonoBehaviour
             soldier.GetComponent<NavMeshAgent>().enabled = true;
             Invoke("HideEnemyPrompt", 4f);
         }
-        else if(item == "BoosterWarning"){
+        else if(item == "BoosterWarning" && tutorialStep == 3){
             Debug.Log("BoosterWarning");
             BoosterWarning.SetActive(visibility);
             if(SceneManager.GetActiveScene().name != "Tutorial")
             {
                 Invoke("turnOffBoosterWarning", 2f);
             }
-            
         }
-
+        else if(item == "GoalWarning" && tutorialStep == 4){
+            Debug.Log("GoalWarning");
+            GoalWarning.SetActive(visibility);
+            Invoke("HideGoalWarning", 6f);
+            tutorialStep++;
+        }
     }
     public void turnOffBoosterWarning()
     {
         BoosterWarning.SetActive(false);
+        if(tutorialStep == 3) { tutorialStep++; }
+    }
+
+    public void ShowGoalWarning()
+    {
+        MakeVisible("GoalWarning", true);
+    }
+
+    public void HideGoalWarning()
+    {
+        GoalWarning.SetActive(false);
     }
 
     public void SetGameOverReason(string reason)
@@ -133,6 +151,7 @@ public class UIManager : MonoBehaviour
     public void HideEnemyPrompt()
     {
         enemyPrompt.SetActive(false);
+        tutorialStep++;
     }
 
     private void Next()
@@ -141,14 +160,16 @@ public class UIManager : MonoBehaviour
         healthPrompt.SetActive(false);     
         cam.GetComponent<CameraPan>().enabled = false;
         cam.GetComponent<CameraMover>().enabled = true;
+        tutorialStep++;
     }
 
     IEnumerator HideGameStart()
     {
-        yield return new WaitForSecondsRealtime(2f); // Wait for the specified delay
+        yield return new WaitForSecondsRealtime(5f); // Wait for the specified delay
         Time.timeScale = 1;
         gameStart.SetActive(false);
 
+        tutorialStep++;
         MakeVisible("HealthPrompt", true);
     }
 

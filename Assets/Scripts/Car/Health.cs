@@ -63,18 +63,18 @@ public class Health : MonoBehaviour
         if (other.CompareTag("Damage"))
         {
             Destroy(other.gameObject);
-            LiveDecrease(10);
+            LiveDecrease(5);
             _audioSource.PlayOneShot(arrowSound); 
         }
         else if (other.CompareTag("Weapon"))
         {
-            LiveDecrease(10);
+            LiveDecrease(5);
             // other.gameObject.SetActive(false);
             other.gameObject.tag = "Untagged";
             _audioSource.PlayOneShot(swordSound);
         }
         else if (other.CompareTag("Projectile")){
-            LiveDecrease(10);
+            LiveDecrease(5);
             _audioSource.PlayOneShot(arrowSound);
         }
     }

@@ -8,7 +8,7 @@ public class BurstOnCollide : MonoBehaviour
     public AudioClip collisionSound;
     public GameObject particles;
     public float volume;
-    [SerializeField] string[] collisionTags;
+    string[] collisionTags = {"Player", "MeleeSoldier"};
     int burstThreshold = 25;
 
     AudioSource audioSource;
@@ -21,6 +21,7 @@ public class BurstOnCollide : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         GameObject other = collision.gameObject;
+        if(gameObject == null) { return; }
         if(collision.relativeVelocity.magnitude > burstThreshold && collisionTags.Any(tag => other.CompareTag(tag)))
         {
             audioSource.PlayOneShot(collisionSound, volume);
@@ -39,7 +40,7 @@ public class BurstOnCollide : MonoBehaviour
     {
         GameObject other = collision.gameObject;
         Rigidbody collisionBody = collision.attachedRigidbody;
-        if(collisionBody == null) { return; }
+        if(collisionBody == null || gameObject == null) { return; }
         if(collisionBody.velocity.magnitude > burstThreshold && collisionTags.Any(tag => other.CompareTag(tag)))
         {
             audioSource.PlayOneShot(collisionSound, volume);
