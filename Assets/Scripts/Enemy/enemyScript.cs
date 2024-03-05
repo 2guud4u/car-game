@@ -57,6 +57,7 @@ public class enemyScript : MonoBehaviour
     public int maxHealth = 10;
     [SerializeField] GameObject healthBar;
     protected bool doesMove = true;
+    private bool collided = false;
 
     private void Awake()
     {
@@ -72,6 +73,14 @@ public class enemyScript : MonoBehaviour
         InvokeRepeating("UpdateBehavior", Random.Range(0f, 1f), timeToUpdateBehavior);
     }
 
+    private void Update()
+    {
+        if (collided && Vector3.Distance(rb.transform.position, player.transform.position) > 3f)
+        {
+            agent.enabled = true;
+            collided = false;
+        }
+    }
     private void UpdateBehavior()
     {
         //Check for sight and attack range
@@ -215,7 +224,7 @@ public class enemyScript : MonoBehaviour
             if (RbVelocity.magnitude > thresholdDamageVelocity)
             {
                 // Debug.Log("Player has entered the enemy's trigger");
-                float speedBasedDamage = (thresholdDamageVelocity / 2) + Mathf.Log(playerVelocity.velocity.magnitude - (thresholdDamageVelocity / 2) + 1);
+                float speedBasedDamage = (thresholdDamageVelocity / 7) + Mathf.Log(playerVelocity.velocity.magnitude - (thresholdDamageVelocity / 2) + 1);
 
                 //Vector3 awayDirection = transform.position - other.transform.position;
                 //awayDirection.Normalize();
@@ -240,24 +249,25 @@ public class enemyScript : MonoBehaviour
             }
             else
             {
-                rb.isKinematic = false;
-                rb.AddForce(awayDirection * 1f, ForceMode.Acceleration);
+                agent.enabled = false;
+                collided = true;
+
             }
 
         }
 
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.tag == "Player")
-    //    {
-    //        Vector3 awayDirection = transform.position - collision.transform.position;
-    //        awayDirection.Normalize();
-    //        rb.isKinematic = false;
-    //        rb.AddForce(awayDirection * 1f, ForceMode.Acceleration);
-    //    }
-    //}
+    private void ResetSoldier()
+    {
+        agent.enabled = true;
+        animator.enabled = true;
+        foreach (Rigidbody limbRb in rbs)
+        {
+            limbRb.isKinematic = true;
+        }
+    }
+
     public Rigidbody[] GetRbs() {
         return rbs;
     }
