@@ -1209,7 +1209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6424328489575032744, guid: 7a1288cfbcf7a4d31aecd97aab16dec4, type: 3}
       propertyPath: thresholdDamageVelocity
-      value: 20
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7755446284023417325, guid: 7a1288cfbcf7a4d31aecd97aab16dec4, type: 3}
       propertyPath: m_Name
