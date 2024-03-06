@@ -272,7 +272,7 @@ WheelCollider:
     m_ExtremumValue: 2
     m_AsymptoteSlip: 1
     m_AsymptoteValue: 1.4
-    m_Stiffness: 2
+    m_Stiffness: 2.5
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -659,7 +659,7 @@ WheelCollider:
     m_ExtremumValue: 2
     m_AsymptoteSlip: 1
     m_AsymptoteValue: 1.4
-    m_Stiffness: 2
+    m_Stiffness: 2.5
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -920,7 +920,7 @@ WheelCollider:
     m_ExtremumValue: 2
     m_AsymptoteSlip: 1
     m_AsymptoteValue: 1.4
-    m_Stiffness: 2
+    m_Stiffness: 2.5
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1225,7 +1225,7 @@ WheelCollider:
     m_ExtremumValue: 2
     m_AsymptoteSlip: 1
     m_AsymptoteValue: 1.4
-    m_Stiffness: 2
+    m_Stiffness: 2.5
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1444,14 +1444,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 100
+  currentHealth: 80
   healthBar: {fileID: 0}
   swordSound: {fileID: 8300000, guid: 006a638c89e0c7e4e9bf2a62d09186c0, type: 3}
   arrowSound: {fileID: 8300000, guid: 31eda9cfac5ab7246809cb8f1327577c, type: 3}
   heartSound: {fileID: 8300000, guid: e72d36e9dcf30894eb7c7ccbbc51e209, type: 3}
   carSmoke: {fileID: 4121091811543088291, guid: ddf4ea2625767fd4bb4153e7e4009ad5, type: 3}
   smokeThreshold: 30
-  flag: 1
+  flag: 0
 --- !u!82 &7741980937519634574
 AudioSource:
   m_ObjectHideFlags: 0
