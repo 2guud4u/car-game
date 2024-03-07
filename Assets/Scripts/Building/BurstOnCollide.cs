@@ -22,7 +22,7 @@ public class BurstOnCollide : MonoBehaviour
     {
         GameObject other = collision.gameObject;
         if(gameObject == null) { return; }
-        if(collision.relativeVelocity.magnitude > burstThreshold && collisionTags.Any(tag => other.CompareTag(tag)))
+        if(collision.relativeVelocity.magnitude > burstThreshold && other.tag == "MeleeSoldier")
         {
             audioSource.PlayOneShot(collisionSound, volume);
             Rigidbody[] rbs = transform.parent.GetComponentsInChildren<Rigidbody>();
@@ -41,7 +41,7 @@ public class BurstOnCollide : MonoBehaviour
         GameObject other = collision.gameObject;
         Rigidbody collisionBody = collision.attachedRigidbody;
         if(collisionBody == null || gameObject == null) { return; }
-        if(collisionBody.velocity.magnitude > burstThreshold && collisionTags.Any(tag => other.CompareTag(tag)))
+        if(collisionBody.velocity.magnitude > burstThreshold && other.tag == "Player")
         {
             audioSource.PlayOneShot(collisionSound, volume);
             Instantiate(particles, collision.transform.position, Quaternion.identity);

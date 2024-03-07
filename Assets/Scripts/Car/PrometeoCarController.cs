@@ -348,6 +348,10 @@ public class PrometeoCarController : MonoBehaviour
                 maxSpeed *= 2;
                 accelerationMultiplier *= 2;
                 isAccelerating = true;
+                FLwheelFriction.stiffness = 1.5f;
+                FRwheelFriction.stiffness = 1.5f;
+                RLwheelFriction.stiffness = 1.5f;
+                RRwheelFriction.stiffness = 1.5f;
                 GameManager.Instance.DecreaseSoul();
                 Invoke("ResetSpeed", 3f);
               }else{
@@ -356,9 +360,6 @@ public class PrometeoCarController : MonoBehaviour
                     UIManager.Instance.MakeVisible("BoosterWarning", true);
                 }   
               }
-                
-                
-
                 
             }
             
@@ -411,6 +412,10 @@ public class PrometeoCarController : MonoBehaviour
         maxSpeed /= 2;
         accelerationMultiplier /= 2;
         isAccelerating = false;
+        FLwheelFriction.stiffness = 2.5f;
+        FRwheelFriction.stiffness = 2.5f;
+        RLwheelFriction.stiffness = 2.5f;
+        RRwheelFriction.stiffness = 2.5f;
     }
 
     // This method converts the car speed data from float to string, and then set the text of the UI carSpeedText with this value.
@@ -687,10 +692,10 @@ public class PrometeoCarController : MonoBehaviour
       // drifting value has been reached. It will increase smoothly by using the variable Time.deltaTime.
       driftingAxis = driftingAxis + (Time.deltaTime);
       float secureStartingPoint = driftingAxis * FLWextremumSlip * handbrakeDriftMultiplier;
-        FLwheelFriction.stiffness = 1.5f;
-        FRwheelFriction.stiffness = 1.5f;
-        RRwheelFriction.stiffness = 1.5f;
-        RLwheelFriction.stiffness = 1.5f;
+        FLwheelFriction.stiffness = 2f;
+        FRwheelFriction.stiffness = 2f;
+        RRwheelFriction.stiffness = 2f;
+        RLwheelFriction.stiffness = 2f;
 
       if (secureStartingPoint < FLWextremumSlip){
         driftingAxis = FLWextremumSlip / (FLWextremumSlip * handbrakeDriftMultiplier);
@@ -783,10 +788,11 @@ public class PrometeoCarController : MonoBehaviour
         driftingAxis = 0f;
       }
 
-        FLwheelFriction.stiffness = 2f;
-        FRwheelFriction.stiffness = 2f;
-        RLwheelFriction.stiffness = 2f;
-        RRwheelFriction.stiffness = 2f;
+        FLwheelFriction.stiffness = 2.5f;
+        FRwheelFriction.stiffness = 2.5f;
+        RLwheelFriction.stiffness = 2.5f;
+        RRwheelFriction.stiffness = 2.5f;
+
 
         //If the 'driftingAxis' value is not 0f, it means that the wheels have not recovered their traction.
         //We are going to continue decreasing the sideways friction of the wheels until we reach the initial
