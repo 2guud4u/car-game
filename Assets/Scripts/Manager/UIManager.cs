@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI gameOverText;
 
     public GameObject BoosterWarning;
+    public GameObject BoosterPrompt;
     public GameObject GoalWarning;
     public GameObject gameOverScreen;
     public GameObject gameWinScreen;
@@ -26,7 +27,7 @@ public class UIManager : MonoBehaviour
     public Camera cam;
     public GameObject soul;
     public static UIManager Instance;
-    int tutorialStep = 0;
+    public int tutorialStep = 0;
 
     private void Awake()
     {
@@ -97,13 +98,14 @@ public class UIManager : MonoBehaviour
             soldier.GetComponent<NavMeshAgent>().enabled = true;
             Invoke("HideEnemyPrompt", 4f);
         }
-        else if(item == "BoosterWarning" && tutorialStep == 3){
-            Debug.Log("BoosterWarning");
+        else if(item == "BoosterPrompt")
+        {
+            BoosterPrompt.SetActive(visibility);
+        }
+        else if (item == "BoosterWarning")
+        {
             BoosterWarning.SetActive(visibility);
-            if(SceneManager.GetActiveScene().name != "Tutorial")
-            {
-                Invoke("turnOffBoosterWarning", 2f);
-            }
+            Invoke("turnOffBoosterWarning", 2f);
         }
         else if(item == "GoalWarning" && tutorialStep == 4){
             Debug.Log("GoalWarning");
@@ -115,6 +117,11 @@ public class UIManager : MonoBehaviour
     public void turnOffBoosterWarning()
     {
         BoosterWarning.SetActive(false);
+    }    
+    
+    public void turnOffBoosterPrompt()
+    {
+        BoosterPrompt.SetActive(false);
         if(tutorialStep == 3) { tutorialStep++; }
     }
 

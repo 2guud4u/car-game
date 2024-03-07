@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour
     public AudioSource engine;
     public AudioSource drift;
     enemySpawner[] spawners;
-    private bool hasCalled = false;
 
     private void Awake()
     {
@@ -67,10 +66,9 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if(_soul == 1 && SceneManager.GetActiveScene().name == "Tutorial" && !hasCalled)
+        if(SceneManager.GetActiveScene().name == "Tutorial" && UIManager.Instance.tutorialStep == 3)
         {
-            UIManager.Instance.MakeVisible("BoosterWarning", true);
-            hasCalled = true;
+            UIManager.Instance.MakeVisible("BoosterPrompt", true);
         }
     }
 

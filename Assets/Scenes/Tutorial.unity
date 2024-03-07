@@ -234,7 +234,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.33333334
+  m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: b9fd81c1603fdeb43aa9f2614d1fcec2, type: 2}
   m_BuildHeightMesh: 0
@@ -613,7 +613,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use SHIFT to spend a soul to boost your car.
+  m_text: Use SHIFT to boost your car.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5184,7 +5184,8 @@ MonoBehaviour:
   timerText: {fileID: 611470746}
   speedText: {fileID: 355227637}
   gameOverText: {fileID: 169620283}
-  BoosterWarning: {fileID: 660201121}
+  BoosterWarning: {fileID: 1829310928}
+  BoosterPrompt: {fileID: 660201121}
   GoalWarning: {fileID: 887457334}
   gameOverScreen: {fileID: 903371996}
   gameWinScreen: {fileID: 1366244114}
@@ -8716,7 +8717,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Booster require souls!
+  m_text: Booster is at cooldown!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}

@@ -149,6 +149,7 @@ public class PrometeoCarController : MonoBehaviour
       bool deceleratingCar;
       bool touchControlsSetup = false;
       bool isAccelerating;
+      bool boostAtCD = false;
       /*
       The following variables are used to store information about sideways friction of the wheels (such as
       extremumSlip,extremumValue, asymptoteSlip, asymptoteValue and stiffness). We change this values to
@@ -341,7 +342,12 @@ public class PrometeoCarController : MonoBehaviour
             
             if (Keyboard.current.shiftKey.wasPressedThisFrame && !isAccelerating)
             {
-              if(GameManager.Instance._soul > 0){
+              if(!boostAtCD){
+                if(SceneManager.GetActiveScene().name == "Tutorial")
+                {
+                    UIManager.Instance.turnOffBoosterPrompt();
+                }
+                boostAtCD = true;
                 carRigidbody.AddForce((transform.forward * 200000000) * Time.fixedDeltaTime);
                 LVParticleSystem.Play();
                 RVParticleSystem.Play();
@@ -352,7 +358,6 @@ public class PrometeoCarController : MonoBehaviour
                 FRwheelFriction.stiffness = 1.5f;
                 RLwheelFriction.stiffness = 1.5f;
                 RRwheelFriction.stiffness = 1.5f;
-                GameManager.Instance.DecreaseSoul();
                 Invoke("ResetSpeed", 3f);
               }else{
                 if(SceneManager.GetActiveScene().name != "Tutorial")
@@ -407,7 +412,7 @@ public class PrometeoCarController : MonoBehaviour
 
     }
 
-    public void ResetSpeed()
+    private void ResetSpeed()
     {
         maxSpeed /= 2;
         accelerationMultiplier /= 2;
@@ -416,6 +421,12 @@ public class PrometeoCarController : MonoBehaviour
         FRwheelFriction.stiffness = 2.5f;
         RLwheelFriction.stiffness = 2.5f;
         RRwheelFriction.stiffness = 2.5f;
+        Invoke("ResetBoost", 7f);
+    }
+
+    private void ResetBoost()
+    {
+        boostAtCD = false;
     }
 
     // This method converts the car speed data from float to string, and then set the text of the UI carSpeedText with this value.
