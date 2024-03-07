@@ -9,7 +9,7 @@ public class BurstOnCollide : MonoBehaviour
     public GameObject particles;
     public float volume;
     string[] collisionTags = {"Player", "MeleeSoldier"};
-    int burstThreshold = 25;
+    int burstThreshold = 18;
 
     AudioSource audioSource;
     void Awake()
