@@ -348,9 +348,7 @@ public class PrometeoCarController : MonoBehaviour
                 maxSpeed *= 2;
                 accelerationMultiplier *= 2;
                 isAccelerating = true;
-                Debug.Log(FLwheelFriction.stiffness);
                 FLwheelFriction.stiffness = 1.5f;
-                Debug.Log(FLwheelFriction.stiffness);
                 FRwheelFriction.stiffness = 1.5f;
                 RLwheelFriction.stiffness = 1.5f;
                 RRwheelFriction.stiffness = 1.5f;
