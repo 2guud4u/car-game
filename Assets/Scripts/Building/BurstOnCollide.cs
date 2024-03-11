@@ -11,10 +11,11 @@ public class BurstOnCollide : MonoBehaviour
     string[] collisionTags = {"Player", "MeleeSoldier"};
     int burstThreshold = 18;
 
-    AudioSource audioSource;
+    GameObject audioSource;
     void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
+        // audioSource = GetComponent<AudioSource>();
+        audioSource = GameObject.Find("CollideAudio");
     }
 
     // Update is called once per frame
@@ -24,7 +25,9 @@ public class BurstOnCollide : MonoBehaviour
         if(gameObject == null) { return; }
         if(collision.relativeVelocity.magnitude > burstThreshold && other.tag == "MeleeSoldier")
         {
-            audioSource.PlayOneShot(collisionSound, volume);
+            audioSource.GetComponent<AudioSource>().PlayOneShot(collisionSound, volume);
+            audioSource.transform.position = collision.transform.position;
+
             Rigidbody[] rbs = transform.parent.GetComponentsInChildren<Rigidbody>();
             foreach (Rigidbody rb in rbs)
             {
@@ -43,7 +46,9 @@ public class BurstOnCollide : MonoBehaviour
         if(collisionBody == null || gameObject == null) { return; }
         if(collisionBody.velocity.magnitude > burstThreshold && other.tag == "Player")
         {
-            audioSource.PlayOneShot(collisionSound, volume);
+            audioSource.GetComponent<AudioSource>().PlayOneShot(collisionSound, volume);
+            audioSource.transform.position = collision.transform.position;
+
             Instantiate(particles, collision.transform.position, Quaternion.identity);
             Destroy(gameObject);
             Rigidbody[] rbs = transform.parent.GetComponentsInChildren<Rigidbody>();
