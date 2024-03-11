@@ -11290,7 +11290,8 @@ PrefabInstance:
       value: Castle1 (10)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7883577338435467175, guid: b7ed1ab136b0e45b190b8934d55596b4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7ed1ab136b0e45b190b8934d55596b4, type: 3}
@@ -11784,7 +11785,8 @@ PrefabInstance:
       value: Castle1 (21)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7883577338435467175, guid: b7ed1ab136b0e45b190b8934d55596b4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7ed1ab136b0e45b190b8934d55596b4, type: 3}
@@ -17252,7 +17254,8 @@ PrefabInstance:
       value: Castle1 (19)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7883577338435467175, guid: b7ed1ab136b0e45b190b8934d55596b4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7ed1ab136b0e45b190b8934d55596b4, type: 3}
@@ -17720,7 +17723,8 @@ PrefabInstance:
       value: Castle1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7883577338435467175, guid: b7ed1ab136b0e45b190b8934d55596b4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7ed1ab136b0e45b190b8934d55596b4, type: 3}
@@ -18153,7 +18157,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6757085415966932477, guid: 4720171fb22294371b4dabcf0c9af804, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4720171fb22294371b4dabcf0c9af804, type: 3}
@@ -18743,7 +18748,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7606820656785053337, guid: 2618f92a1f4a44c5dbdd65e312efd334, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2618f92a1f4a44c5dbdd65e312efd334, type: 3}
@@ -20189,7 +20195,8 @@ PrefabInstance:
       value: Castle1 (11)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7883577338435467175, guid: b7ed1ab136b0e45b190b8934d55596b4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7ed1ab136b0e45b190b8934d55596b4, type: 3}
@@ -31392,7 +31399,8 @@ PrefabInstance:
       value: Castle1 (20)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7883577338435467175, guid: b7ed1ab136b0e45b190b8934d55596b4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7ed1ab136b0e45b190b8934d55596b4, type: 3}
@@ -31449,7 +31457,8 @@ PrefabInstance:
       value: Castle1 (18)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7883577338435467175, guid: b7ed1ab136b0e45b190b8934d55596b4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7ed1ab136b0e45b190b8934d55596b4, type: 3}
@@ -35129,7 +35138,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7606820656785053337, guid: 2618f92a1f4a44c5dbdd65e312efd334, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2618f92a1f4a44c5dbdd65e312efd334, type: 3}
@@ -36599,7 +36609,8 @@ PrefabInstance:
       value: Castle1 (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7883577338435467175, guid: b7ed1ab136b0e45b190b8934d55596b4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7ed1ab136b0e45b190b8934d55596b4, type: 3}
@@ -40647,7 +40658,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6757085415966932477, guid: 4720171fb22294371b4dabcf0c9af804, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4720171fb22294371b4dabcf0c9af804, type: 3}
