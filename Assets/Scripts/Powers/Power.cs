@@ -11,6 +11,11 @@ public class Power : MonoBehaviour
             Destroy(other.gameObject);
             gameObject.GetComponent<Health>().LiveIncrease(10);
         }
+        if(other.gameObject.tag == "Time")
+        {
+            Destroy(other.gameObject);
+            GameManager.Instance.AddTime(15);
+        }
         // other ideas: more base speed, free boost, higher damage, more time, etc.
     }
 }

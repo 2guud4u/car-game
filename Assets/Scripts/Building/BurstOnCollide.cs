@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class BurstOnCollide : MonoBehaviour
 {
@@ -9,12 +11,31 @@ public class BurstOnCollide : MonoBehaviour
     public GameObject particles;
     public float volume;
     string[] collisionTags = {"Player", "MeleeSoldier"};
-    int burstThreshold = 18;
+    int burstThreshold = 22;
+    float tiltThreshold = 50;
 
-    AudioSource audioSource;
+    GameObject audioSource;
     void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
+        audioSource = GameObject.Find("CollideAudio");
+    }
+
+    private void StartFallChecks()
+    {
+        InvokeRepeating("CheckDidFall", Random.Range(0f, 1f), 1f);
+    }
+
+    private void CheckDidFall()
+    {
+        if(Mathf.Abs(transform.rotation.eulerAngles.z) > tiltThreshold || Mathf.Abs(transform.rotation.eulerAngles.x) > tiltThreshold)
+        {
+            DestroyWall();
+        }
+    }
+
+    private void DestroyWall() {
+        Instantiate(particles, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 
     // Update is called once per frame
@@ -24,15 +45,24 @@ public class BurstOnCollide : MonoBehaviour
         if(gameObject == null) { return; }
         if(collision.relativeVelocity.magnitude > burstThreshold && other.tag == "MeleeSoldier")
         {
-            audioSource.PlayOneShot(collisionSound, volume);
-            Rigidbody[] rbs = transform.parent.GetComponentsInChildren<Rigidbody>();
-            foreach (Rigidbody rb in rbs)
+            audioSource.GetComponent<AudioSource>().PlayOneShot(collisionSound, volume);
+            audioSource.transform.position = collision.transform.position;
+
+            Transform[] children = transform.parent.GetComponentsInChildren<Transform>();
+            foreach (Transform child in children)
             {
-                rb.isKinematic = false;
-                rb.AddForce(collision.relativeVelocity * 20, ForceMode.Impulse);
+                Rigidbody rb = child.GetComponent<Rigidbody>();
+                if(rb != null)
+                {
+                    rb.isKinematic = false;
+                    rb.AddForce(collision.relativeVelocity * 100, ForceMode.Impulse);
+                    
+                    BurstOnCollide boc = child.GetComponent<BurstOnCollide>();
+                    boc.StartFallChecks();
+                }
             }
-            Instantiate(particles, collision.transform.position, Quaternion.identity);
-            Destroy(gameObject);
+
+            DestroyWall();
         }
     }
 
@@ -43,15 +73,24 @@ public class BurstOnCollide : MonoBehaviour
         if(collisionBody == null || gameObject == null) { return; }
         if(collisionBody.velocity.magnitude > burstThreshold && other.tag == "Player")
         {
-            audioSource.PlayOneShot(collisionSound, volume);
-            Instantiate(particles, collision.transform.position, Quaternion.identity);
-            Destroy(gameObject);
-            Rigidbody[] rbs = transform.parent.GetComponentsInChildren<Rigidbody>();
-            foreach (Rigidbody rb in rbs)
+            audioSource.GetComponent<AudioSource>().PlayOneShot(collisionSound, volume);
+            audioSource.transform.position = collision.transform.position;
+            
+            Transform[] children = transform.parent.GetComponentsInChildren<Transform>();
+            foreach (Transform child in children)
             {
-                rb.isKinematic = false;
-                rb.AddForce(collisionBody.velocity * 200, ForceMode.Impulse);
+                Rigidbody rb = child.GetComponent<Rigidbody>();
+                if(rb != null)
+                {
+                    rb.isKinematic = false;
+                    rb.AddForce(collisionBody.velocity * 100, ForceMode.Impulse);
+                    
+                    BurstOnCollide boc = child.GetComponent<BurstOnCollide>();
+                    boc.StartFallChecks();
+                }
             }
+
+            DestroyWall();
         }
     }
 }
