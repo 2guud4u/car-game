@@ -5,19 +5,24 @@ using System.Collections.Generic;
 public class EndPortal : MonoBehaviour
 {
     private Vector3 portalSize = new Vector3(10f, 20f, 1f);
-    private bool _open = false;
+    private bool _open;
+    private bool lightningActive;
     public Material skyboxMaterial;
     public Color skyColor;
+    private Color currentColor;
+    public GameObject lightning;
+    private LineRenderer lineRenderer;
     public Color portalSky;
     private AudioSource _audioSource;
     public AudioClip thunderCrack;
-    //public LineRenderer lightning;
-    //public Transform startPoint;
-    //public Transform targetObject;
+
+
 
     void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
+        lightningActive = false;
+        _open = false;
     }
     
     public void Start()
@@ -27,8 +32,7 @@ public class EndPortal : MonoBehaviour
         {
             if (skyboxMaterial.shader.name == "Skybox/Procedural")
             {
-                // Get the color from the shader properties
-                Color currentColor = skyboxMaterial.GetColor("_SkyTint");
+                currentColor = skyboxMaterial.GetColor("_SkyTint");
             }
             else
             {
@@ -39,8 +43,7 @@ public class EndPortal : MonoBehaviour
         {
             Debug.LogWarning("No Skybox material assigned.");
         }
-        //lightning.enabled = false;
-        //StartCoroutine(strikeLightning());
+        lineRenderer = lightning.GetComponent<LineRenderer>();
     }
     
     void Update()
@@ -59,6 +62,9 @@ public class EndPortal : MonoBehaviour
         //growth
         if(_open){
             transform.localScale = portalSize+(new Vector3(1f, 1f, 1f)*(GameManager.Instance._soul/ GameManager.Instance.soulCondition));
+            if (!lightningActive){
+                StartCoroutine(Strike());
+            }
         }
     }
     
@@ -76,23 +82,21 @@ public class EndPortal : MonoBehaviour
             skyboxMaterial.SetColor("_SkyTint", portalSky);
         } else {
             RenderSettings.skybox = skyboxMaterial;
-            skyboxMaterial.SetColor("_SkyTint", skyColor);
         }
     }
 
-    /* IEnumerator strikeLightning()
+    IEnumerator Strike()
     {
-        while (true) {
-            if (_open){
-                Debug.Log("Lightning Strike");
-                _audioSource.PlayOneShot(thunderCrack);
-                lightning.SetPosition(0, startPoint.position);
-                lightning.SetPosition(1, targetObject.position);
-                lightning.enabled = true;
-                yield return new WaitForSeconds(2f); 
-                lightning.enabled = false;
-                yield return new WaitForSeconds(8f); 
-            }
-        }
-    } */
+        _audioSource.PlayOneShot(thunderCrack);
+        lightningActive = true;
+        lineRenderer.enabled = true;
+        
+        yield return new WaitForSeconds(2f); 
+        
+        lineRenderer.enabled = false;
+
+        yield return new WaitForSeconds(2f); 
+
+        lightningActive = false;
+    }
 }
