@@ -312,6 +312,7 @@ MonoBehaviour:
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
   particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
+  hasChildren: 1
 --- !u!1 &2564011860086698632
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,6 +518,7 @@ MonoBehaviour:
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
   particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
+  hasChildren: 1
 --- !u!1 &3381873201841758780
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,6 +727,7 @@ MonoBehaviour:
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
   particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
+  hasChildren: 1
 --- !u!1 &5157450528688621039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,6 +1089,7 @@ MonoBehaviour:
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
   particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
+  hasChildren: 1
 --- !u!1001 &5697150002187799876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1259,6 +1263,7 @@ MonoBehaviour:
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
   particles: {fileID: 168542, guid: 2dfd7e0a9965641ce9c0ac22711b062c, type: 3}
   volume: 0.6
+  hasChildren: 1
 --- !u!54 &1251718131712709906
 Rigidbody:
   m_ObjectHideFlags: 0
