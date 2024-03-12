@@ -40,7 +40,7 @@ public class horseScript : enemyScript
         // projectile.SetActive(false);
     }
 
-    void OnDestroy() {
-        Destroy(projectile);
-    }
+    // void OnDestroy() {
+    //     Destroy(projectile);
+    // }
 }
