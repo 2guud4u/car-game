@@ -10,6 +10,7 @@ public class BurstOnCollide : MonoBehaviour
     public AudioClip collisionSound;
     public GameObject particles;
     public float volume;
+    public bool hasChildren;
     string[] collisionTags = {"Player", "MeleeSoldier"};
     int burstThreshold = 22;
     float tiltThreshold = 50;
@@ -29,11 +30,11 @@ public class BurstOnCollide : MonoBehaviour
     {
         if(Mathf.Abs(transform.rotation.eulerAngles.z) > tiltThreshold || Mathf.Abs(transform.rotation.eulerAngles.x) > tiltThreshold)
         {
-            DestroyWall();
+            DestroyObject();
         }
     }
 
-    private void DestroyWall() {
+    private void DestroyObject() {
         Instantiate(particles, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
@@ -48,21 +49,9 @@ public class BurstOnCollide : MonoBehaviour
             audioSource.GetComponent<AudioSource>().PlayOneShot(collisionSound, volume);
             audioSource.transform.position = collision.transform.position;
 
-            Transform[] children = transform.parent.GetComponentsInChildren<Transform>();
-            foreach (Transform child in children)
-            {
-                Rigidbody rb = child.GetComponent<Rigidbody>();
-                if(rb != null)
-                {
-                    rb.isKinematic = false;
-                    rb.AddForce(collision.relativeVelocity * 100, ForceMode.Impulse);
-                    
-                    BurstOnCollide boc = child.GetComponent<BurstOnCollide>();
-                    boc.StartFallChecks();
-                }
-            }
+            if(hasChildren) { addForceToChildren(collision.relativeVelocity * 100); }
 
-            DestroyWall();
+            DestroyObject();
         }
     }
 
@@ -75,22 +64,28 @@ public class BurstOnCollide : MonoBehaviour
         {
             audioSource.GetComponent<AudioSource>().PlayOneShot(collisionSound, volume);
             audioSource.transform.position = collision.transform.position;
+            Debug.Log(gameObject.name);
             
-            Transform[] children = transform.parent.GetComponentsInChildren<Transform>();
-            foreach (Transform child in children)
-            {
-                Rigidbody rb = child.GetComponent<Rigidbody>();
-                if(rb != null)
-                {
-                    rb.isKinematic = false;
-                    rb.AddForce(collisionBody.velocity * 100, ForceMode.Impulse);
-                    
-                    BurstOnCollide boc = child.GetComponent<BurstOnCollide>();
-                    boc.StartFallChecks();
-                }
-            }
+            if(hasChildren) { addForceToChildren(collisionBody.velocity * 100); }
 
-            DestroyWall();
+            DestroyObject();
+        }
+    }
+
+    private void addForceToChildren(Vector3 force)
+    {
+        Transform[] children = transform.parent.GetComponentsInChildren<Transform>();
+        foreach (Transform child in children)
+        {
+            Rigidbody rb = child.GetComponent<Rigidbody>();
+            if(rb != null)
+            {
+                rb.isKinematic = false;
+                rb.AddForce(force, ForceMode.Impulse);
+                
+                BurstOnCollide boc = child.GetComponent<BurstOnCollide>();
+                boc.StartFallChecks();
+            }
         }
     }
 }

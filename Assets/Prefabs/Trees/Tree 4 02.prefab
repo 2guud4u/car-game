@@ -111,6 +111,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cce66f6ad2b184459a1baf0ccf4b63ba, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8416147418579406392}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cce66f6ad2b184459a1baf0ccf4b63ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4834964377678887327}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cce66f6ad2b184459a1baf0ccf4b63ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8122795781876967560}
   m_SourcePrefab: {fileID: 100100000, guid: cce66f6ad2b184459a1baf0ccf4b63ba, type: 3}
 --- !u!23 &534597611016667656 stripped
 MeshRenderer:
@@ -143,6 +149,49 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.15, y: 2.66152, z: 0.15}
   m_Center: {x: -0.02, y: 1.3149905, z: 0}
+--- !u!114 &4834964377678887327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3029443469927614340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69440bcdfcf0c4e60a54b22daaec1a2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
+  particles: {fileID: 168542, guid: d41a1de2f49cb4056955046d5145dd80, type: 3}
+  volume: 0
+  hasChildren: 0
+--- !u!54 &8122795781876967560
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3029443469927614340}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!23 &8738908812737611578 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -2338212239285862929, guid: cce66f6ad2b184459a1baf0ccf4b63ba, type: 3}
