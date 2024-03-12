@@ -268,7 +268,7 @@ WheelCollider:
     m_AsymptoteValue: 0.5
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.4
+    m_ExtremumSlip: 0.8
     m_ExtremumValue: 2
     m_AsymptoteSlip: 1
     m_AsymptoteValue: 1.4
@@ -655,7 +655,7 @@ WheelCollider:
     m_AsymptoteValue: 0.5
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.4
+    m_ExtremumSlip: 0.8
     m_ExtremumValue: 2
     m_AsymptoteSlip: 1
     m_AsymptoteValue: 1.4
@@ -916,7 +916,7 @@ WheelCollider:
     m_AsymptoteValue: 0.5
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.4
+    m_ExtremumSlip: 0.8
     m_ExtremumValue: 2
     m_AsymptoteSlip: 1
     m_AsymptoteValue: 1.4
@@ -1221,7 +1221,7 @@ WheelCollider:
     m_AsymptoteValue: 0.5
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.4
+    m_ExtremumSlip: 0.8
     m_ExtremumValue: 2
     m_AsymptoteSlip: 1
     m_AsymptoteValue: 1.4
@@ -1380,9 +1380,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0fefceefe666bb4682b272ec8c5bdd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 600
-  maxReverseSpeed: 45
-  accelerationMultiplier: 29
+  maxSpeed: 300
+  maxReverseSpeed: 120
+  accelerationMultiplier: 35
   maxSteeringAngle: 35
   steeringSpeed: 0.5
   brakeForce: 600
@@ -1444,14 +1444,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 80
+  currentHealth: 100
   healthBar: {fileID: 0}
   swordSound: {fileID: 8300000, guid: 006a638c89e0c7e4e9bf2a62d09186c0, type: 3}
   arrowSound: {fileID: 8300000, guid: 31eda9cfac5ab7246809cb8f1327577c, type: 3}
   heartSound: {fileID: 8300000, guid: e72d36e9dcf30894eb7c7ccbbc51e209, type: 3}
   carSmoke: {fileID: 4121091811543088291, guid: ddf4ea2625767fd4bb4153e7e4009ad5, type: 3}
   smokeThreshold: 30
-  flag: 0
+  flag: 1
 --- !u!82 &7741980937519634574
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2137,7 +2137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6797484483416101543, guid: 3c2b3403f85bfdd45a7ae9437581cba7, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key1.r
-      value: 0.9411765
+      value: 0.77775365
       objectReference: {fileID: 0}
     - target: {fileID: 6797484483416101543, guid: 3c2b3403f85bfdd45a7ae9437581cba7, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.m_ColorSpace
