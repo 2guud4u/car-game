@@ -150,12 +150,14 @@ public class PrometeoCarController : MonoBehaviour
       bool touchControlsSetup = false;
       bool isAccelerating;
       bool boostAtCD = false;
-      /*
-      The following variables are used to store information about sideways friction of the wheels (such as
-      extremumSlip,extremumValue, asymptoteSlip, asymptoteValue and stiffness). We change this values to
-      make the car to start drifting.
-      */
-      WheelFrictionCurve FLwheelFriction;
+      float stiffnessDelta = 1f;
+      float extremumSlipIncrement = 2f;
+    /*
+    The following variables are used to store information about sideways friction of the wheels (such as
+    extremumSlip,extremumValue, asymptoteSlip, asymptoteValue and stiffness). We change this values to
+    make the car to start drifting.
+    */
+    WheelFrictionCurve FLwheelFriction;
       float FLWextremumSlip;
       WheelFrictionCurve FRwheelFriction;
       float FRWextremumSlip;
@@ -348,16 +350,12 @@ public class PrometeoCarController : MonoBehaviour
                     UIManager.Instance.turnOffBoosterPrompt();
                 }
                 boostAtCD = true;
-                carRigidbody.AddForce((transform.forward * 200000000) * Time.fixedDeltaTime);
+                carRigidbody.AddForce((transform.forward * 100000000) * Time.fixedDeltaTime);
                 LVParticleSystem.Play();
                 RVParticleSystem.Play();
                 maxSpeed *= 2;
                 accelerationMultiplier *= 2;
                 isAccelerating = true;
-                FLwheelFriction.stiffness = 1.5f;
-                FRwheelFriction.stiffness = 1.5f;
-                RLwheelFriction.stiffness = 1.5f;
-                RRwheelFriction.stiffness = 1.5f;
                 Invoke("ResetSpeed", 3f);
               }else{
                 if(SceneManager.GetActiveScene().name != "Tutorial")
@@ -404,6 +402,42 @@ public class PrometeoCarController : MonoBehaviour
           ResetSteeringAngle();
         }
 
+        if (isAccelerating)
+        {
+            FLwheelFriction.stiffness = Math.Max(FLwheelFriction.stiffness - stiffnessDelta * Time.deltaTime, 1.5f);
+            FRwheelFriction.stiffness = Math.Max(FRwheelFriction.stiffness - stiffnessDelta * Time.deltaTime, 1.5f);
+            RLwheelFriction.stiffness = Math.Max(RLwheelFriction.stiffness - stiffnessDelta * Time.deltaTime, 1.5f);
+            RRwheelFriction.stiffness = Math.Max(RRwheelFriction.stiffness - stiffnessDelta * Time.deltaTime, 1.5f);
+
+            FLwheelFriction.extremumSlip = Mathf.Min(FLwheelFriction.extremumSlip + extremumSlipIncrement * Time.deltaTime, 3f);
+            FRwheelFriction.extremumSlip = Mathf.Min(FRwheelFriction.extremumSlip + extremumSlipIncrement * Time.deltaTime, 3f);
+            RLwheelFriction.extremumSlip = Mathf.Min(RLwheelFriction.extremumSlip + extremumSlipIncrement * Time.deltaTime, 3f);
+            RRwheelFriction.extremumSlip = Mathf.Min(RRwheelFriction.extremumSlip + extremumSlipIncrement * Time.deltaTime, 3f);
+
+
+            frontLeftCollider.sidewaysFriction = FLwheelFriction;
+            frontRightCollider.sidewaysFriction = FRwheelFriction;
+            rearLeftCollider.sidewaysFriction = RLwheelFriction;
+            rearRightCollider.sidewaysFriction = RRwheelFriction;
+            }
+        else
+            {
+            FLwheelFriction.stiffness = Math.Min(FLwheelFriction.stiffness + stiffnessDelta * Time.deltaTime, 2.5f);
+            FRwheelFriction.stiffness = Math.Min(FRwheelFriction.stiffness + stiffnessDelta * Time.deltaTime, 2.5f);
+            RLwheelFriction.stiffness = Math.Min(RLwheelFriction.stiffness + stiffnessDelta * Time.deltaTime, 2.5f);
+            RRwheelFriction.stiffness = Math.Min(RRwheelFriction.stiffness + stiffnessDelta * Time.deltaTime, 2.5f);
+
+            FLwheelFriction.extremumSlip = Mathf.Max(FLwheelFriction.extremumSlip - extremumSlipIncrement * Time.deltaTime, 0.8f);
+            FRwheelFriction.extremumSlip = Mathf.Max(FRwheelFriction.extremumSlip - extremumSlipIncrement * Time.deltaTime, 0.8f);
+            RLwheelFriction.extremumSlip = Mathf.Max(RLwheelFriction.extremumSlip - extremumSlipIncrement * Time.deltaTime, 0.8f);
+            RRwheelFriction.extremumSlip = Mathf.Max(RRwheelFriction.extremumSlip - extremumSlipIncrement * Time.deltaTime, 0.8f);
+
+            frontLeftCollider.sidewaysFriction = FLwheelFriction;
+            frontRightCollider.sidewaysFriction = FRwheelFriction;
+            rearLeftCollider.sidewaysFriction = RLwheelFriction;
+            rearRightCollider.sidewaysFriction = RRwheelFriction;
+            }
+
       }
 
 
@@ -417,10 +451,6 @@ public class PrometeoCarController : MonoBehaviour
         maxSpeed /= 2;
         accelerationMultiplier /= 2;
         isAccelerating = false;
-        FLwheelFriction.stiffness = 2.5f;
-        FRwheelFriction.stiffness = 2.5f;
-        RLwheelFriction.stiffness = 2.5f;
-        RRwheelFriction.stiffness = 2.5f;
         Invoke("ResetBoost", 7f);
     }
 
@@ -586,13 +616,26 @@ public class PrometeoCarController : MonoBehaviour
           rearRightCollider.brakeTorque = 0;
           rearRightCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
         }else {
-          // If the maxSpeed has been reached, then stop applying torque to the wheels.
-          // IMPORTANT: The maxSpeed variable should be considered as an approximation; the speed of the car
-          // could be a bit higher than expected.
-    			frontLeftCollider.motorTorque = 0;
-    			frontRightCollider.motorTorque = 0;
-          rearLeftCollider.motorTorque = 0;
-    			rearRightCollider.motorTorque = 0;
+
+            if(Mathf.RoundToInt(carSpeed) > maxSpeed + 10f)
+            {
+                frontLeftCollider.brakeTorque = 0;
+                frontLeftCollider.motorTorque = (accelerationMultiplier * 50f) * -1f;
+                frontRightCollider.brakeTorque = 0;
+                frontRightCollider.motorTorque = (accelerationMultiplier * 50f) * -1f;
+                rearLeftCollider.brakeTorque = 0;
+                rearLeftCollider.motorTorque = (accelerationMultiplier * 50f) * -1f;
+                rearRightCollider.brakeTorque = 0;
+                rearRightCollider.motorTorque = (accelerationMultiplier * 50f) * -1f;
+                }
+                else
+                {
+                    frontLeftCollider.motorTorque = 0;
+                    frontRightCollider.motorTorque = 0;
+                    rearLeftCollider.motorTorque = 0;
+                    rearRightCollider.motorTorque = 0;
+                }
+    			
     		}
       }
     }
@@ -726,16 +769,25 @@ public class PrometeoCarController : MonoBehaviour
       //value, so, we are going to continue increasing the sideways friction of the wheels until driftingAxis
       // = 1f.
       if(driftingAxis < 1f){
-        FLwheelFriction.extremumSlip = FLWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
+
+            if (isAccelerating)
+            {
+                FLwheelFriction.extremumSlip = FLWextremumSlip * handbrakeDriftMultiplier * driftingAxis * 2;
+                FRwheelFriction.extremumSlip = FRWextremumSlip * handbrakeDriftMultiplier * driftingAxis * 2;
+                RLwheelFriction.extremumSlip = RLWextremumSlip * handbrakeDriftMultiplier * driftingAxis * 2;
+                RRwheelFriction.extremumSlip = RRWextremumSlip * handbrakeDriftMultiplier * driftingAxis * 2;
+            }
+            else
+            {
+                FLwheelFriction.extremumSlip = FLWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
+                FRwheelFriction.extremumSlip = FRWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
+                RLwheelFriction.extremumSlip = RLWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
+                RRwheelFriction.extremumSlip = RRWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
+            }
+        
         frontLeftCollider.sidewaysFriction = FLwheelFriction;
-
-        FRwheelFriction.extremumSlip = FRWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
-        frontRightCollider.sidewaysFriction = FRwheelFriction;
-
-        RLwheelFriction.extremumSlip = RLWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
+        frontRightCollider.sidewaysFriction = FRwheelFriction;  
         rearLeftCollider.sidewaysFriction = RLwheelFriction;
-
-        RRwheelFriction.extremumSlip = RRWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
         rearRightCollider.sidewaysFriction = RRwheelFriction;
       }
 
