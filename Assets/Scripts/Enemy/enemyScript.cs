@@ -169,7 +169,7 @@ public class enemyScript : MonoBehaviour
     private void turnOnRagdoll(Vector3 force)
     {
         agent.enabled = false;
-        animator.enabled = false;
+        //animator.enabled = false;
         foreach (Rigidbody limbRb in rbs)
         {
             limbRb.isKinematic = false;
@@ -179,7 +179,7 @@ public class enemyScript : MonoBehaviour
     }
     private void turnOffRagdoll()
     {
-        animator.enabled = true;
+        
         if(health > 0){
             GameObject enemy = Instantiate(enemyObj, torsoRb.transform.position, Quaternion.identity);
             enemyScript enemyScript = enemy.GetComponentInChildren<enemyScript>();
@@ -212,7 +212,7 @@ public class enemyScript : MonoBehaviour
             Vector3 RbVelocity;
             if(other.gameObject.tag == "Player"){
                 RbVelocity = playerVelocity.velocity;
-                _audioSource.PlayOneShot(damageSound);
+                //_audioSource.PlayOneShot(damageSound);
             }
             else{
                 RbVelocity = otherRb.velocity;
@@ -282,6 +282,6 @@ public class enemyScript : MonoBehaviour
 
     public void AnimateAttack()
     {
-        animator.SetTrigger("isAttacking");
+        //animator.SetTrigger("isAttacking");
     }
 }
