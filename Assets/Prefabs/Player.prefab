@@ -1430,7 +1430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dfb7a479d9e44eaeb8816ec1c93aab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectSoul: {fileID: 8300000, guid: bce1cd96c593a9041add4c1fda84739e, type: 3}
+  collectSoul: {fileID: 8300000, guid: 989861ce2668042e598b57f03bfcf3ee, type: 3}
 --- !u!114 &334288503679474534
 MonoBehaviour:
   m_ObjectHideFlags: 0
