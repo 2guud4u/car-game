@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Security.Cryptography;
 
 public class GameManager : MonoBehaviour
 {
@@ -76,6 +77,11 @@ public class GameManager : MonoBehaviour
     {
         _soul++;
         UIManager.Instance.UpdateSoulText(_soul, soulCondition);
+    }
+
+    public void AddTime(int increment)
+    {
+        _levelTime += increment;
     }
 
     public void DecreaseSoul()

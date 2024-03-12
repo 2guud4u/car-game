@@ -17,6 +17,7 @@ TagManager:
   - Building
   - SpawnPoint
   - PlayerWide
+  - Time
   layers:
   - Default
   - TransparentFX
