@@ -1058,7 +1058,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9157757014258731873}
   - component: {fileID: 2283841497700398530}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WideCollider
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1380,7 +1380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0fefceefe666bb4682b272ec8c5bdd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 300
+  maxSpeed: 200
   maxReverseSpeed: 120
   accelerationMultiplier: 35
   maxSteeringAngle: 35
