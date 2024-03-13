@@ -18,6 +18,7 @@ TagManager:
   - SpawnPoint
   - PlayerWide
   - Time
+  - Water
   layers:
   - Default
   - TransparentFX
