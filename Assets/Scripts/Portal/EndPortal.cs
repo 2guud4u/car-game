@@ -4,24 +4,31 @@ using System.Collections.Generic;
 
 public class EndPortal : MonoBehaviour
 {
+    public EndPortal Instance;
     private Vector3 portalSize = new Vector3(10f, 20f, 1f);
-    private bool _open = false;
+    private bool _open;
+    private bool lightningActive;
     public Material skyboxMaterial;
     public Color skyColor;
+    //private Color currentColor;
+    public GameObject lightning;
+    private LineRenderer lineRenderer;
     public Color portalSky;
     private AudioSource _audioSource;
     public AudioClip thunderCrack;
-    //public LineRenderer lightning;
-    //public Transform startPoint;
-    //public Transform targetObject;
 
     void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
+        if (Instance == null){
+            Instance = this;
+        }
     }
     
     public void Start()
     {
+        lightningActive = false;
+        _open = false;
         skyboxMaterial = RenderSettings.skybox;
         if (skyboxMaterial != null)
         {
@@ -38,8 +45,8 @@ public class EndPortal : MonoBehaviour
         {
             Debug.LogWarning("No Skybox material assigned.");
         }
-        //lightning.enabled = false;
-        //StartCoroutine(strikeLightning());
+        lineRenderer = lightning.GetComponent<LineRenderer>();
+        lineRenderer.enabled = false;
     }
     
     void Update()
@@ -58,6 +65,9 @@ public class EndPortal : MonoBehaviour
         //growth
         if(_open){
             transform.localScale = portalSize+(new Vector3(1f, 1f, 1f)*(GameManager.Instance._soul/ GameManager.Instance.soulCondition));
+            if (!lightningActive){
+                StartCoroutine(Strike());
+            }
         }
     }
     
@@ -79,19 +89,23 @@ public class EndPortal : MonoBehaviour
         }
     }
 
-    /* IEnumerator strikeLightning()
+    IEnumerator Strike()
     {
-        while (true) {
-            if (_open){
-                Debug.Log("Lightning Strike");
-                _audioSource.PlayOneShot(thunderCrack);
-                lightning.SetPosition(0, startPoint.position);
-                lightning.SetPosition(1, targetObject.position);
-                lightning.enabled = true;
-                yield return new WaitForSeconds(2f); 
-                lightning.enabled = false;
-                yield return new WaitForSeconds(8f); 
-            }
-        }
-    } */
+        _audioSource.PlayOneShot(thunderCrack);
+        lightningActive = true;
+        lineRenderer.enabled = true;
+        
+        yield return new WaitForSeconds(2f); 
+        
+        lineRenderer.enabled = false;
+
+        yield return new WaitForSeconds(2f); 
+
+        lightningActive = false;
+    }
+
+    public bool isOpen()
+    {
+        return _open;
+    }
 }
