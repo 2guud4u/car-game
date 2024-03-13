@@ -16,17 +16,15 @@ public class EndPortal : MonoBehaviour
     private AudioSource _audioSource;
     public AudioClip thunderCrack;
 
-
-
     void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
-        lightningActive = false;
-        _open = false;
     }
     
     public void Start()
     {
+        lightningActive = false;
+        _open = false;
         skyboxMaterial = RenderSettings.skybox;
         if (skyboxMaterial != null)
         {
@@ -44,6 +42,7 @@ public class EndPortal : MonoBehaviour
             Debug.LogWarning("No Skybox material assigned.");
         }
         lineRenderer = lightning.GetComponent<LineRenderer>();
+        lineRenderer.enabled = false;
     }
     
     void Update()
@@ -82,6 +81,7 @@ public class EndPortal : MonoBehaviour
             skyboxMaterial.SetColor("_SkyTint", portalSky);
         } else {
             RenderSettings.skybox = skyboxMaterial;
+            skyboxMaterial.SetColor("_SkyTint", skyColor);
         }
     }
 
