@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public AudioSource engine;
     public AudioSource drift;
     enemySpawner[] spawners;
+    [SerializeField] GameObject[] powerups;
 
     private void Awake()
     {
@@ -138,6 +139,14 @@ public class GameManager : MonoBehaviour
         if (drift != null){
             drift.Stop();
         }
+    }
+
+    public (GameObject, float)[] GetPowers()
+    {
+        (GameObject, float) healthPower = (powerups[0], 0.05f);
+        (GameObject, float) timePower = (powerups[1], 0.05f);
+        (GameObject, float)[] powerUps = {healthPower, timePower};
+        return powerUps;
     }
 
 

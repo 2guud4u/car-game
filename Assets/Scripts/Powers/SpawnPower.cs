@@ -4,18 +4,31 @@ using UnityEngine;
 
 public class SpawnPower : MonoBehaviour
 {
-    [SerializeField] GameObject[] powerups;
-    [SerializeField] int minEffect;
-    [SerializeField] int maxEffect;
-    [SerializeField] float spawnChance;
+    GameObject currentPower;
+    MeshRenderer meshRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
+        InvokeRepeating("PowerUpdate", Random.Range(0, 5f), 30f);
+    }
+
+    void PowerUpdate()
+    {
+        if(meshRenderer != null && meshRenderer.isVisible) { return; }
+        
+        if(currentPower != null) { Destroy(currentPower); }
+
+        (GameObject, float)[] powerUps = GameManager.Instance.GetPowers();
+        (GameObject, float) powerUp = powerUps[Random.Range(0, powerUps.Length)];   
+
+        GameObject power = powerUp.Item1;
+        float spawnChance = powerUp.Item2 * powerUps.Length;
+        
         if(Random.Range(0f, 1f) < spawnChance)
         {
-            GameObject randomPower = powerups[Random.Range(0, powerups.Length)];
-            Instantiate(randomPower, transform);
+            currentPower = Instantiate(power, transform);
+            meshRenderer = currentPower.GetComponent<MeshRenderer>();
         }
     }
 }

@@ -32,7 +32,7 @@ public class EndPortal : MonoBehaviour
         {
             if (skyboxMaterial.shader.name == "Skybox/Procedural")
             {
-                currentColor = skyboxMaterial.GetColor("_SkyTint");
+                //skyColor = skyboxMaterial.GetColor("_SkyTint");
             }
             else
             {

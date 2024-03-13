@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7396577323237094099}
-  - component: {fileID: 2167093708779482628}
   - component: {fileID: 2674553871724304518}
   - component: {fileID: 2556116338777325008}
   m_Layer: 0
@@ -28,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 1205833184595639575}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.7500002, y: 0, z: -3.0500004}
-  m_LocalScale: {x: 0.3, y: 1, z: 1}
+  m_LocalPosition: {x: 1.7500002, y: 0, z: -2.06}
+  m_LocalScale: {x: 0.3, y: 1, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3816197064561337909}
@@ -40,27 +39,6 @@ Transform:
   - {fileID: 8548960089246573597}
   m_Father: {fileID: 2925579088429406187}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2167093708779482628
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1205833184595639575}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.349027, y: 12.969305, z: 9.989836}
-  m_Center: {x: 4.4, y: 6.5004263, z: -4.986105}
 --- !u!114 &2674553871724304518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,7 +210,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -9.1, y: 0, z: 2.54}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0.85}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7497609522854837790}
@@ -338,8 +316,8 @@ Transform:
   m_GameObject: {fileID: 3968711343068511038}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.7, y: 0, z: 8.17}
-  m_LocalScale: {x: 1, y: 1, z: 1.1}
+  m_LocalPosition: {x: -0.1, y: 0, z: 6.69}
+  m_LocalScale: {x: 1, y: 1, z: 0.95}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2501043912219478391}
@@ -944,7 +922,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2925579088429406187}
-  - component: {fileID: 7084378022902646322}
   m_Layer: 0
   m_Name: Castle1
   m_TagString: Untagged
@@ -973,21 +950,6 @@ Transform:
   - {fileID: 5662036688652186750}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7084378022902646322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7167244691680515013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 716da79e03ef16848bccc602088216ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toppleForce: 100
-  toppleTorque: 100
-  crashSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
 --- !u!1 &7883577338435467175
 GameObject:
   m_ObjectHideFlags: 0
@@ -1032,12 +994,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d66c8b57864154da6b3d5d44ff88711e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerups:
-  - {fileID: 5381239183583933435, guid: 1396a2ea9f077044493cb2b01308fce0, type: 3}
-  - {fileID: 8415248498332601849, guid: 836d7ac5b25afc746ac6cd6b74c295d0, type: 3}
-  minEffect: 5
-  maxEffect: 10
-  spawnChance: 0.1
 --- !u!1 &8593208573601471415
 GameObject:
   m_ObjectHideFlags: 0

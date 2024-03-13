@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.3764914, g: 0.39727733, b: 0.45058274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3764914, g: 0.5702495, b: 0.6216631, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5237,6 +5237,9 @@ MonoBehaviour:
   loseSound: {fileID: 8300000, guid: a291bcde85e8dc644970188d88745e66, type: 3}
   engine: {fileID: 0}
   drift: {fileID: 0}
+  powerups:
+  - {fileID: 5381239183583933435, guid: 1396a2ea9f077044493cb2b01308fce0, type: 3}
+  - {fileID: 8415248498332601849, guid: 836d7ac5b25afc746ac6cd6b74c295d0, type: 3}
 --- !u!4 &911829357
 Transform:
   m_ObjectHideFlags: 0
@@ -7080,9 +7083,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skyboxMaterial: {fileID: 0}
-  skyColor: {r: 0, g: 0, b: 0, a: 0}
-  portalSky: {r: 0, g: 0, b: 0, a: 0}
-  thunderCrack: {fileID: 0}
+  skyColor: {r: 0, g: 0.7660377, b: 0.7238407, a: 0}
+  portalSky: {r: 0.9924528, g: 0, b: 0, a: 0}
+  thunderCrack: {fileID: 8300000, guid: 566cb5c6e895598459070d2f694f5da6, type: 3}
 --- !u!1 &1398119155
 GameObject:
   m_ObjectHideFlags: 0
