@@ -581,7 +581,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8646579835613097627}
-  - component: {fileID: 2329596304795075703}
   m_Layer: 0
   m_Name: Castle2
   m_TagString: Untagged
@@ -610,21 +609,6 @@ Transform:
   - {fileID: 8694481041372348098}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2329596304795075703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3887249643254864195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 716da79e03ef16848bccc602088216ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toppleForce: 100
-  toppleTorque: 100
-  crashSound: {fileID: 0}
 --- !u!1 &4710749600998872521
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,7 +619,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7382199378329906516}
   - component: {fileID: 7501307914986035353}
-  - component: {fileID: 7469860192047680488}
   - component: {fileID: 2723716415069379067}
   m_Layer: 0
   m_Name: wallDoor
@@ -691,27 +674,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &7469860192047680488
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4710749600998872521}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 5.349027, y: 12.969305, z: 9.989836}
-  m_Center: {x: 4.4, y: 6.5004263, z: -4.986105}
 --- !u!114 &2723716415069379067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -825,12 +787,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d66c8b57864154da6b3d5d44ff88711e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerups:
-  - {fileID: 5381239183583933435, guid: 1396a2ea9f077044493cb2b01308fce0, type: 3}
-  - {fileID: 8415248498332601849, guid: 836d7ac5b25afc746ac6cd6b74c295d0, type: 3}
-  minEffect: 5
-  maxEffect: 10
-  spawnChance: 0.2
 --- !u!1 &7642715654347881582
 GameObject:
   m_ObjectHideFlags: 0

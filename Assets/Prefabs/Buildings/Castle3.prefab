@@ -493,8 +493,8 @@ Transform:
   m_GameObject: {fileID: 3125700540242071676}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 8.17}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1, y: 0, z: 6.9}
+  m_LocalScale: {x: 1, y: 1, z: 0.85}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7377945171657221208}
@@ -733,7 +733,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7680239614574416874}
-  - component: {fileID: 5533371875660319756}
   m_Layer: 0
   m_Name: Castle3
   m_TagString: Untagged
@@ -766,21 +765,6 @@ Transform:
   - {fileID: 1352007408315699466}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5533371875660319756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4781487987507494352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 716da79e03ef16848bccc602088216ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toppleForce: 100
-  toppleTorque: 100
-  crashSound: {fileID: 0}
 --- !u!1 &5514990817157202426
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,7 +794,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -10.11, y: 0, z: 2.49}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0.85}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 110950559719994846}
@@ -898,7 +882,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6590676753693962869}
   - component: {fileID: 2937722499069879832}
-  - component: {fileID: 831168385597917592}
   - component: {fileID: 5334287057887489324}
   m_Layer: 0
   m_Name: wallDoor
@@ -916,8 +899,8 @@ Transform:
   m_GameObject: {fileID: 5781805234450475215}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.07, y: 0, z: -0.03}
-  m_LocalScale: {x: 0.3, y: 1, z: 1}
+  m_LocalPosition: {x: 6.07, y: 0, z: 0.88}
+  m_LocalScale: {x: 0.3, y: 1, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1691047377375427736}
@@ -956,27 +939,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &831168385597917592
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5781805234450475215}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 5.349027, y: 12.969305, z: 9.989836}
-  m_Center: {x: 4.4, y: 6.5004263, z: -4.986105}
 --- !u!114 &5334287057887489324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1144,12 +1106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d66c8b57864154da6b3d5d44ff88711e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerups:
-  - {fileID: 5381239183583933435, guid: 1396a2ea9f077044493cb2b01308fce0, type: 3}
-  - {fileID: 8415248498332601849, guid: 836d7ac5b25afc746ac6cd6b74c295d0, type: 3}
-  minEffect: 5
-  maxEffect: 10
-  spawnChance: 0.3
 --- !u!1 &7624314483350881135
 GameObject:
   m_ObjectHideFlags: 0

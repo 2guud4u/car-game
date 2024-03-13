@@ -12,7 +12,7 @@ public class BurstOnCollide : MonoBehaviour
     public float volume;
     public bool hasChildren;
     string[] collisionTags = {"Player", "MeleeSoldier"};
-    int burstThreshold = 22;
+    int burstThreshold = 20;
     float tiltThreshold = 50;
 
     GameObject audioSource;
@@ -64,7 +64,6 @@ public class BurstOnCollide : MonoBehaviour
         {
             audioSource.GetComponent<AudioSource>().PlayOneShot(collisionSound, volume);
             audioSource.transform.position = collision.transform.position;
-            Debug.Log(gameObject.name);
             
             if(hasChildren) { addForceToChildren(collisionBody.velocity * 100); }
 
