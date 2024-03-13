@@ -4,12 +4,13 @@ using System.Collections.Generic;
 
 public class EndPortal : MonoBehaviour
 {
+    public EndPortal Instance;
     private Vector3 portalSize = new Vector3(10f, 20f, 1f);
     private bool _open;
     private bool lightningActive;
     public Material skyboxMaterial;
     public Color skyColor;
-    private Color currentColor;
+    //private Color currentColor;
     public GameObject lightning;
     private LineRenderer lineRenderer;
     public Color portalSky;
@@ -19,6 +20,9 @@ public class EndPortal : MonoBehaviour
     void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
+        if (Instance == null){
+            Instance = this;
+        }
     }
     
     public void Start()
@@ -98,5 +102,10 @@ public class EndPortal : MonoBehaviour
         yield return new WaitForSeconds(2f); 
 
         lightningActive = false;
+    }
+
+    public bool isOpen()
+    {
+        return _open;
     }
 }
