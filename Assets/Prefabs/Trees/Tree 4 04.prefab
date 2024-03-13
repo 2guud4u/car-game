@@ -162,7 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: d6dcc43a9279f2c4d9ac216a3f13fa39, type: 3}
   particles: {fileID: 168542, guid: d41a1de2f49cb4056955046d5145dd80, type: 3}
-  volume: 0
+  volume: 0.6
   hasChildren: 0
 --- !u!54 &2106186378123423887
 Rigidbody:
