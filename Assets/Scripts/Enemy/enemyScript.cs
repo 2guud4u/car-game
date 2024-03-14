@@ -282,6 +282,6 @@ public class enemyScript : MonoBehaviour
 
     public void AnimateAttack()
     {
-        //animator.SetTrigger("isAttacking");
+        animator.SetTrigger("isAttacking");
     }
 }
