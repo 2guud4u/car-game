@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Security.Cryptography;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
     public AudioSource drift;
     enemySpawner[] spawners;
     [SerializeField] GameObject[] powerups;
+    public bool _haungs;
 
     private void Awake()
     {
@@ -46,6 +48,7 @@ public class GameManager : MonoBehaviour
         {
             spawner.enabled = false;
         }
+        _haungs = false;
     }
 
     void Update()
@@ -71,6 +74,26 @@ public class GameManager : MonoBehaviour
         if(SceneManager.GetActiveScene().name == "Tutorial" && UIManager.Instance.tutorialStep == 3)
         {
             UIManager.Instance.MakeVisible("BoosterPrompt", true);
+        }
+
+        if (Keyboard.current.hKey.isPressed && !_haungs){
+            _haungs = true;
+            Debug.Log("You've now entered Haungs Mode");
+        }
+
+        if (_haungs){
+            // add time 
+            if (Keyboard.current.tKey.isPressed){
+                AddTime(10);
+            }
+            // add health
+            if (Keyboard.current.hKey.isPressed){
+                Health.Instance.LiveIncrease(10);
+            }
+            // add soul
+            if (Keyboard.current.yKey.isPressed){
+                ScoreUpdate();
+            }
         }
     }
 
@@ -148,6 +171,5 @@ public class GameManager : MonoBehaviour
         (GameObject, float)[] powerUps = {healthPower, timePower};
         return powerUps;
     }
-
 
 }
