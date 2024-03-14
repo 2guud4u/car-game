@@ -344,7 +344,7 @@ public class PrometeoCarController : MonoBehaviour
             
             if (Keyboard.current.shiftKey.wasPressedThisFrame && !isAccelerating)
             {
-              if(!boostAtCD){
+              if(!boostAtCD || GameManager.Instance._haungs){
                 if(SceneManager.GetActiveScene().name == "Tutorial")
                 {
                     UIManager.Instance.turnOffBoosterPrompt();
