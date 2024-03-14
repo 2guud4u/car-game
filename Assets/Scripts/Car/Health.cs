@@ -1,3 +1,5 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -12,10 +14,13 @@ public class Health : MonoBehaviour
     public AudioClip swordSound;
     public AudioClip arrowSound;
     public AudioClip heartSound;
+    public AudioClip sparksSound;
     private AudioSource _audioSource;
+    public GameObject sparks;
     public GameObject carSmoke;
     public int smokeThreshold = 30;
     public bool flag = false;
+    bool isTakingWaterDamage;
 
     // Start is called before the first frame update
     private void Awake()
@@ -73,10 +78,43 @@ public class Health : MonoBehaviour
             other.gameObject.tag = "Untagged";
             _audioSource.PlayOneShot(swordSound);
         }
-        else if (other.CompareTag("Projectile")){
+        else if (other.CompareTag("Projectile"))
+        {
             LiveDecrease(5);
             _audioSource.PlayOneShot(arrowSound);
         }
+        else if (other.CompareTag("Water"))
+        {
+            StartCoroutine(TakeDamage());
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.CompareTag("Water"))
+        {
+            isTakingWaterDamage = false;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Water"))
+        {
+            if(!isTakingWaterDamage) { StartCoroutine(TakeDamage()); }
+        }
+    }
+
+    private IEnumerator TakeDamage()
+    {
+        isTakingWaterDamage = true;
+
+        yield return new WaitForSeconds(0.25f);
+        LiveDecrease(5);
+        Instantiate(sparks, transform.position + new Vector3(0, 2, 0), Quaternion.identity);
+        _audioSource.PlayOneShot(sparksSound);
+
+        isTakingWaterDamage = false;
     }
 
 }
