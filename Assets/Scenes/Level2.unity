@@ -1333,7 +1333,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7636402168267379197, guid: a85934633cf6b416981ad8da230adf18, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1533031423}
   m_SourcePrefab: {fileID: 100100000, guid: a85934633cf6b416981ad8da230adf18, type: 3}
 --- !u!1 &146292850
 GameObject:
@@ -3305,41 +3308,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f710250abab6f24a954bdf3c3c1ac64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seed: 0
-  terrains:
-  - {fileID: 325583321}
-  - {fileID: 1402499819}
-  visibleTerrainsOnly: 0
-  treeTypes: []
-  grassPrefabs: []
-  terrainSettings:
-    drawTreesAndFoliage: 1
-    preservePrefabLayer: 1
-    treeLightProbes: 0
-    treeDistance: 1000
-    billboardStart: 300
-    maxMeshTrees: 50
-    detailScattermode: 0
-    grassDistance: 200
-    grassDensity: 1
-    windStrength: 0.15
-    windSpeed: 1
-    windFrequency: 2
-    wintTint: {r: 1, g: 1, b: 1, a: 1}
-  cellSize: 64
-  cellDivisions: 4
-  highPrecisionCollision: 1
-  collisionLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  terrainMinMaxHeight: {x: -11.277622, y: 146.25763}
-  detailResolution: 256
-  detailResolutionIndex: 0
-  grassPatchSize: 128
-  grassPatchSizeIndex: 4
-  tempColliders: []
-  waterHeight: 0
-  autoRespawnTrees: 1
 --- !u!4 &342090268 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 368078291876955041, guid: ebb4c4fa630a04b63a040457b205a19f, type: 3}
@@ -11549,6 +11517,32 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53ebf8ed8d648409fa4559f3cc2fb058, type: 3}
+--- !u!1 &1533031418 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7636402168267379197, guid: a85934633cf6b416981ad8da230adf18, type: 3}
+  m_PrefabInstance: {fileID: 146193667}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1533031423
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533031418}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.3599997, y: 3.7295997, z: 2.2847998}
+  m_Center: {x: 0, y: 1.8647996, z: 0}
 --- !u!4 &1536208071 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 368078291876955041, guid: ebb4c4fa630a04b63a040457b205a19f, type: 3}
