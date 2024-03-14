@@ -21605,42 +21605,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1368598966}
     m_Modifications:
-    - target: {fileID: 5044986279010026964, guid: 4720171fb22294371b4dabcf0c9af804, type: 3}
-      propertyPath: m_Name
-      value: Castle3 Side
-      objectReference: {fileID: 0}
-    - target: {fileID: 7984201042082786286, guid: 4720171fb22294371b4dabcf0c9af804, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7984201042082786286, guid: 4720171fb22294371b4dabcf0c9af804, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 30.000004
-      objectReference: {fileID: 0}
-    - target: {fileID: 7984201042082786286, guid: 4720171fb22294371b4dabcf0c9af804, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 46.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7984201042082786286, guid: 4720171fb22294371b4dabcf0c9af804, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -154.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7984201042082786286, guid: 4720171fb22294371b4dabcf0c9af804, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 7984201042082786286, guid: 4720171fb22294371b4dabcf0c9af804, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 7984201042082786286, guid: 4720171fb22294371b4dabcf0c9af804, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7984201042082786286, guid: 4720171fb22294371b4dabcf0c9af804, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 270
-      objectReference: {fileID: 0}
     - target: {fileID: 4197967917153765321, guid: 93bd07bd72d8a4f4390d2a3f138e6a70, type: 3}
       propertyPath: m_LocalPosition.x
       value: 89.3
@@ -21688,6 +21652,42 @@ PrefabInstance:
     - target: {fileID: 9165335280059038596, guid: 93bd07bd72d8a4f4390d2a3f138e6a70, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5044986279010026964, guid: 4720171fb22294371b4dabcf0c9af804, type: 3}
+      propertyPath: m_Name
+      value: Castle3 Side
+      objectReference: {fileID: 0}
+    - target: {fileID: 7984201042082786286, guid: 4720171fb22294371b4dabcf0c9af804, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7984201042082786286, guid: 4720171fb22294371b4dabcf0c9af804, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 30.000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 7984201042082786286, guid: 4720171fb22294371b4dabcf0c9af804, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 46.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7984201042082786286, guid: 4720171fb22294371b4dabcf0c9af804, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -154.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7984201042082786286, guid: 4720171fb22294371b4dabcf0c9af804, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7984201042082786286, guid: 4720171fb22294371b4dabcf0c9af804, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7984201042082786286, guid: 4720171fb22294371b4dabcf0c9af804, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7984201042082786286, guid: 4720171fb22294371b4dabcf0c9af804, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 270
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -23136,9 +23136,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skyboxMaterial: {fileID: 0}
   skyColor: {r: 0, g: 0, b: 0, a: 0}
+  player: {fileID: 1821000340}
   lightning: {fileID: 951285199}
   portalSky: {r: 0.97735846, g: 0.11732273, b: 0.027660921, a: 0}
+  portalSound: {fileID: 2112566442}
   thunderCrack: {fileID: 8300000, guid: 566cb5c6e895598459070d2f694f5da6, type: 3}
+  threshold: 100
 --- !u!82 &1391675109
 AudioSource:
   m_ObjectHideFlags: 0
@@ -34063,6 +34066,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2112566443}
+  - component: {fileID: 2112566445}
   - component: {fileID: 2112566444}
   m_Layer: 0
   m_Name: PortalSound
@@ -34096,15 +34100,15 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: e536247f01ae2954eae9612635025c86, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -34182,6 +34186,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2112566445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112566442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4611181f6d1ce5d4ba83f4be59e3df6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioSource: {fileID: 0}
 --- !u!4 &2113228370 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6186562155477202417, guid: 5641f7578b6d24469a0fb6445f8b6686, type: 3}

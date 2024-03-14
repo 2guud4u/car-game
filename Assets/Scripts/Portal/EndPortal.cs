@@ -4,25 +4,26 @@ using System.Collections.Generic;
 
 public class EndPortal : MonoBehaviour
 {
-    public EndPortal Instance;
+    //public EndPortal Instance;
     private Vector3 portalSize = new Vector3(10f, 20f, 1f);
     private bool _open;
     private bool lightningActive;
     public Material skyboxMaterial;
     public Color skyColor;
+    public GameObject player;
     //private Color currentColor;
     public GameObject lightning;
     private LineRenderer lineRenderer;
     public Color portalSky;
     private AudioSource _audioSource;
+    public GameObject portalSound;
+    private AudioSource _portalSound;
     public AudioClip thunderCrack;
+    public int threshold;
 
     void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
-        if (Instance == null){
-            Instance = this;
-        }
     }
     
     public void Start()
@@ -47,6 +48,8 @@ public class EndPortal : MonoBehaviour
         }
         lineRenderer = lightning.GetComponent<LineRenderer>();
         lineRenderer.enabled = false;
+
+        _portalSound = portalSound.GetComponent<AudioSource>();
     }
     
     void Update()
@@ -67,6 +70,15 @@ public class EndPortal : MonoBehaviour
             transform.localScale = portalSize+(new Vector3(1f, 1f, 1f)*(GameManager.Instance._soul/ GameManager.Instance.soulCondition));
             if (!lightningActive){
                 StartCoroutine(Strike());
+            }
+
+            // check distance from player
+            float distanceFromPlayer = Vector3.Distance(player.transform.position, transform.position);
+            //Debug.Log(distanceFromPlayer);
+            if (distanceFromPlayer > threshold){
+                _portalSound.volume = 0f;
+            } else {
+                _portalSound.volume = 1f;
             }
         }
     }
@@ -95,17 +107,13 @@ public class EndPortal : MonoBehaviour
         lightningActive = true;
         lineRenderer.enabled = true;
         
-        yield return new WaitForSeconds(2f); 
+        yield return new WaitForSeconds(3f); 
         
         lineRenderer.enabled = false;
 
-        yield return new WaitForSeconds(2f); 
+        yield return new WaitForSeconds(6f); 
 
         lightningActive = false;
     }
 
-    public bool isOpen()
-    {
-        return _open;
-    }
 }
