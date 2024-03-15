@@ -35,6 +35,7 @@ public class BurstOnCollide : MonoBehaviour
     }
 
     private void DestroyObject() {
+        GameManager.Instance.addDestructionScore(5);
         Instantiate(particles, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

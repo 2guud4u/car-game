@@ -30,6 +30,7 @@ public class Topple : MonoBehaviour
 
                 Vector3 toppleDirection = transform.position - collision.transform.position;
                 rb.AddForce(toppleDirection.normalized * toppleForce, ForceMode.Impulse);
+                GameManager.Instance.addDestructionScore(1);
             }
         }
     }

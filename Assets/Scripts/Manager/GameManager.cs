@@ -28,7 +28,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject[] powerups;
     public bool _haungs;
 
-    public float destructionScore = 0;
+    public int timeLeft;
+    public int destructionScore = 0;
 
     private void Awake()
     {
@@ -56,6 +57,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         int currTime = _levelTime - Mathf.FloorToInt(Time.timeSinceLevelLoad);
+        timeLeft = currTime;
         UIManager.Instance.SetTimer(currTime);
         UIManager.Instance.SetSpeedometer(playerRigidbody.velocity.magnitude);
         if(currTime <= 0){
@@ -99,7 +101,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void addDestructionScore(float score)
+    public void addDestructionScore(int score)
     {
         destructionScore += score;
     }
@@ -128,6 +130,8 @@ public class GameManager : MonoBehaviour
         // this isn't working for some reason
         //MusicManager.Instance.StopAudio();
         //_audioSource.PlayOneShot(winSound);
+        UIManager.Instance.UpdateScoreBoard(_soul, timeLeft, destructionScore);
+
     }
 
     public void GameWin()
@@ -137,7 +141,7 @@ public class GameManager : MonoBehaviour
         MusicManager.Instance.StopAudio();
         StopAudio();
         _audioSource.PlayOneShot(winSound);
-        UIManager.Instance.UpdateScoreBoard(_soul, _levelTime);
+        UIManager.Instance.UpdateScoreBoard(_soul, _levelTime, destructionScore);
     }
 
     public void PortalOpened()
@@ -147,6 +151,10 @@ public class GameManager : MonoBehaviour
 
     public void EndLevel()
     {
+        UIManager.Instance.UpdateScoreBoard(_soul, _levelTime, destructionScore);
+
+        UIManager.Instance.MakeVisible("scoreBoard", true);
+
         UIManager.Instance.MakeVisible("GameWin", true);
         Time.timeScale = 0;
     }

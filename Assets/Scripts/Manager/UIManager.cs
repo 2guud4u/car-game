@@ -71,9 +71,14 @@ public class UIManager : MonoBehaviour
         soulText.text = currentSouls + "/" + soulCondition;
     }
 
-    public void UpdateScoreBoard(int souls, int time)
+    public void UpdateScoreBoard(int souls, int time, int destructionScore)
     {
-        scoreBoardText.text = "Score: ";
+        int totalScore = souls*10 + time*5+ destructionScore;
+        scoreBoardText.text = "FINAL SCORE" +
+        "\nSouls Collected: " + souls.ToString() 
+        + "\nTime to spare: "+ time 
+        + "\n Destruction Score: " + destructionScore
+        + "\n Total Score:" + totalScore;
     }
     public void MakeVisible(string item, bool visibility)
     {
