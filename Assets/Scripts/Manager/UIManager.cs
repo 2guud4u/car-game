@@ -13,6 +13,9 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI speedText;
     public TextMeshProUGUI gameOverText;
 
+    public TextMeshProUGUI scoreBoardText;
+
+    public GameObject scoreBoard;
     public GameObject BoosterWarning;
     public GameObject BoosterPrompt;
     public GameObject GoalWarning;
@@ -68,6 +71,10 @@ public class UIManager : MonoBehaviour
         soulText.text = currentSouls + "/" + soulCondition;
     }
 
+    public void UpdateScoreBoard(int souls, int time)
+    {
+        scoreBoardText.text = "Score: ";
+    }
     public void MakeVisible(string item, bool visibility)
     {
         if(item == "GameOver") {
@@ -112,6 +119,9 @@ public class UIManager : MonoBehaviour
             GoalWarning.SetActive(visibility);
             Invoke("HideGoalWarning", 6f);
             tutorialStep++;
+        }
+        else if(item == "scoreBoard"){
+            scoreBoard.SetActive(visibility);
         }
     }
     public void turnOffBoosterWarning()

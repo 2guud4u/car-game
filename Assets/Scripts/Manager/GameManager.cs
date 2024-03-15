@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     enemySpawner[] spawners;
     [SerializeField] GameObject[] powerups;
 
+    public float destructionScore = 0;
+
     private void Awake()
     {
         if (Instance == null)
@@ -74,6 +76,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void addDestructionScore(float score)
+    {
+        destructionScore += score;
+    }
     public void ScoreUpdate()
     {
         _soul++;
@@ -108,6 +114,7 @@ public class GameManager : MonoBehaviour
         MusicManager.Instance.StopAudio();
         StopAudio();
         _audioSource.PlayOneShot(winSound);
+        UIManager.Instance.UpdateScoreBoard(_soul, _levelTime);
     }
 
     public void PortalOpened()
