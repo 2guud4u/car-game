@@ -141,7 +141,7 @@ public class GameManager : MonoBehaviour
         MusicManager.Instance.StopAudio();
         StopAudio();
         _audioSource.PlayOneShot(winSound);
-        UIManager.Instance.UpdateScoreBoard(_soul, _levelTime, destructionScore);
+        UIManager.Instance.UpdateScoreBoard(_soul, timeLeft, destructionScore);
     }
 
     public void PortalOpened()
@@ -151,7 +151,7 @@ public class GameManager : MonoBehaviour
 
     public void EndLevel()
     {
-        UIManager.Instance.UpdateScoreBoard(_soul, _levelTime, destructionScore);
+        UIManager.Instance.UpdateScoreBoard(_soul, timeLeft, destructionScore);
 
         UIManager.Instance.MakeVisible("scoreBoard", true);
 
