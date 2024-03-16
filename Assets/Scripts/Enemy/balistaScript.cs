@@ -24,7 +24,7 @@ public class balistaScript : enemyScript
                 Rigidbody rb = Instantiate(projectile, transform.position + transform.forward * 2 + Vector3.down*3f, rotationToPlayer).GetComponent<Rigidbody>();
                 // rb.AddForce(transform.forward * 100f, ForceMode.Impulse);
                 // rb.AddForce(transform.up * 8f, ForceMode.Impulse);
-                Vector3 aimRandomness = new Vector3(Random.Range(-4f, -4f), Random.Range(-4f, 4f), Random.Range(-4f, 4f));
+                Vector3 aimRandomness = new Vector3(Random.Range(-1f, -1f), Random.Range(-1f, 1f), Random.Range(-1f, 1f));
                 Vector3 directionToAim = (aimRandomness +player.position + Vector3.down * 1.5f) - rb.position;
 
             // Apply force in the direction of the player
