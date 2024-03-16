@@ -57,7 +57,7 @@ public class Health : MonoBehaviour
         _audioSource.PlayOneShot(heartSound);
     }
 
-    void LiveDecrease(int decrease) 
+    public void LiveDecrease(int decrease) 
     { 
         currentHealth -= decrease;
         healthBar.SetHealth(currentHealth);
