@@ -181,7 +181,7 @@ public class enemyScript : MonoBehaviour
     {
         
         if(health > 0){
-            GameObject enemy = Instantiate(enemyObj, torsoRb.transform.position, Quaternion.identity);
+            GameObject enemy = Instantiate(enemyObj, torsoRb.transform.position + new Vector3(0,1,0), Quaternion.identity);
             enemyScript enemyScript = enemy.GetComponentInChildren<enemyScript>();
             enemyScript.setHealth(health);
             enemyScript.healthBar.GetComponent<HealthBar>().SetHealth((int) health);
