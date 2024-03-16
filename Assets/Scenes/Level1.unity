@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.56264573, g: 0.39727733, b: 0.45058274, a: 1}
+  m_IndirectSpecularColor: {r: 0.40169168, g: 0.4344059, b: 0.50253874, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -995,6 +995,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1763553761384994393, guid: 023cb68372a5d44f2a2f885fc3442044, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4610887071388067089, guid: 023cb68372a5d44f2a2f885fc3442044, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.6415482
@@ -31909,6 +31913,10 @@ PrefabInstance:
       propertyPath: timeSwordIsDrawn
       value: 0.75
       objectReference: {fileID: 0}
+    - target: {fileID: 6913561624664220867, guid: 7a1288cfbcf7a4d31aecd97aab16dec4, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7755446284023417325, guid: 7a1288cfbcf7a4d31aecd97aab16dec4, type: 3}
       propertyPath: m_Name
       value: soldier1
@@ -44254,6 +44262,7 @@ GameObject:
   - component: {fileID: 1126513777}
   - component: {fileID: 1126513776}
   - component: {fileID: 1126513782}
+  - component: {fileID: 1126513783}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -44501,6 +44510,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cc5a907d8757ee48bad3e6f5740b028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1126513783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126513774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c933bdfbc256460e94a93c8eba9c80c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRate: 10
+  spawnRange: 150
+  maxEnemiesNearby: 25
+  spawnLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  enemyPrefab: {fileID: 1116013062473787898, guid: 60f651ee112294889ae789ce4a44a5bc, type: 3}
 --- !u!4 &1126640332 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2925579088429406187, guid: b7ed1ab136b0e45b190b8934d55596b4, type: 3}

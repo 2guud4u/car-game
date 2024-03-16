@@ -637,7 +637,7 @@ MonoBehaviour:
   walkPointRange: 0
   timeBeforeFirstAttack: 0
   timeBetweenAttacks: 6
-  alreadyAttacked: 1
+  alreadyAttacked: 0
   projectile: {fileID: 1913830896440844453, guid: 048ea57898fb5445a84f95636c795b42, type: 3}
   sightRange: 100
   attackRange: 100
