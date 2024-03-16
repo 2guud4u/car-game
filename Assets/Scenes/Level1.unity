@@ -9975,6 +9975,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 545705776}
     m_Modifications:
+    - target: {fileID: 4580261969498794201, guid: 84b43016294ca41cfbc8e7aa0ef220de, type: 3}
+      propertyPath: alreadyAttacked
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5384973891642931596, guid: 84b43016294ca41cfbc8e7aa0ef220de, type: 3}
       propertyPath: m_Name
       value: siegeBallista 1 (3)
@@ -21202,6 +21206,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 545705776}
     m_Modifications:
+    - target: {fileID: 4580261969498794201, guid: 84b43016294ca41cfbc8e7aa0ef220de, type: 3}
+      propertyPath: alreadyAttacked
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5384973891642931596, guid: 84b43016294ca41cfbc8e7aa0ef220de, type: 3}
       propertyPath: m_Name
       value: siegeBallista 1 (5)
@@ -23417,6 +23425,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 545705776}
     m_Modifications:
+    - target: {fileID: 4580261969498794201, guid: 84b43016294ca41cfbc8e7aa0ef220de, type: 3}
+      propertyPath: alreadyAttacked
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5384973891642931596, guid: 84b43016294ca41cfbc8e7aa0ef220de, type: 3}
       propertyPath: m_Name
       value: siegeBallista 1 (8)
@@ -33022,6 +33034,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 545705776}
     m_Modifications:
+    - target: {fileID: 4580261969498794201, guid: 84b43016294ca41cfbc8e7aa0ef220de, type: 3}
+      propertyPath: alreadyAttacked
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5384973891642931596, guid: 84b43016294ca41cfbc8e7aa0ef220de, type: 3}
       propertyPath: m_Name
       value: siegeBallista 1 (4)
@@ -41973,6 +41989,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 545705776}
     m_Modifications:
+    - target: {fileID: 4580261969498794201, guid: 84b43016294ca41cfbc8e7aa0ef220de, type: 3}
+      propertyPath: alreadyAttacked
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5384973891642931596, guid: 84b43016294ca41cfbc8e7aa0ef220de, type: 3}
       propertyPath: m_Name
       value: siegeBallista 1 (6)
@@ -48508,6 +48528,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 545705776}
     m_Modifications:
+    - target: {fileID: 4580261969498794201, guid: 84b43016294ca41cfbc8e7aa0ef220de, type: 3}
+      propertyPath: alreadyAttacked
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5384973891642931596, guid: 84b43016294ca41cfbc8e7aa0ef220de, type: 3}
       propertyPath: m_Name
       value: siegeBallista 1 (1)
@@ -54379,6 +54403,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 545705776}
     m_Modifications:
+    - target: {fileID: 4580261969498794201, guid: 84b43016294ca41cfbc8e7aa0ef220de, type: 3}
+      propertyPath: alreadyAttacked
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5384973891642931596, guid: 84b43016294ca41cfbc8e7aa0ef220de, type: 3}
       propertyPath: m_Name
       value: siegeBallista 1 (2)
@@ -59259,6 +59287,71 @@ Transform:
   - {fileID: 227703225}
   m_Father: {fileID: 454797817}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1489370312
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1116013062473787898, guid: 60f651ee112294889ae789ce4a44a5bc, type: 3}
+      propertyPath: m_Name
+      value: Horse
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194441234843982074, guid: 60f651ee112294889ae789ce4a44a5bc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.95715
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194441234843982074, guid: 60f651ee112294889ae789ce4a44a5bc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194441234843982074, guid: 60f651ee112294889ae789ce4a44a5bc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -238.03917
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194441234843982074, guid: 60f651ee112294889ae789ce4a44a5bc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194441234843982074, guid: 60f651ee112294889ae789ce4a44a5bc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194441234843982074, guid: 60f651ee112294889ae789ce4a44a5bc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194441234843982074, guid: 60f651ee112294889ae789ce4a44a5bc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194441234843982074, guid: 60f651ee112294889ae789ce4a44a5bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194441234843982074, guid: 60f651ee112294889ae789ce4a44a5bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194441234843982074, guid: 60f651ee112294889ae789ce4a44a5bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335439940797134840, guid: 60f651ee112294889ae789ce4a44a5bc, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335439940797134840, guid: 60f651ee112294889ae789ce4a44a5bc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 60f651ee112294889ae789ce4a44a5bc, type: 3}
 --- !u!1001 &1489753628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63020,6 +63113,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 545705776}
     m_Modifications:
+    - target: {fileID: 4580261969498794201, guid: 84b43016294ca41cfbc8e7aa0ef220de, type: 3}
+      propertyPath: alreadyAttacked
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5384973891642931596, guid: 84b43016294ca41cfbc8e7aa0ef220de, type: 3}
       propertyPath: m_Name
       value: siegeBallista 1
@@ -73324,6 +73421,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 545705776}
     m_Modifications:
+    - target: {fileID: 4580261969498794201, guid: 84b43016294ca41cfbc8e7aa0ef220de, type: 3}
+      propertyPath: alreadyAttacked
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5384973891642931596, guid: 84b43016294ca41cfbc8e7aa0ef220de, type: 3}
       propertyPath: m_Name
       value: siegeBallista 1 (7)
@@ -86795,3 +86896,4 @@ SceneRoots:
   - {fileID: 16573347}
   - {fileID: 811255268}
   - {fileID: 492888047}
+  - {fileID: 1489370312}
