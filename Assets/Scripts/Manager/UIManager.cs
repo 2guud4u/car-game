@@ -25,6 +25,7 @@ public class UIManager : MonoBehaviour
     public GameObject gameStart;
     public GameObject healthPrompt;
     public GameObject enemyPrompt;
+    public GameObject haungsPrompt;
     public GameObject soldier;
     public GameObject player;
     public Camera cam;
@@ -138,6 +139,9 @@ public class UIManager : MonoBehaviour
         else if(item == "scoreBoard"){
             print("hai");
             scoreBoard.SetActive(visibility);
+        }
+        else if (item == "haungsMode"){
+            haungsPrompt.SetActive(visibility);
         }
     }
     public void turnOffBoosterWarning()

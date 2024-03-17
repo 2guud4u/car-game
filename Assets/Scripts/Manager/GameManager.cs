@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         UIManager.Instance.UpdateSoulText(_soul, soulCondition);
         UIManager.Instance.MakeVisible("GameStart", true);
+        UIManager.Instance.MakeVisible("haungsMode", false);
         spawners = GetComponents<enemySpawner>();
         foreach(enemySpawner spawner in spawners)
         {
@@ -82,7 +83,7 @@ public class GameManager : MonoBehaviour
 
         if (Keyboard.current.hKey.isPressed && !_haungs){
             _haungs = true;
-            Debug.Log("You've now entered Haungs Mode");
+            UIManager.Instance.MakeVisible("haungsMode", true);
         }
 
         if (_haungs){
