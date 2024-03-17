@@ -11,6 +11,12 @@ public class SpawnPower : MonoBehaviour
     void Start()
     {
         InvokeRepeating("PowerUpdate", Random.Range(0, 5f), 30f);
+        Transform child = GetComponentInChildren<Transform>();
+        if(child != null)
+        {
+            currentPower = child.gameObject;
+            print("yuhhhh");
+        }
     }
 
     void PowerUpdate()
