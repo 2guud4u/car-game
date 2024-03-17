@@ -19,6 +19,7 @@ public class CameraMover : MonoBehaviour
 
     private float waitTime = 0f;
     private bool isWaiting = false;
+    private bool hasTraveled = false;
 
     private void Awake()
     {
@@ -75,14 +76,17 @@ public class CameraMover : MonoBehaviour
             // If the camera has reached the end position
             if (transform.position == endPosition)
             {
+                UIManager.Instance.MakeVisible("EnemyPrompt1", true);
+
                 isWaiting = true;
-                waitTime = 2f;
+                hasTraveled = true;
+                waitTime = 3.5f;
             }
         }
 
-        if (transform.position == position)
+        if (transform.position == position && hasTraveled)
         {
-            UIManager.Instance.MakeVisible("EnemyPrompt", true);
+            UIManager.Instance.MakeVisible("EnemyPrompt2", true);
             this.enabled = false;
         }
     }

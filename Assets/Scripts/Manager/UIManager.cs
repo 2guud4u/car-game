@@ -102,15 +102,25 @@ public class UIManager : MonoBehaviour
         {
             healthPrompt.SetActive(visibility);
         }
-        else if (item == "EnemyPrompt" && tutorialStep == 2 && enemyPrompt != null)
+        else if (item == "EnemyPrompt1" && tutorialStep == 2 && enemyPrompt != null)
         {
             enemyPrompt.SetActive(visibility);
+            Invoke("HideEnemyPrompt", 3.5f);
+        }
+        else if (item == "EnemyPrompt2" && enemyPrompt != null)
+        {
+            enemyPrompt.SetActive(visibility);
+            enemyPrompt.transform.GetChild(0).gameObject.SetActive(false);
+            enemyPrompt.transform.GetChild(2).gameObject.SetActive(false);
+            enemyPrompt.transform.GetChild(1).gameObject.SetActive(true);
+            enemyPrompt.transform.GetChild(3).gameObject.SetActive(true);
             cam.GetComponent<CameraPan>().enabled = true;
             player.GetComponent<PlayerInput>().enabled = true;
             soldier.GetComponent<NavMeshAgent>().enabled = true;
             Invoke("HideEnemyPrompt", 4f);
+            tutorialStep--;
         }
-        else if(item == "BoosterPrompt")
+        else if(item == "BoosterPrompt" && tutorialStep == 3)
         {
             BoosterPrompt.SetActive(visibility);
         }
@@ -126,6 +136,7 @@ public class UIManager : MonoBehaviour
             tutorialStep++;
         }
         else if(item == "scoreBoard"){
+            print("hai");
             scoreBoard.SetActive(visibility);
         }
     }

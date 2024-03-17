@@ -19,6 +19,7 @@ TagManager:
   - PlayerWide
   - Time
   - Water
+  - Ballista
   layers:
   - Default
   - TransparentFX

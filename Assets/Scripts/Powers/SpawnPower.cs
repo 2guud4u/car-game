@@ -15,7 +15,6 @@ public class SpawnPower : MonoBehaviour
         if(child != null)
         {
             currentPower = child.gameObject;
-            print("yuhhhh");
         }
     }
 

@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if(SceneManager.GetActiveScene().name == "Tutorial" && UIManager.Instance.tutorialStep == 3)
+        if(_soul == 1 && SceneManager.GetActiveScene().name == "Tutorial" && UIManager.Instance.tutorialStep == 3)
         {
             UIManager.Instance.MakeVisible("BoosterPrompt", true);
         }

@@ -41,7 +41,7 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currentHealth == maxHealth && !flag)
+        if(currentHealth >= maxHealth && !flag)
         {
             flag = true;
             UIManager.Instance.HideHealthPrompt();

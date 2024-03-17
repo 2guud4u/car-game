@@ -12,8 +12,11 @@ public class DamageObject : MonoBehaviour
     //     Destroy(gameObject, lifeTime);
     // }
 
-    // private void OnCollisionEnter(Collision collision)
-    // {
-    //     Destroy(gameObject);
-    // }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag != "Ballista")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

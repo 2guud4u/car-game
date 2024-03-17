@@ -584,7 +584,7 @@ GameObject:
   - component: {fileID: 5357671382685472300}
   m_Layer: 8
   m_Name: siegeBallista 1
-  m_TagString: Untagged
+  m_TagString: Ballista
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
