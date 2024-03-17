@@ -107,7 +107,7 @@ public class EndPortal : MonoBehaviour
         lightningActive = true;
         lineRenderer.enabled = true;
         
-        yield return new WaitForSeconds(3f); 
+        yield return new WaitForSeconds(1.5f); 
         
         lineRenderer.enabled = false;
 
