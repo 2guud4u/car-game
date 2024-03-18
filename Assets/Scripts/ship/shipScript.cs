@@ -4,20 +4,45 @@ using UnityEngine;
 
 public class shipScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public float min;
-    public float max;
-    public float distance = 100;
-    void Start()
+   public float speed = 2f; // Adjust this value to change the movement speed
+    public float distance = 5f; // Adjust this value to change the movement distance
+
+    private Vector3 startPosition;
+    private Vector3 movementDirection;
+    private bool isMovingForward = true;
+
+    private void Start()
     {
-               
-        min=transform.position.x;
-        max=transform.position.x+distance;
+        startPosition = transform.position;
+        movementDirection = transform.forward*-1;
+        StartCoroutine(MoveObject());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator MoveObject()
     {
-        transform.position =new Vector3(Mathf.PingPong(Time.time*2,max-min)+min, transform.position.y, transform.position.z);
+        while (true)
+        {
+            transform.position += movementDirection * speed * Time.deltaTime;
+            Debug.Log(isMovingForward);
+            if (isMovingForward)
+            {
+                if (Vector3.Distance(transform.position, startPosition) >= distance)
+                {
+                    isMovingForward = false;
+                    movementDirection = -movementDirection;
+                }
+            }
+            else
+            {
+                Debug.Log(Vector3.Distance(transform.position, startPosition));
+                if (Vector3.Distance(transform.position, startPosition) <= 5f)
+                {
+                    isMovingForward = true;
+                    movementDirection = -movementDirection;
+                }
+            }
+
+            yield return null;
+        }
     }
 }
