@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
 
     public int timeLeft;
     public int destructionScore = 0;
+    public GameObject mainCamera;
+    public GameObject portalCamera;
 
     private void Awake()
     {
@@ -147,7 +149,12 @@ public class GameManager : MonoBehaviour
 
     public void PortalOpened()
     {
-        UIManager.Instance.MakeVisible("WarningPortal", true);
+        // UIManager.Instance.MakeVisible("WarningPortal", true);
+        if(portalCamera != null)
+        {
+            SwitchCamera();
+            Invoke("SwitchCamera", 2f);
+        }
     }
 
     public void EndLevel()
@@ -186,6 +193,12 @@ public class GameManager : MonoBehaviour
         (GameObject, float) timePower = (powerups[1], 0.05f);
         (GameObject, float)[] powerUps = {healthPower, timePower};
         return powerUps;
+    }
+    
+    void SwitchCamera()
+    {
+        mainCamera.SetActive(!mainCamera.activeSelf);
+        portalCamera.SetActive(!portalCamera.activeSelf);
     }
 
 }

@@ -21,7 +21,6 @@ public class UIManager : MonoBehaviour
     public GameObject GoalWarning;
     public GameObject gameOverScreen;
     public GameObject gameWinScreen;
-    public GameObject portalWarningScreen;
     public GameObject gameStart;
     public GameObject healthPrompt;
     public GameObject enemyPrompt;
@@ -89,10 +88,6 @@ public class UIManager : MonoBehaviour
         else if(item == "GameWin") {
             gameWinScreen.SetActive(visibility);
         }
-        else if(item == "WarningPortal") {
-            portalWarningScreen.SetActive(visibility);
-            Invoke("HideWarningPortal", 4f);
-        }
         else if (item == "GameStart" && tutorialStep == 0 && gameStart != null)
         {
             // Time.timeScale = 0;
@@ -137,7 +132,6 @@ public class UIManager : MonoBehaviour
             tutorialStep++;
         }
         else if(item == "scoreBoard"){
-            print("hai");
             scoreBoard.SetActive(visibility);
         }
         else if (item == "haungsMode"){
@@ -168,11 +162,6 @@ public class UIManager : MonoBehaviour
     public void SetGameOverReason(string reason)
     {
         gameOverText.text = reason;
-    }
-
-    public void HideWarningPortal()
-    {
-        portalWarningScreen.SetActive(false);
     }
 
     public void HideHealthPrompt()

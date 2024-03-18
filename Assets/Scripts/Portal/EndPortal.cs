@@ -57,6 +57,11 @@ public class EndPortal : MonoBehaviour
         if (GameManager.Instance._soul >= GameManager.Instance.soulCondition && !_open){
             transform.localScale = portalSize;
             _open = true;
+            
+            foreach(Transform child in GetComponentInChildren<Transform>()) {
+                child.gameObject.SetActive(true);
+            }
+
             GameManager.Instance.PortalOpened();
             changeSky();
         }
