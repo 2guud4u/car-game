@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.56264573, g: 0.39727733, b: 0.45058274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3764914, g: 0.39727733, b: 0.45058274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -44659,7 +44659,7 @@ MonoBehaviour:
   player: {fileID: 1899445756}
   soldier: {fileID: 0}
   soulCondition: 25
-  _levelTime: 300
+  _levelTime: 240
   _soul: 0
   nextLevel: Level2
   winSound: {fileID: 8300000, guid: 9dcb8342575de014385c916bc36f2cbb, type: 3}
@@ -44797,7 +44797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnRate: 10
   spawnRange: 150
-  maxEnemiesNearby: 25
+  maxEnemiesNearby: 10
   spawnLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -44819,7 +44819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnRate: 4
   spawnRange: 150
-  maxEnemiesNearby: 25
+  maxEnemiesNearby: 10
   spawnLayer:
     serializedVersion: 2
     m_Bits: 128

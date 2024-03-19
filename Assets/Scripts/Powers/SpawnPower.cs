@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SpawnPower : MonoBehaviour
@@ -11,11 +12,9 @@ public class SpawnPower : MonoBehaviour
     void Start()
     {
         InvokeRepeating("PowerUpdate", Random.Range(0, 5f), 30f);
-        Transform child = GetComponentInChildren<Transform>();
-        if(child != null)
-        {
-            currentPower = child.gameObject;
-        }
+        IEnumerable<Transform> children = GetComponentsInChildren<Transform>().Where(t => t != transform);
+        currentPower = children.First<Transform>().gameObject;
+        print(currentPower.name);
     }
 
     void PowerUpdate()

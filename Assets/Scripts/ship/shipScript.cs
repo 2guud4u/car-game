@@ -23,7 +23,6 @@ public class shipScript : MonoBehaviour
         while (true)
         {
             transform.position += movementDirection * speed * Time.deltaTime;
-            Debug.Log(isMovingForward);
             if (isMovingForward)
             {
                 if (Vector3.Distance(transform.position, startPosition) >= distance)
