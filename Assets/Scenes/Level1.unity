@@ -44844,6 +44844,7 @@ MonoBehaviour:
   speedText: {fileID: 788269472}
   gameOverText: {fileID: 342049133}
   scoreBoardText: {fileID: 210243146}
+  timeTravelText: {fileID: 1278081216}
   scoreBoard: {fileID: 489750919}
   BoosterWarning: {fileID: 416004140}
   BoosterPrompt: {fileID: 0}
@@ -44854,6 +44855,7 @@ MonoBehaviour:
   healthPrompt: {fileID: 0}
   enemyPrompt: {fileID: 0}
   haungsPrompt: {fileID: 134391776}
+  timeTravelScreen: {fileID: 1278081217}
   soldier: {fileID: 0}
   player: {fileID: 0}
   cam: {fileID: 0}
@@ -50681,9 +50683,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1126513775}
     - target: {fileID: 7309178798535136704, guid: f06de4aef40544b18aa9c6935b320d38, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7309178798535136704, guid: f06de4aef40544b18aa9c6935b320d38, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1126513775}
+      objectReference: {fileID: 1126513780}
+    - target: {fileID: 7309178798535136704, guid: f06de4aef40544b18aa9c6935b320d38, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TimeTravel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7309178798535136704, guid: f06de4aef40544b18aa9c6935b320d38, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7309178798535136704, guid: f06de4aef40544b18aa9c6935b320d38, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: the Golden Age of Piracy:144:1726
+      objectReference: {fileID: 0}
     - target: {fileID: 7982501879843705008, guid: f06de4aef40544b18aa9c6935b320d38, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -50775,6 +50793,22 @@ PrefabInstance:
 --- !u!224 &1278081215 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7982501879843705008, guid: f06de4aef40544b18aa9c6935b320d38, type: 3}
+  m_PrefabInstance: {fileID: 1278081214}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1278081216 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1587707752731834675, guid: f06de4aef40544b18aa9c6935b320d38, type: 3}
+  m_PrefabInstance: {fileID: 1278081214}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1278081217 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3676326988549239156, guid: f06de4aef40544b18aa9c6935b320d38, type: 3}
   m_PrefabInstance: {fileID: 1278081214}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1279068062

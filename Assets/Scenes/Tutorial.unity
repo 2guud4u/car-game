@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.56075704, g: 0.39727733, b: 0.45058274, a: 1}
+  m_IndirectSpecularColor: {r: 0.40169168, g: 0.4344059, b: 0.50253874, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -689,6 +689,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4748430262522521921, guid: 1396a2ea9f077044493cb2b01308fce0, type: 3}
   m_PrefabInstance: {fileID: 283287734}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &216498325 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1587707752731834675, guid: f06de4aef40544b18aa9c6935b320d38, type: 3}
+  m_PrefabInstance: {fileID: 3060957930052958691}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &218448401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2362,7 +2373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1821000340}
   soldier: {fileID: 238600897}
-  soulCondition: 2
+  soulCondition: 5
   _levelTime: 240
   _soul: 0
   nextLevel: Level1
@@ -2454,6 +2465,7 @@ MonoBehaviour:
   speedText: {fileID: 355227637}
   gameOverText: {fileID: 169620283}
   scoreBoardText: {fileID: 1466942141}
+  timeTravelText: {fileID: 216498325}
   scoreBoard: {fileID: 1520904462}
   BoosterWarning: {fileID: 1829310928}
   BoosterPrompt: {fileID: 660201121}
@@ -2464,6 +2476,7 @@ MonoBehaviour:
   healthPrompt: {fileID: 904549888}
   enemyPrompt: {fileID: 2088729404}
   haungsPrompt: {fileID: 468645091}
+  timeTravelScreen: {fileID: 1726823177}
   soldier: {fileID: 238600897}
   player: {fileID: 1821000340}
   cam: {fileID: 1196812880}
@@ -4400,6 +4413,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2611079129810703298, guid: ca8b0b1069362684dbfc39112fed2037, type: 3}
   m_PrefabInstance: {fileID: 1711421620}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1726823177 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3676326988549239156, guid: f06de4aef40544b18aa9c6935b320d38, type: 3}
+  m_PrefabInstance: {fileID: 3060957930052958691}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1732366101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5356,6 +5374,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 911829356}
+    - target: {fileID: 3676326988549239156, guid: f06de4aef40544b18aa9c6935b320d38, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5702616841906806808, guid: f06de4aef40544b18aa9c6935b320d38, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -5369,9 +5391,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1196812880}
     - target: {fileID: 7309178798535136704, guid: f06de4aef40544b18aa9c6935b320d38, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7309178798535136704, guid: f06de4aef40544b18aa9c6935b320d38, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 911829356}
+      objectReference: {fileID: 911829360}
+    - target: {fileID: 7309178798535136704, guid: f06de4aef40544b18aa9c6935b320d38, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TimeTravel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7309178798535136704, guid: f06de4aef40544b18aa9c6935b320d38, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7309178798535136704, guid: f06de4aef40544b18aa9c6935b320d38, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Ancient Rome:2024:117
+      objectReference: {fileID: 0}
     - target: {fileID: 7982501879843705008, guid: f06de4aef40544b18aa9c6935b320d38, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5464,7 +5502,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7982501879843705008, guid: f06de4aef40544b18aa9c6935b320d38, type: 3}
-      insertIndex: -1
+      insertIndex: 8
       addedObject: {fileID: 468645092}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f06de4aef40544b18aa9c6935b320d38, type: 3}
