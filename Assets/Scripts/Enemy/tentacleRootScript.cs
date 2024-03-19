@@ -27,7 +27,7 @@ public class tentacleRootScript : MonoBehaviour
     void Start()
     {
         timeFromLastAttack = 0;
-        attackTime = Random.Range(2, 10);
+        attackTime = Random.Range(10, 20);
         originalRotation = transform.rotation;
 
     }

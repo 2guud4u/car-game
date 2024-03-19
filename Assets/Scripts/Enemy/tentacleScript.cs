@@ -5,6 +5,8 @@ using UnityEngine;
 public class tentacleScript : MonoBehaviour
 {
     // Start is called before the first frame update
+    public AudioSource audioSource;
+
     void Start()
     {
         
@@ -20,8 +22,9 @@ public class tentacleScript : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
+            audioSource.Play();
             Health.Instance.LiveDecrease(10);
-            Debug.Log("Player hit");
+            
         }
     }
 }

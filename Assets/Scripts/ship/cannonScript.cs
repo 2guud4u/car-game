@@ -11,15 +11,16 @@ public class cannonScript : MonoBehaviour
 
     public GameObject projectile;
 
-    public float powerforward = 900.0f;
+    public float powerforward = 1000.0f;
 
     public float powerup = 1.0f;
 
     private GameObject ball;
     
+    public AudioSource audioSource;
     void Start()
     {
-        
+        FireRate = Random.Range(5.0f, 50.0f);
     }
 
     // Update is called once per frame
@@ -33,6 +34,8 @@ public class cannonScript : MonoBehaviour
 
     void Fire()
     {
+        FireRate = Random.Range(10.0f, 30.0f);
+        audioSource.Play();
         if(ball != null){
             Destroy(ball);
         }
