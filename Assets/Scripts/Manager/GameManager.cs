@@ -127,6 +127,9 @@ public class GameManager : MonoBehaviour
     
     public void GameOver(string reason)
     {
+        if (_haungs){
+            UIManager.Instance.MakeVisible("haungsMode", false);
+        }
         UIManager.Instance.MakeVisible("GameOver", true);
         UIManager.Instance.SetGameOverReason(reason);
         Time.timeScale = 0;
@@ -139,6 +142,9 @@ public class GameManager : MonoBehaviour
 
     public void GameWin()
     {
+        if (_haungs){
+            UIManager.Instance.MakeVisible("haungsMode", false);
+        }
         UIManager.Instance.MakeVisible("GameWin", true);
         Time.timeScale = 0;
         MusicManager.Instance.StopAudio();
@@ -159,6 +165,9 @@ public class GameManager : MonoBehaviour
 
     public void EndLevel()
     {
+        if (_haungs){
+            UIManager.Instance.MakeVisible("haungsMode", false);
+        }
         UIManager.Instance.UpdateScoreBoard(_soul, timeLeft, destructionScore);
 
         UIManager.Instance.MakeVisible("scoreBoard", true);
