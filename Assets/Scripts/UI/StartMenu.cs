@@ -2,6 +2,7 @@ using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StartMenu : MonoBehaviour
 {
@@ -10,11 +11,35 @@ public class StartMenu : MonoBehaviour
     [SerializeField] GameObject tutorialPrompt;
     [SerializeField] GameObject story;
 
-    bool _isPaused = false;
+    bool _isActive = false;
+
+    private void Update()
+    {
+        if (_isActive)
+        {
+            if(Keyboard.current.escapeKey.wasPressedThisFrame)
+            {
+                GoBack();
+
+            }
+        }
+    }
 
     public void StartGame()
     {
         tutorialPrompt.SetActive(true);
+        _isActive = true;
+        Button[] buttons = FindObjectsOfType<Button>();
+
+        foreach (Button btn in buttons)
+        {
+            if(btn.name != "Yes" && btn.name != "No")
+            {
+                
+                btn.interactable = false;
+            }
+            
+        }
     }
 
     public void SelectLevel()
@@ -39,9 +64,15 @@ public class StartMenu : MonoBehaviour
     }
     public void GoBack()
     {
+        tutorialPrompt.SetActive(false);
         levelSelect.SetActive(false);
         story.SetActive(false);
         startSceen.SetActive(true);
+        Button[] buttons = FindObjectsOfType<Button>();
+        foreach (Button btn in buttons)
+        {
+            btn.interactable = true;
+        }
     }
 
     public void GoStory()
