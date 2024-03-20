@@ -37,8 +37,8 @@ public class tentacleRootScript : MonoBehaviour
         timeFromLastAttack += Time.deltaTime;
         if(timeFromLastAttack >= attackTime){
             StartRotating(90);
-            timeFromLastAttack = 0;
-            attackTime = Random.Range(0, 10);
+            timeFromLastAttack = -3; // accounting for time to reset rotation
+            attackTime = Random.Range(3, 10);
             Invoke("ResetRotation", 2);
         }
         if (rotationProgress < 1 && rotationProgress >= 0){

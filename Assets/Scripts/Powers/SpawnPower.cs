@@ -16,13 +16,13 @@ public class SpawnPower : MonoBehaviour
         Transform child = children.FirstOrDefault();
         if(child != null) {
             currentPower = child.gameObject;
+            meshRenderer = currentPower.GetComponent<MeshRenderer>();
         }
     }
 
     void PowerUpdate()
     {
         if(meshRenderer != null && meshRenderer.isVisible) { return; }
-        
         if(currentPower != null) { Destroy(currentPower); }
 
         (GameObject, float)[] powerUps = GameManager.Instance.GetPowers();

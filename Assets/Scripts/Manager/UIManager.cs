@@ -211,6 +211,7 @@ public class UIManager : MonoBehaviour
             timeTravelText.text = string.Format("Traveling to\n{0}...\nYear {1}", location, startYear + countdown);
             yield return new WaitForSeconds(2 / Mathf.Abs(endYear - startYear));
         }
+        timeTravelText.text = string.Format("Traveling to\n{0}...\nYear {1}", location, endYear);
         GameManager.Instance.NextLevel();
     }
 
