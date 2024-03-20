@@ -13,8 +13,10 @@ public class SpawnPower : MonoBehaviour
     {
         InvokeRepeating("PowerUpdate", Random.Range(0, 5f), 30f);
         IEnumerable<Transform> children = GetComponentsInChildren<Transform>().Where(t => t != transform);
-        currentPower = children.First<Transform>().gameObject;
-        print(currentPower.name);
+        Transform child = children.FirstOrDefault();
+        if(child != null) {
+            currentPower = child.gameObject;
+        }
     }
 
     void PowerUpdate()

@@ -89,9 +89,7 @@ public class UIManager : MonoBehaviour
         string[] splitData = data.Split(":");
         string location = splitData[0];
         int startYear = int.Parse(splitData[1]);
-        print(splitData[2]);
         int endYear = int.Parse(splitData[2]);
-        print(endYear);
         timeTravelScreen.SetActive(true);
         StartCoroutine(ChangeTimeTravelText(location, startYear, endYear));
     }
@@ -207,33 +205,13 @@ public class UIManager : MonoBehaviour
     
     IEnumerator ChangeTimeTravelText(string location, int startYear, int endYear)
     {
-        // print(Time.deltaTime);
-        // print(Time.deltaTime * 2);
-        // print(endYear - startYear);
-        // print((endYear - startYear) / (Time.deltaTime * 2f));
         int increment = (int) ((endYear - startYear) / 40f);
-        print(increment);
-        print(2 / Mathf.Abs(endYear - startYear));
         for (int countdown = 0; Math.Abs(countdown) < Math.Abs(endYear - startYear); countdown += increment)
         {
             timeTravelText.text = string.Format("Traveling to\n{0}...\nYear {1}", location, startYear + countdown);
-            print(increment);
-            print(countdown);
             yield return new WaitForSeconds(2 / Mathf.Abs(endYear - startYear));
-            // yield return new WaitForSeconds(0.01f);
         }
         GameManager.Instance.NextLevel();
-
-        // int increment = (int) Mathf.Sign(endYear - startYear);
-        // for (int countdown = startYear; countdown != endYear; countdown += increment)
-        // {
-        //     timeTravelText.text = string.Format("Traveling to\n{0}...\nYear {1}", location, countdown);
-        //     print(2 / Mathf.Abs(endYear - startYear));
-        //     yield return new WaitForSeconds(2 / Mathf.Abs(endYear - startYear));
-        // }
-        // GameManager.Instance.NextLevel();
-
-        print("domne");
     }
 
     IEnumerator HideGameStart()

@@ -39,6 +39,11 @@ public class PauseMenu : MonoBehaviour
         pauseScreen.SetActive(false);
     }
 
+    public void RestartLevel()
+    {
+        GameManager.Instance.RestartLevel();
+    }
+
     public void QuitGame()
     {
         Debug.Log("Quit Game");
