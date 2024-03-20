@@ -57,7 +57,6 @@ public class FinalScene : MonoBehaviour
 
     public void LoadStartMenu()
     {
-        print("Restart Game");
         SceneManager.LoadScene("StartMenu");
     }
 }

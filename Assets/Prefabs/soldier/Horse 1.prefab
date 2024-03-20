@@ -2230,7 +2230,7 @@ GameObject:
   - component: {fileID: 5488545829688643859}
   - component: {fileID: 7022662484499176984}
   - component: {fileID: 8893775185232403615}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Horse 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

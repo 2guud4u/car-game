@@ -33,7 +33,7 @@ public class shipScript : MonoBehaviour
             }
             else
             {
-                Debug.Log(Vector3.Distance(transform.position, startPosition));
+                // Debug.Log(Vector3.Distance(transform.position, startPosition));
                 if (Vector3.Distance(transform.position, startPosition) <= 5f)
                 {
                     isMovingForward = true;

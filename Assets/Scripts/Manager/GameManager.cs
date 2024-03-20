@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     public int destructionScore = 0;
     public GameObject mainCamera;
     public GameObject portalCamera;
+    bool spawnersEnabled = false;
 
     private void Awake()
     {
@@ -70,12 +71,13 @@ public class GameManager : MonoBehaviour
             GameOver("You died!");
         }
 
-        if(soldier == null)
+        if(!spawnersEnabled && soldier == null)
         {
             foreach (enemySpawner spawner in spawners)
             {
                 spawner.enabled = true;
             }
+            spawnersEnabled = true;
         }
 
         if(_soul == 1 && SceneManager.GetActiveScene().name == "Tutorial" && UIManager.Instance.tutorialStep == 3)

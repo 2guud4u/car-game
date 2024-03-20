@@ -6,7 +6,7 @@ using System.Linq;
 public class enemySpawner : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] float spawnRate = 5.0f;
+    [SerializeField] float spawnRate;
     [SerializeField] float spawnRange;
     public int maxEnemiesNearby;
     public LayerMask spawnLayer;
@@ -33,9 +33,19 @@ public class enemySpawner : MonoBehaviour
         int nearEnemiesCount = nearEnemies.Where(c => c.gameObject.transform.parent == null).ToArray().Length;
 
         int random = Mathf.Min(nearSpawnPoints.Length, Random.Range(0, nearSpawnPoints.Length));
-        if(nearEnemiesCount < maxEnemiesNearby && nearSpawnPoints.Length > 0)
+        if(nearEnemiesCount < maxEnemiesNearby)
         {
-            GameObject l = Instantiate(enemyPrefab, nearSpawnPoints[random].gameObject.transform.position, Quaternion.identity);
+            if(nearSpawnPoints.Length > 0)
+            {
+                GameObject l = Instantiate(enemyPrefab, nearSpawnPoints[random].gameObject.transform.position, Quaternion.identity);
+            }
+            else
+            {
+                GameObject[] spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
+                if(spawnPoints.Length == 0) { return; }
+                random = Mathf.Min(spawnPoints.Length, Random.Range(0, spawnPoints.Length));
+                GameObject l = Instantiate(enemyPrefab, spawnPoints[random].gameObject.transform.position, Quaternion.identity);
+            }
         }
 
     }
