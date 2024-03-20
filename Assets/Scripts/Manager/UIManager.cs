@@ -217,8 +217,7 @@ public class UIManager : MonoBehaviour
 
     IEnumerator HideGameStart()
     {
-        yield return new WaitForSecondsRealtime(5f); // Wait for the specified delay
-        Time.timeScale = 1;
+        yield return new WaitForSeconds(5f); // Wait for the specified delay
         gameStart.SetActive(false);
 
         tutorialStep++;
