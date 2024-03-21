@@ -41,10 +41,15 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currentHealth >= maxHealth && !flag)
+        if(currentHealth >= maxHealth)
         {
-            flag = true;
-            UIManager.Instance.HideHealthPrompt();
+            if (!flag)
+            {
+                flag = true;
+                UIManager.Instance.HideHealthPrompt();
+            }
+            currentHealth = maxHealth;
+
         } else if (currentHealth <= smokeThreshold){
             ParticleManager.Instance.PlayEffect(carSmoke, transform.position, 1f);
         }

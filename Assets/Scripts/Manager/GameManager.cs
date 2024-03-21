@@ -175,6 +175,7 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.MakeVisible("scoreBoard", true);
 
         UIManager.Instance.MakeVisible("GameWin", true);
+        StopAudio();
         Time.timeScale = 0;
     }
 
@@ -196,6 +197,7 @@ public class GameManager : MonoBehaviour
         if (drift != null){
             drift.Stop();
         }
+        MusicManager.Instance.StopAudio();
     }
 
     public (GameObject, float)[] GetPowers()
