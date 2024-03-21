@@ -163,7 +163,6 @@ GameObject:
   - component: {fileID: 2153932850550432397}
   - component: {fileID: 7801933661029738179}
   - component: {fileID: 3889105997416821620}
-  - component: {fileID: 4723789142135964414}
   - component: {fileID: 1179999778794451033}
   m_Layer: 0
   m_Name: Wall (3)
@@ -285,21 +284,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4723789142135964414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3975370768712126649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 716da79e03ef16848bccc602088216ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toppleForce: 1000
-  toppleTorque: 1000
-  crashSound: {fileID: 8300000, guid: 78f4925c70a2b424393f2d478207f2df, type: 3}
 --- !u!114 &1179999778794451033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,7 +313,6 @@ GameObject:
   - component: {fileID: 2858931329441196461}
   - component: {fileID: 4999673941689553882}
   - component: {fileID: 2879218549609222614}
-  - component: {fileID: 8529730725035773428}
   - component: {fileID: 2853283052007890623}
   m_Layer: 0
   m_Name: Wall (1)
@@ -451,21 +434,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8529730725035773428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4711563970504266459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 716da79e03ef16848bccc602088216ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toppleForce: 1000
-  toppleTorque: 1000
-  crashSound: {fileID: 8300000, guid: 78f4925c70a2b424393f2d478207f2df, type: 3}
 --- !u!114 &2853283052007890623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -533,7 +501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toppleForce: 100
   toppleTorque: 100
-  crashSound: {fileID: 0}
+  crashSound: {fileID: 8300000, guid: 78f4925c70a2b424393f2d478207f2df, type: 3}
 --- !u!1 &7517807629175148552
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,7 +515,6 @@ GameObject:
   - component: {fileID: 7720250550445923596}
   - component: {fileID: 7774615609911336912}
   - component: {fileID: 7501112972514447667}
-  - component: {fileID: 5636575463127413709}
   - component: {fileID: 6901178220024362550}
   m_Layer: 0
   m_Name: Wall (2)
@@ -669,21 +636,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5636575463127413709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7517807629175148552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 716da79e03ef16848bccc602088216ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toppleForce: 1000
-  toppleTorque: 1000
-  crashSound: {fileID: 8300000, guid: 78f4925c70a2b424393f2d478207f2df, type: 3}
 --- !u!114 &6901178220024362550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -713,7 +665,6 @@ GameObject:
   - component: {fileID: 4867473875587819982}
   - component: {fileID: 6392714721482395335}
   - component: {fileID: 7645146078331027150}
-  - component: {fileID: 6724238308240985606}
   - component: {fileID: 7693970066347153424}
   m_Layer: 0
   m_Name: Wall
@@ -835,21 +786,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6724238308240985606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7641845296989101183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 716da79e03ef16848bccc602088216ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toppleForce: 1000
-  toppleTorque: 1000
-  crashSound: {fileID: 8300000, guid: 78f4925c70a2b424393f2d478207f2df, type: 3}
 --- !u!114 &7693970066347153424
 MonoBehaviour:
   m_ObjectHideFlags: 0

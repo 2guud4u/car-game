@@ -17,7 +17,7 @@ public class balistaScript : enemyScript
 
             if (!alreadyAttacked)
             {
-                Debug.Log("Attacking player");
+                //Debug.Log("Attacking player");
                 Vector3 directionToPlayer = player.position - transform.position;
 
             // Create a rotation to look at the player

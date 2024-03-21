@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3738073774666354450}
   - component: {fileID: 5215332713154875176}
   - component: {fileID: 5202093383082525653}
-  - component: {fileID: 8578454151372922911}
   - component: {fileID: 2348638850023882466}
   m_Layer: 0
   m_Name: Wall (3)
@@ -135,21 +134,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8578454151372922911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 390950854387845132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 716da79e03ef16848bccc602088216ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toppleForce: 1000
-  toppleTorque: 1000
-  crashSound: {fileID: 8300000, guid: 78f4925c70a2b424393f2d478207f2df, type: 3}
 --- !u!114 &2348638850023882466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +163,6 @@ GameObject:
   - component: {fileID: 5487790312970055758}
   - component: {fileID: 7384302367680167156}
   - component: {fileID: 4316576593721221688}
-  - component: {fileID: 483493533088529328}
   - component: {fileID: 7416554164401921470}
   m_Layer: 0
   m_Name: Wall (2)
@@ -301,21 +284,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &483493533088529328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3595834768075805048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 716da79e03ef16848bccc602088216ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toppleForce: 1000
-  toppleTorque: 1000
-  crashSound: {fileID: 8300000, guid: 78f4925c70a2b424393f2d478207f2df, type: 3}
 --- !u!114 &7416554164401921470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -531,7 +499,6 @@ GameObject:
   - component: {fileID: 3407085375070247339}
   - component: {fileID: 4238686051190226159}
   - component: {fileID: 7425436476961984169}
-  - component: {fileID: 8882994056330156100}
   - component: {fileID: 2161413741039702877}
   m_Layer: 0
   m_Name: Wall (1)
@@ -653,21 +620,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8882994056330156100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6538136263190264866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 716da79e03ef16848bccc602088216ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toppleForce: 1000
-  toppleTorque: 1000
-  crashSound: {fileID: 8300000, guid: 78f4925c70a2b424393f2d478207f2df, type: 3}
 --- !u!114 &2161413741039702877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -697,7 +649,6 @@ GameObject:
   - component: {fileID: 8010837856109632112}
   - component: {fileID: 1337188567696328588}
   - component: {fileID: 7590471324041325364}
-  - component: {fileID: 7242913291203127544}
   - component: {fileID: 8701838466830500783}
   m_Layer: 0
   m_Name: Wall
@@ -819,21 +770,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7242913291203127544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8672721962627858570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 716da79e03ef16848bccc602088216ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toppleForce: 1000
-  toppleTorque: 1000
-  crashSound: {fileID: 8300000, guid: 78f4925c70a2b424393f2d478207f2df, type: 3}
 --- !u!114 &8701838466830500783
 MonoBehaviour:
   m_ObjectHideFlags: 0
